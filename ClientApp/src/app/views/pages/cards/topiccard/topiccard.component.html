@@ -1,0 +1,154 @@
+<kt-portlet>
+
+	<kt-portlet-header [class]="'kt-portlet__head--lg'">
+
+		<ng-container ktPortletTitle>
+			<h3 class="kt-portlet__head-title">
+				<span>{{this.translate.instant("TOPICCARD.TOPICCARD_LIST")}}</span>
+			</h3>
+		</ng-container>
+
+		<ng-container ktPortletTools>
+			<button mat-raised-button matTooltip="{{this.translate.instant('TOPICCARD.CREATE_NEW_TOPICCARD')}}"
+				(click)="openCreateEditDialog(true,null)" color="primary" type="button">
+				<span>{{this.translate.instant('TOPICCARD.NEW_TOPICCARD')}}</span>
+			</button>
+		</ng-container>
+	</kt-portlet-header>
+
+	<kt-portlet-body>
+
+		<mat-form-field appearance="fill">
+			<mat-label>{{this.translate.instant('MENU.FILTER')}}</mat-label>
+			<input matInput (keyup)="applyFilter($event)" placeholder="{{this.translate.instant('DATATABLE.SEARCH')}}">
+			<mat-icon matSuffix></mat-icon>
+			<!-- <mat-hint>Hint</mat-hint> -->
+		</mat-form-field>
+
+		<div class="mat-table__wrapper">
+			<mat-table class="lmat-elevation-z8" #table [dataSource]="dataSource" matSort #sort1="matSort"
+				matSortActive="id" matSortDirection="asc" matSortDisableClear style="min-width: 600px;">
+				<ng-container matColumnDef="select">
+					<mat-header-cell *matHeaderCellDef class="mat-column-checkbox">
+						<mat-checkbox (change)="$event ? masterToggle() : null"
+							[checked]="selection.hasValue() && isAllSelected()"
+							[indeterminate]="selection.hasValue() && !isAllSelected()" [color]="'primary'">
+						</mat-checkbox>
+					</mat-header-cell>
+
+					<mat-cell *matCellDef="let row" class="mat-column-checkbox">
+						<mat-checkbox (click)="$event.stopPropagation()"
+							(change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)"
+							[color]="'primary'">
+						</mat-checkbox>
+					</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="name">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.NAME_COLUMN')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.name}}</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="createdDate">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.CREATED_DATE_COLUMN')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.createdDate | date: 'dd/MM/yyyy'}}
+					</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="description">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.DESCRIPTION')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.description}}</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="tenant">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>{{this.translate.instant('TOPICCARD.TENANT')}}
+					</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.tenant.name}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="topic">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.TOPIC')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.topic.name}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="lesson">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.LESSON')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.lesson.name}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="fileUrl">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.FILE_URL')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">
+						<a mat-icon-button href="{{topiccard.fileUrl}}" target="_blank">
+							<mat-icon>open_in_new</mat-icon>
+						</a>
+					</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="price">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.PRICE')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">{{topiccard.price}}
+						{{this.translate.instant("CURRENCY_TYPE")}}</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="isActive">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('TOPICCARD.ACTIVE_COLUMN')}}</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">
+						<mat-icon aria-hidden="false" *ngIf="topiccard.isActive">done</mat-icon>
+						<mat-icon aria-hidden="false" *ngIf="!topiccard.isActive">cancel</mat-icon>
+					</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="id">
+					<mat-header-cell *matHeaderCellDef>{{this.translate.instant('TOPICCARD.ACTIONS_COLUMN')}}
+					</mat-header-cell>
+					<mat-cell *matCellDef="let topiccard">
+						<!-- <button mat-icon-button color="primary" matTooltip="Edit lesson"
+								(click)="editlesson(lesson)">
+								<mat-icon>create</mat-icon>
+							</button>&nbsp;
+
+							<button mat-icon-button color="warn" matTooltip="Delete lesson" type="button"
+								(click)="deletelesson(lesson)">
+								<mat-icon>delete</mat-icon>
+							</button>&nbsp; -->
+
+						<button mat-icon-button [matMenuTriggerFor]="menu"
+							matTooltip="{{this.translate.instant('MOREACTIONS')}}">
+							<mat-icon>more_vert</mat-icon>
+						</button>
+						<mat-menu #menu="matMenu">
+							<button mat-menu-item (click)="deleteTopicCard(topiccard.id)">
+								<mat-icon>delete</mat-icon>
+								<span>{{this.translate.instant('DELETE')}}</span>
+							</button>
+							<button mat-menu-item disabled>
+								<mat-icon>voicemail</mat-icon>
+								<span>{{this.translate.instant('DETAILS')}}</span>
+							</button>
+							<button mat-menu-item (click)="openCreateEditDialog(false,topiccard)">
+								<mat-icon>edit</mat-icon>
+								<span>{{this.translate.instant('EDIT')}}</span>
+							</button>
+						</mat-menu>
+					</mat-cell>
+				</ng-container>
+
+				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+				<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+			</mat-table>
+			<!-- Message for empty data  -->
+			<!-- <div class="mat-table__message" *ngIf="dataSource.length==0">No records found</div>
+			<div class="mat-table__message" *ngIf="dataSource.isPreloadTextViewed$ | async">Please wait....</div> -->
+		</div>
+		<div class="mat-table__bottom">
+			<!-- <mat-spinner [diameter]="20" *ngIf="dataSource.loading$ | async"></mat-spinner> -->
+			<mat-paginator [pageSize]="10" [pageSizeOptions]="[3, 5, 10]" [showFirstLastButtons]="true"></mat-paginator>
+		</div>
+	</kt-portlet-body>
+
+</kt-portlet>

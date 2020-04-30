@@ -1,0 +1,135 @@
+<div class="kt-portlet" [ngClass]="{ 'kt-portlet--body-progress kt-portlet--body-progress-overlay' : viewLoading }">
+	<div class="kt-portlet__head kt-portlet__head__custom">
+		<div class="kt-portlet__head-label">
+			<h3 class="kt-portlet__head-title">{{getTitle()}}</h3>
+		</div>
+	</div>
+	<form class="kt-form" [formGroup]="bundleForm">
+		<div class="kt-portlet__body">
+
+			<div class="kt-portlet__body-progress">
+				<mat-spinner [diameter]="20"></mat-spinner>
+			</div>
+
+			<kt-alert *ngIf="hasFormErrors" type="warn" [duration]="30000" [showCloseButton]="true"
+				(close)="onAlertClose($event)">
+				{{this.translate.instant('FORM_ERROR')}}
+			</kt-alert>
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('NAME')}}" formControlName="name" />
+						<mat-error>{{this.translate.instant("NAME")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('DESCRIPTION')}}"
+							formControlName="description" />
+						<mat-error>{{this.translate.instant("DESCRIPTION")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">Please enter
+							<strong>Address</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('PRICE')}}" formControlName="price" />
+						<mat-error>{{this.translate.instant("PRICE")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						 <mat-hint align="start">
+							<strong>{{this.translate.instant("CURRENCY_TYPE")}}</strong>
+						</mat-hint> 
+					</mat-form-field>
+				</div>
+			</div>
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<div class="basic-container">
+						<h4></h4>
+							<mat-form-field>
+								<mat-select [formControl]="questionCardMultiCtrl" placeholder="{{this.translate.instant('QUESTIONCARD.QUESTIONCARD_LIST')}}"
+									[multiple]="true">
+									<mat-select-search [formControl]="questionCardMultiFilterCtrl"></mat-select-search>
+									<mat-option *ngFor="let item of filteredQuestionCardMulti | async "
+										[value]="item.id">
+										{{item.name}}
+									</mat-option>
+								</mat-select>
+							</mat-form-field>
+					</div>
+				</div>
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<div class="basic-container">
+							<mat-form-field>
+								<mat-select [formControl]="topicCardMultiCtrl" placeholder="{{this.translate.instant('TOPICCARD.TOPICCARD_LIST')}}" [multiple]="true">
+									<mat-select-search [formControl]="topicCardMultiFilterCtrl"></mat-select-search>
+									<mat-option *ngFor="let item of filteredTopicCardMulti | async " [value]="item.id">
+										{{item.name}}
+									</mat-option>
+								</mat-select>
+							</mat-form-field>
+					</div>
+				</div>
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<div class="basic-container">
+							<mat-form-field>
+								<mat-select [formControl]="examCardMultiCtrl" placeholder="{{this.translate.instant('EXAMCARD.EXAMCARD_LIST')}}" [multiple]="true">
+									<mat-select-search [formControl]="examCardMultiFilterCtrl"></mat-select-search>
+									<mat-option *ngFor="let item of filteredExamCardMulti | async " [value]="item.id">
+										{{item.name}}
+									</mat-option>
+								</mat-select>
+							</mat-form-field>
+					</div>
+				</div>
+			</div>
+
+			<div class="kt-separator kt-separator--dashed"></div>
+
+			<div class="form-group kt-form__group rowe">
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<mat-select placeholder="{{this.translate.instant('EXAMCARD.ENTER_TENANT')}}"
+							formControlName="tenantId">
+							<mat-option *ngFor="let tenant of tenants" [value]="tenant.id">
+								{{ tenant.name }}
+							</mat-option>
+						</mat-select>
+						<mat-error>{{this.translate.instant("EXAMCARD.ENTER_TENANT")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+						<strong>first name</strong>
+					</mat-hint> -->
+					</mat-form-field>
+				</div>
+			</div>
+
+		</div>
+		<div class="kt-portlet__foot kt-portlet__no-border kt-portlet__foot--fit">
+			<div class="kt-form__actions kt-form__actions--solid">
+				<div class="row text-right">
+					<div class="col-lg-12">
+						<button type="button" mat-raised-button cdkFocusInitial (click)="dialogClose()"
+							matTooltip="Cancel changes">
+							{{this.translate.instant("CANCEL")}}
+						</button>&nbsp;
+						<button type="button" mat-raised-button color="primary" (click)="onSubmit()"
+							[disabled]="viewLoading" matTooltip="Save changes">
+							{{this.translate.instant("SAVE")}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

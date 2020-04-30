@@ -1,0 +1,73 @@
+<!--begin::Head-->
+<div class="kt-login__head">
+	<!-- <a href="javascript:;" routerLink="/auth/register"
+		class="kt-link kt-login__signup-link">{{this.translate.instant("AUTH.GENERAL.SIGNUP_BUTTON")}}</a> -->
+</div>
+<!--end::Head-->
+
+<!--begin::Body-->
+<div class="kt-login__body">
+	<!--begin::Signin-->
+	<div class="kt-login__form">
+		<div class="kt-login__title">
+			<h3>{{this.translate.instant("AUTH.LOGIN.TITLE")}}</h3>
+		</div>
+
+		<kt-auth-notice></kt-auth-notice>
+
+		<!--begin::Form-->
+		<form class="kt-form" [formGroup]="loginForm" autocomplete="off" (ngSubmit)="loginWithEmail()">
+			<div class="form-group">
+				<mat-form-field>
+					<mat-label>{{this.translate.instant("AUTH.INPUT.EMAIL")}}</mat-label>
+					<input matInput type="email" placeholder="{{this.translate.instant('AUTH.INPUT.EMAIL')}}"
+						formControlName="email" autocomplete="off" />
+					<mat-error *ngIf="isControlHasError('email','required')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.REQUIRED_FIELD")}}</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('email','email')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.INVALID_FIELD")}}</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('email','minlength')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.MIN_LENGTH_FIELD")}} 3</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('email','maxlength')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.MAX_LENGTH_FIELD")}} 320</strong>
+					</mat-error>
+				</mat-form-field>
+			</div>
+			<div class="form-group">
+				<mat-form-field>
+					<mat-label>{{this.translate.instant("AUTH.INPUT.PASSWORD")}}</mat-label>
+					<input matInput type="password" placeholder="{{this.translate.instant('AUTH.INPUT.PASSWORD')}}"
+						formControlName="password" autocomplete="off" />
+					<mat-error *ngIf="isControlHasError('password','required')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.REQUIRED_FIELD")}}</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('password','minlength')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.MIN_LENGTH_FIELD")}} 3</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('password','maxlength')">
+						<strong>{{this.translate.instant("AUTH.VALIDATION.MAX_LENGTH_FIELD")}} 320</strong>
+					</mat-error>
+				</mat-form-field>
+			</div>
+			<!--begin::Action-->
+			<label>{{this.errorMessage}}</label>
+
+			<div class="kt-login__actions">
+				<a href="javascript:;" routerLink="/auth/forgot-password" class="kt-link kt-login__link-forgot">
+					{{this.translate.instant("AUTH.GENERAL.FORGOT_BUTTON")}}
+				</a>
+				<button (click)="loginWithEmail()"
+					id="kt_login_signin_submit"
+					class="btn btn-primary btn-elevate kt-login__btn-primary">{{this.translate.instant("AUTH.LOGIN.BUTTON")}}</button>
+			</div>
+
+			<!--end::Action-->
+		</form>
+		<!--end::Form-->
+	</div>
+	<!--end::Signin-->
+</div>
+<!--end::Body-->

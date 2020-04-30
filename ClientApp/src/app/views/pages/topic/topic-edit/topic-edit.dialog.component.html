@@ -1,0 +1,69 @@
+<div class="kt-portlet" [ngClass]="{ 'kt-portlet--body-progress kt-portlet--body-progress-overlay' : viewLoading }">
+	<div class="kt-portlet__head kt-portlet__head__custom">
+		<div class="kt-portlet__head-label">
+			<h3 class="kt-portlet__head-title">{{getTitle()}}</h3>
+		</div>
+	</div>
+	<form class="kt-form" [formGroup]="topicForm">
+		<div class="kt-portlet__body">
+			<div class="kt-portlet__body-progress">
+				<mat-spinner [diameter]="20"></mat-spinner>
+			</div>
+
+			<kt-alert *ngIf="hasFormErrors" type="warn" [duration]="30000" [showCloseButton]="true" (close)="onAlertClose($event)">
+				{{this.translate.instant('FORM_ERROR')}}
+			</kt-alert>
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-select placeholder="{{this.translate.instant('TOPIC.SELECT_LESSON')}}" (ngModelChange)="lessonChangeListener($event)" formControlName="lessonId">
+							<mat-option *ngFor="let lesson of lessons" [value]="lesson.id">
+								{{ lesson.name }}
+							</mat-option>
+						</mat-select>
+						<mat-error>{{this.translate.instant('TOPIC.LESSON_IS_REQUIRED')}}</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-select placeholder="{{this.translate.instant('TOPIC.SELECT_PARENT_TOPIC')}}" formControlName="parentTopicId">
+							<mat-option [value]="0"></mat-option>
+							<mat-option *ngFor="let topic of lessonTopics" [value]="topic.id">
+								{{ topic.name }}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+				</div>
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('TOPIC.ENTER_TOPIC_NAME')}}" formControlName="name" />
+						<mat-error>{{this.translate.instant('TOPIC.TOPIC_NAME_IS_REQUIRED')}}</mat-error>
+						<mat-hint align="start">{{this.translate.instant('TOPIC.ENTER_TOPIC_NAME')}}</mat-hint>
+					</mat-form-field>
+				</div>
+
+			</div>
+			<div class="kt-separator kt-separator--dashed"></div>
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input type="text" matInput placeholder="{{this.translate.instant('TOPIC.ENTER_CLASS_LEVEL')}}" formControlName="classLevel" />
+						<mat-error>{{this.translate.instant('TOPIC.CLASS_LEVEL_REQUIRED')}}</mat-error>
+						<mat-hint align="start">{{this.translate.instant('TOPIC.ENTER_CLASS_LEVEL')}}</mat-hint>
+					</mat-form-field>
+				</div>
+			</div>
+			<div class="kt-separator kt-separator--dashed"></div>
+		</div>
+		<div class="kt-portlet__foot kt-portlet__no-border kt-portlet__foot--fit">
+			<div class="kt-form__actions kt-form__actions--solid">
+				<div class="row text-right">
+					<div class="col-lg-12">
+						<button type="button" mat-raised-button cdkFocusInitial (click)="dialogClose()" matTooltip="{{this.translate.instant('TOPIC.CANCEL')}}">{{this.translate.instant('TOPIC.CANCEL')}}</button>&nbsp;
+						<button type="button" mat-raised-button color="primary" (click)="onSubmit()" [disabled]="viewLoading" matTooltip="{{this.translate.instant('TOPIC.SAVE')}}">{{this.translate.instant('TOPIC.SAVE')}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

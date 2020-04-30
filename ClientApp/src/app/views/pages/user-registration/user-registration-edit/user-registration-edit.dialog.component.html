@@ -1,0 +1,145 @@
+<div class="kt-portlet" [ngClass]="{ 'kt-portlet--body-progress kt-portlet--body-progress-overlay' : viewLoading }">
+	<div class="kt-portlet__head kt-portlet__head__custom">
+		<div class="kt-portlet__head-label">
+			<h3 class="kt-portlet__head-title">{{getTitle()}}</h3>
+		</div>
+	</div>
+	<form class="kt-form" [formGroup]="userForm">
+		<div class="kt-portlet__body">
+
+			<div class="kt-portlet__body-progress">
+				<mat-spinner [diameter]="20"></mat-spinner>
+			</div>
+
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-6 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-label>{{this.translate.instant('AUTH.INPUT.EMAIL')}}</mat-label>
+						<input matInput type="emailAddress" placeholder="{{this.translate.instant('AUTH.INPUT.EMAIL')}}"
+							formControlName="emailAddress" autocomplete="off" />
+						<mat-error *ngIf="isControlHasError('emailAddress','required')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.REQUIRED_FIELD')}} </strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('emailAddress','emailAddress')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.INVALID_FIELD')}} </strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('emailAddress','minlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MIN_LENGTH_FIELD')}} 3</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('emailAddress','maxlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MAX_LENGTH_FIELD')}} 320</strong>
+						</mat-error>
+					</mat-form-field>
+				</div>
+
+				<div class="col-lg-6 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-select placeholder="{{this.translate.instant('QUESTIONCARD.ENTER_TENANT')}}" formControlName="tenantId">
+							<mat-option *ngFor="let tenant of tenants" [value]="tenant.id">
+								{{tenant.name}}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+				</div>
+			</div>
+
+			<div class="kt-separator kt-separator--dashed"></div>
+
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-6 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-label>{{this.translate.instant('NAME')}}</mat-label>
+						<input matInput type="text" placeholder="{{this.translate.instant('NAME')}}"
+							formControlName="name" />
+						<mat-error *ngIf="isControlHasError('name','required')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.REQUIRED_FIELD')}} </strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('name','minlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MIN_LENGTH_FIELD')}} 3</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('name','maxlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MAX_LENGTH_FIELD')}} 100</strong>
+						</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="col-lg-6 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-label>{{this.translate.instant('SURNAME')}}</mat-label>
+						<input matInput type="text" placeholder="{{this.translate.instant('SURNAME')}}"
+							formControlName="surname" />
+						<mat-error *ngIf="isControlHasError('surname','required')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.REQUIRED_FIELD')}} </strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('surname','minlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MIN_LENGTH_FIELD')}} 3</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('surname','maxlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MAX_LENGTH_FIELD')}} 100</strong>
+						</mat-error>
+					</mat-form-field>
+				</div>
+			</div>
+			<div [hidden]="this.data.userModel" class="kt-separator kt-separator--dashed"></div>
+
+			<div [hidden]="this.data.userModel" class="form-group kt-form__group row" fxLayoutAlign="center center">
+				<div class="col-lg-6 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-label>{{this.translate.instant('AUTH.INPUT.PASSWORD')}}</mat-label>
+						<input matInput type="password" placeholder="{{this.translate.instant('AUTH.INPUT.PASSWORD')}}"
+							formControlName="password" autocomplete="off" />
+						<mat-error *ngIf="isControlHasError('password','required')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.REQUIRED_FIELD')}}</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('password','minlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MIN_LENGTH_FIELD')}} 8</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('password','maxlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MAX_LENGTH_FIELD')}} 20</strong>
+						</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="col-lg-6 kt-margin-bottom-20-mobile">
+					<mat-form-field>
+						<mat-label>{{this.translate.instant('AUTH.INPUT.CONFIRM_PASSWORD')}}</mat-label>
+						<input matInput type="password"
+							placeholder="{{this.translate.instant('AUTH.INPUT.CONFIRM_PASSWORD')}}"
+							formControlName="confirmPassword" autocomplete="off" />
+						<mat-error *ngIf="isControlHasError('confirmPassword','required')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.REQUIRED_FIELD')}}</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('confirmPassword','minlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MIN_LENGTH_FIELD')}} 8</strong>
+						</mat-error>
+						<mat-error *ngIf="isControlHasError('confirmPassword','maxlength')">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.MAX_LENGTH_FIELD')}} 20</strong>
+						</mat-error>
+						<mat-error
+							*ngIf="userForm.get('confirmPassword').errors && userForm.get('confirmPassword').errors.ConfirmPassword">
+							<strong>{{this.translate.instant('AUTH.VALIDATION.CONFIRM_VALIDATION')}}</strong>
+						</mat-error>
+					</mat-form-field>
+				</div>
+			</div>
+		</div>
+		<div class="kt-separator kt-separator--dashed"></div>
+
+		<div class="kt-portlet__foot kt-portlet__no-border kt-portlet__foot--fit">
+			<div class="kt-form__actions kt-form__actions--solid">
+				<div class="row text-right">
+					<div class="col-lg-12">
+						<button type="button" mat-raised-button cdkFocusInitial (click)="dialogClose()"
+							>
+							{{this.translate.instant("CANCEL")}}
+						</button>&nbsp;
+						<button type="button" mat-raised-button color="primary" (click)="onSubmit()"
+							[disabled]="viewLoading">
+							{{this.translate.instant("SAVE")}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+
+</div>

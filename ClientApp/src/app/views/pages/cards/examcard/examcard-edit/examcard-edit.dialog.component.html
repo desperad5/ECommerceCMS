@@ -1,0 +1,153 @@
+<div class="kt-portlet" [ngClass]="{ 'kt-portlet--body-progress kt-portlet--body-progress-overlay' : viewLoading }">
+	<div class="kt-portlet__head kt-portlet__head__custom">
+		<div class="kt-portlet__head-label">
+			<h3 class="kt-portlet__head-title">{{getTitle()}}</h3>
+		</div>
+	</div>
+	<form class="kt-form" [formGroup]="examcardForm">
+		<div class="kt-portlet__body">
+
+			<div class="kt-portlet__body-progress">
+				<mat-spinner [diameter]="20"></mat-spinner>
+			</div>
+
+			<kt-alert *ngIf="hasFormErrors" type="warn" [duration]="30000" [showCloseButton]="true"
+				(close)="onAlertClose($event)">
+				{{this.translate.instant('FORM_ERROR')}}
+			</kt-alert>
+
+			<div class="form-group kt-form__group row">
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('EXAMCARD.ENTER_CARD_NAME')}}" formControlName="name" />
+						<mat-error>{{this.translate.instant("EXAMCARD.ENTER_CARD_NAME")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+				
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('EXAMCARD.ENTER_DESCRIPTION')}}" formControlName="description" />
+						<mat-error>{{this.translate.instant("EXAMCARD.ENTER_DESCRIPTION")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<mat-select placeholder="{{this.translate.instant('EXAMCARD.TYPE')}}" formControlName="examTypeIdString">
+							<mat-option value="0">{{examTypeIdToString[0]}}</mat-option>
+							<mat-option value="1">{{examTypeIdToString[1]}}</mat-option>
+							<mat-option value="2">{{examTypeIdToString[2]}}</mat-option>
+							<mat-option value="3">{{examTypeIdToString[3]}}</mat-option>
+							<mat-option value="4">{{examTypeIdToString[4]}}</mat-option>
+							<mat-option value="5">{{examTypeIdToString[5]}}</mat-option>
+							<mat-option value="6">{{examTypeIdToString[6]}}</mat-option>
+							<mat-option value="7">{{examTypeIdToString[7]}}</mat-option>
+							<mat-option value="8">{{examTypeIdToString[8]}}</mat-option>
+							<mat-option value="9">{{examTypeIdToString[9]}}</mat-option>
+						</mat-select>
+						<mat-error>{{this.translate.instant("EXAMCARD.ENTER_TYPE")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput type="number" pattern="[0-9]*" placeholder="{{this.translate.instant('EXAMCARD.QUESTION_COUNT')}}" formControlName="questionCount" />
+						<mat-error>{{this.translate.instant("EXAMCARD.QUESTION_COUNT")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<mat-select placeholder="{{this.translate.instant('EXAMCARD.ENTER_TENANT')}}" formControlName="tenantId">
+							<mat-option *ngFor="let tenant of allTenants" [value]="tenant.id">
+								{{ tenant.name }}
+							</mat-option>
+						</mat-select>
+						<mat-error>{{this.translate.instant("EXAMCARD.ENTER_TENANT")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> -->
+					</mat-form-field>
+				</div>
+				<!--
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('IS_ACTIVE')}}" formControlName="isActive" />
+						<mat-error>{{this.translate.instant("IS_ACTIVE")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<mat-hint align="start">please enter
+							<strong>first name</strong>
+						</mat-hint> 
+					</mat-form-field>
+				</div>
+				-->
+				
+				<div class="col-lg-4 kt-margin-bottom-20-mobile">
+					<mat-form-field class="mat-form-field-fluid">
+						<input matInput placeholder="{{this.translate.instant('EXAMCARD.ENTER_PRICE')}}" formControlName="price" />
+						<mat-error>{{this.translate.instant("EXAMCARD.ENTER_PRICE")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<mat-hint align="start">
+							<strong>{{this.translate.instant("CURRENCY_TYPE")}}</strong>
+						</mat-hint> 
+					</mat-form-field>
+				</div>
+			</div>
+
+			<div class="col-lg-4 kt-margin-bottom-20-mobile">
+				<mat-form-field class="mat-form-field-fluid" >
+					<input matInput placeholder="{{this.translate.instant('FILE_URL')}}" formControlName="fileUrl" readonly/> 
+					<kt-upload [currentFiles]="examcard.fileUrl" (fileUploadFinishedEvent)="fileUploadFinished($event)"></kt-upload>
+					<mat-error>{{this.translate.instant("FILE_URL")}}
+						<strong>{{this.translate.instant("REQUIRED")}}</strong>
+					</mat-error>
+					<!-- <mat-hint align="start">please enter
+						<strong>first name</strong>
+					</mat-hint> -->
+				</mat-form-field>
+				
+			</div>
+			
+			
+		</div>
+		<div class="kt-portlet__foot kt-portlet__no-border kt-portlet__foot--fit">
+			<div class="kt-form__actions kt-form__actions--solid">
+				<div class="row text-right">
+					<div class="col-lg-12">
+						<button type="button" mat-raised-button cdkFocusInitial  (click)="dialogClose()" matTooltip="Cancel changes">
+							{{this.translate.instant("CANCEL")}}
+						</button>&nbsp;
+						<button type="button" mat-raised-button color="primary" (click)="onSubmit()"
+							[disabled]="viewLoading" matTooltip="Save changes">
+							{{this.translate.instant("SAVE")}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

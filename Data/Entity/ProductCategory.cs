@@ -8,7 +8,7 @@ namespace SorubankCMS.Data.Entity
 {
     public class ProductCategory:BaseEntity
     {
-        public int ParentCategoryId { get; set; }
+        public int? ParentCategoryId { get; set; }
         public ProductCategory ParentCategory { get; set; }
         [Required]
         public int TenantId { get; set; }

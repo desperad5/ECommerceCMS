@@ -22,7 +22,8 @@ export const locale = {
 			EXAM_CARD: "Sınav Kartı",
 			TOPIC_CARD: "Konu Kartı",
 			CREATE_USER: "Kullanıcı Yönetimi",
-			BUNDLE: "Paket Yönetimi"
+			BUNDLE: "Paket Yönetimi",
+			BRANDS: "Markalar"
 		},
 		AUTH: {
 			GENERAL: {
@@ -176,6 +177,33 @@ export const locale = {
 			DELETE_DIALOG: {
 				INFO_MESSAGE: 'Konu Silme',
 				CONFIRM_MESSAGE: 'Konu Silinecek emin misiniz?',
+				WAITING_MESSAGE: 'Siliniyor...'
+			},
+		},
+		BRAND: {
+			NEW_BRAND: "Yeni Marka",
+			BRAND_LIST: "Marka Listesi",
+			SAVE_MESSAGE: "Marka Kaydedildi",
+			EDIT_MESSAGE: "Marka Güncellendi",
+			DELETE_MESSAGE: "Marka Silindi",
+			DELETE: "Sil",
+			CREATE_NEW_BRAND: "Yeni Marka Oluştur",
+			EDIT: "Düzenle",
+			EDIT_BRAND: "Marka Düzenle",
+			BRAND_NAME_IS_REQUIRED: "Marka Adı Zorunludur.",
+			ENTER_BRAND_NAME: "Lütfen Marka Adını Giriniz",
+			ENTER_WEB_SITE_URL: "Lütfen Web Sitesi Url'ini Giriniz",
+			CANCEL: "İptal",
+			SAVE: "Kaydet",
+			TABLE: {
+				ID: "ID",
+				NAME: "Marka Adı",
+				WEB_SITE_URL: "Web Sitesi",
+				ACTIONS: "İşlemler"
+			},
+			DELETE_DIALOG: {
+				INFO_MESSAGE: 'Marka Silme',
+				CONFIRM_MESSAGE: 'Marka Silinecek emin misiniz?',
 				WAITING_MESSAGE: 'Siliniyor...'
 			},
 		},

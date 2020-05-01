@@ -22,7 +22,8 @@ export const locale = {
 			EXAM_CARD: "Exam Card",
 			TOPIC_CARD: "Topic Card",
 			CREATE_USER: "User Management",
-			BUNDLE: "Bundle Management"
+			BUNDLE: "Bundle Management",
+			BRANDS: "Markalar"
 		},
 		AUTH: {
 			GENERAL: {
@@ -177,6 +178,33 @@ export const locale = {
 			DELETE_DIALOG: {
 				INFO_MESSAGE: 'Delete Topic',
 				CONFIRM_MESSAGE: 'Topic will be deleted. Are you sure?',
+				WAITING_MESSAGE: 'Deleting...'
+			},
+		},
+		BRAND: {
+			NEW_BRAND: "New Brand",
+			BRAND_LIST: "Brand List",
+			SAVE_MESSAGE: "New Brand is Saved",
+			EDIT_MESSAGE: "Brand is Updated",
+			DELETE_MESSAGE: "Brand is Deleted",
+			DELETE: "Delete",
+			EDIT: "Edit",
+			EDIT_BRAND: "Edit Brand",
+			CREATE_NEW_BRAND: "Create New Brand",
+			BRAND_NAME_IS_REQUIRED: "Brand Name is Required",
+			ENTER_BRAND_NAME: "Please Enter Brand Name",
+			ENTER_WEB_SITE_URL: "Please Enter Web Site Url",
+			CANCEL: "Cancel",
+			SAVE: "Save",
+			TABLE: {
+				ID: "ID",
+				NAME: "Brand Name",
+				WEB_SITE_URL:"Web Site",
+				ACTIONS: "Actions"
+			},
+			DELETE_DIALOG: {
+				INFO_MESSAGE: 'Delete Brand',
+				CONFIRM_MESSAGE: 'Brand will be deleted. Are you sure?',
 				WAITING_MESSAGE: 'Deleting...'
 			},
 		},

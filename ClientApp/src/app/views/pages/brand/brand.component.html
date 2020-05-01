@@ -1,0 +1,72 @@
+<kt-portlet>
+    <kt-portlet-header [class]="'kt-portlet__head--lg'">
+        <ng-container ktPortletTitle>
+            <h3 class="kt-portlet__head-title">
+                <span translate="BRAND.BRAND_LIST">{{this.translate.instant('BRAND.BRAND_LIST')}}</span>
+            </h3>
+        </ng-container>
+        <ng-container ktPortletTools>
+            <button mat-raised-button matTooltip="{{this.translate.instant('BRAND.CREATE_NEW_BRAND')}}"
+                    (click)="openCreateEditDialog(true,null)" color="primary" type="button">
+                <span translate="BRAND.NEW_BRAND">{{this.translate.instant('BRAND.NEW_BRAND')}}</span>
+            </button>
+        </ng-container>
+    </kt-portlet-header>
+
+    <kt-portlet-body>
+
+        <mat-form-field appearance="fill">
+            <mat-label>{{this.translate.instant('MENU.FILTER')}}</mat-label>
+            <input matInput (keyup)="applyFilter($event)"
+                   placeholder="{{this.translate.instant('MENU.SEARCHONTABLE')}}">
+            <mat-icon matSuffix></mat-icon>
+            <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+
+        <div class="mat-table__wrapper">
+            <mat-table class="lmat-elevation-z8" #table [dataSource]="brandList" matSort #sort1="matSort"
+                       matSortActive="id" matSortDirection="asc" matSortDisableClear>
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>
+                        {{this.translate.instant('BRAND.TABLE.NAME')}}
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let brand">{{brand.name}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="webSiteUrl">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>
+                        {{this.translate.instant('BRAND.TABLE.WEB_SITE_URL')}}
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let brand">{{brand.webSiteUrl}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef>
+                        {{this.translate.instant('BRAND.TABLE.ACTIONS')}}
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let brand">
+                        <button mat-icon-button [matMenuTriggerFor]="menu"
+                                matTooltip="{{this.translate.instant('MOREACTIONS')}}">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item (click)="deleteTopic(brand.id)">
+                                <mat-icon>delete</mat-icon>
+                                <span>{{this.translate.instant('BRAND.DELETE')}}</span>
+                            </button>
+                            <button mat-menu-item (click)="openCreateEditDialog(false,brand)">
+                                <mat-icon>edit</mat-icon>
+                                <span>{{this.translate.instant('BRAND.EDIT')}}</span>
+                            </button>
+                        </mat-menu>
+                    </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+            </mat-table>
+            <!-- <div class="mat-table__message" *ngIf="brandList.isPreloadTextViewed$ | async">Yükleniyor....</div> -->
+        </div>
+        <div class="mat-table__bottom">
+            <!-- <mat-spinner [diameter]="20" *ngIf="brandList.loading$ | async"></mat-spinner> -->
+            <mat-paginator [pageSize]="10" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+        </div>
+    </kt-portlet-body>
+</kt-portlet>

@@ -20,6 +20,8 @@ using SorubankCMS.Service;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
 using SorubankCMS.Extensions;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Service;
 
 namespace SorubankCMS
 {
@@ -104,7 +106,8 @@ namespace SorubankCMS
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IProductCommentRepository, ProductCommentRepository>();
 
-
+            services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IBrandService, BrandService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)

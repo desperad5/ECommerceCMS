@@ -25,6 +25,13 @@ export class MenuConfig {
 					page: '/user-registration',
 					translate: 'MENU.CREATE_USER',
 					admin: true
+				},
+				{
+					title: 'Brands',
+					root: true,
+					alignment: 'left',
+					page: '/brand',
+					translate: 'MENU.BRANDS'
 				}
 				
 				
@@ -66,6 +73,14 @@ export class MenuConfig {
 					page: '/user-registration',
 					translate: 'MENU.CREATE_USER',
 					admin: true
+				},
+				{
+					title: 'Brands',
+					root: true,
+					alignment: 'left',
+					icon: 'flaticon-price-tag',
+					page: '/brand',
+					translate: 'MENU.BRANDS'
 				}
 				//{
 				//	title: 'Question Card',

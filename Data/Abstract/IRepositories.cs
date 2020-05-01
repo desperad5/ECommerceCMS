@@ -18,5 +18,8 @@ namespace SorubankCMS.Data.Abstract
 
     }
 
+    public interface IBrandRepository : IEntityBaseRepository<Brand>
+    {
 
+    }
 }

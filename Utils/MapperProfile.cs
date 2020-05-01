@@ -3,6 +3,7 @@ using SorubankCMS.Data.Entity;
 using SorubankCMS.Models;
 using SorubankCMS.Models.Response;
 using SorubankCMS.Models.ElasticSearch;
+using ECommerceCMS.Models;
 
 namespace SorubankCMS.Utils
 {
@@ -28,6 +29,8 @@ namespace SorubankCMS.Utils
             CreateMap<OrderCartItem, OrderCartItemResponseModel>();
             CreateMap<OrderCartResponseModel, OrderCart>();
             CreateMap<OrderCartItemResponseModel, OrderCartItem>();
+            CreateMap<Brand, BrandViewModel>();
+            CreateMap<BrandViewModel, Brand>();
         }
     }
 }

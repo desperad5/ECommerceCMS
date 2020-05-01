@@ -80,15 +80,15 @@ namespace SorubankCMS.Controllers
                         new Claim("UserId",user.Id.ToString()),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                         new Claim(JwtRegisteredClaimNames.UniqueName, user.Id.ToString() ),
-                        new Claim("ApplicationName","SoruBankCMS" )
+                        new Claim("ApplicationName","ECommerceCMS" )
                     };
 
 
             var loginKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"));
 
             var token = new JwtSecurityToken(
-                issuer: "Antasya",
-                audience: "Antasya",
+                issuer: "ECommerceTeam",
+                audience: "ECommerceTeam",
                 expires: DateTime.UtcNow.AddYears(1),
                 claims: claims,
                 signingCredentials: new SigningCredentials(loginKey, SecurityAlgorithms.HmacSha256)

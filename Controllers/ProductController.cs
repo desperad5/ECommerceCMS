@@ -31,26 +31,26 @@ namespace SorubankCMS.Controllers
             throw new Exception("Hoaydaaa yine bir exception");
         }
 
-        [HttpPost("[action]")]
-        public IActionResult Search([FromBody] ProductSearchModel productSearchModel)
-        {
-            var result = _productService.SearchProducts(productSearchModel);
-            if (result.resultType == ServiceResultType.Success)
-            {
-                return Ok(result.data);
-            }
-            return BadRequest(result.message);
-        }
-        [HttpPost("[action]")]
-        public IActionResult Detail([FromBody] ProductDetailModel productDetailModel)
-        {
-            var result = _productService.GetProductDetail(productDetailModel.ProductId);
-            if (result.resultType == ServiceResultType.Success)
-            {
-                return Ok(result.data);
-            }
-            return BadRequest(result.message);
-        }
+        //[HttpPost("[action]")]
+        //public IActionResult Search([FromBody] ProductSearchModel productSearchModel)
+        //{
+        //    var result = _productService.SearchProducts(productSearchModel);
+        //    if (result.resultType == ServiceResultType.Success)
+        //    {
+        //        return Ok(result.data);
+        //    }
+        //    return BadRequest(result.message);
+        //}
+        //[HttpPost("[action]")]
+        //public IActionResult Detail([FromBody] ProductDetailModel productDetailModel)
+        //{
+        //    var result = _productService.GetProductDetail(productDetailModel.ProductId);
+        //    if (result.resultType == ServiceResultType.Success)
+        //    {
+        //        return Ok(result.data);
+        //    }
+        //    return BadRequest(result.message);
+        //}
         [HttpPost("[action]")]
         public IActionResult GetComments([FromBody] ProductDetailModel productDetailModel)
         {

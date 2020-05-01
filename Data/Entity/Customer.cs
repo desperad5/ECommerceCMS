@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SorubankCMS.Data.Entity.Customer
+namespace SorubankCMS.Data.Entity
 {
-    public class SorubankUser : BaseEntity
+    public class Customer : BaseEntity
     {
 
         public string SocialAuthId { get; set; }

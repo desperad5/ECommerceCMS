@@ -21,7 +21,7 @@ namespace SorubankCMS.Data.Repositories
         public OrderCart GetOrderCartByUserIdAndStatus(int userId, Enums.OrderCartStatusTypes status)
         {
             //return _context.Set<OrderCart>().Include(o => o.OrderCartItems).ThenInclude(i => i.Product).FirstOrDefault();
-            return _context.OrderCarts.Include(o => o.OrderCartItems).Include("OrderCartItem.Product").FirstOrDefault(o => o.UserId == userId && o.Status == status);
+            return _context.OrderCarts.Include(o => o.OrderCartItems).Include("OrderCartItem.Product").FirstOrDefault(o => o.CustomerId == userId && o.Status == status);
         }
     }
 }

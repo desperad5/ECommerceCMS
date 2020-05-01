@@ -10,8 +10,8 @@ namespace SorubankCMS.Service.Abstract
 {
     public interface IProductService
     {
-        ServiceResult<List<ProductResponseModel>> SearchProducts(ProductSearchModel productSearchModel);
-        ServiceResult<ProductResponseModel> GetProductDetail(int productId);
+        //ServiceResult<List<ProductResponseModel>> SearchProducts(ProductSearchModel productSearchModel);
+        //ServiceResult<ProductResponseModel> GetProductDetail(int productId);
         ServiceResult<Product> GetActiveProductById(int id);
         ServiceResult<List<ProductCommentModel>> GetProductComments(int productId);
         ServiceResult<ProductCommentModel> InsertProductComments(int productId, string Comment, int userId);

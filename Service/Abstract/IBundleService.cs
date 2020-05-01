@@ -9,9 +9,6 @@ namespace SorubankCMS.Service.Abstract
 {
     public interface IBundleService
     {
-        ServiceResult<BundleModel> CreateOrEditBundle(BundleModel bundleModel);
-        ServiceResult<List<BundleModel>> FetchAllBundles();
-        ServiceResult<BundleModel> DeleteBundleById(int id);
-        ServiceResult<List<BundleModel>> FetchAllBundlesByTenantId(int tenantId);
+        
     }
 }

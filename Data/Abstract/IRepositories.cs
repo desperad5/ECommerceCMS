@@ -1,5 +1,4 @@
 ﻿using SorubankCMS.Data.Entity;
-using SorubankCMS.Data.Entity.Customer;
 using System.Collections.Generic;
 
 namespace SorubankCMS.Data.Abstract
@@ -12,12 +11,9 @@ namespace SorubankCMS.Data.Abstract
     {
 
     }
-    public interface ITopicRepository : IEntityBaseRepository<Topic>
-    {
-        IEnumerable<Topic> GetAllActiveTopics();
-    }
+   
 
-    public interface ICustomerRepository : IEntityBaseRepository<SorubankUser>
+    public interface ICustomerRepository : IEntityBaseRepository<Customer>
     {
 
     }

@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Entity.Customer;
 using SorubankCMS.Helpers;
 
 namespace SorubankCMS.Data.Entity
 {
     public class OrderCart : BaseEntity
     {
-        public int UserId { get; set; } //TODO Sorubank'tan taşınacak.
-        public virtual SorubankUser User { get; set; } //TODO sorubank entitysindeki user
+        [Required]
+        public int CustomerId { get; set; } //TODO Sorubank'tan taşınacak.
+        public virtual Customer Customer { get; set; }
+        [Required]
         public double TotalPrice { get; set; }
         public string CargoTraceNumber { get; set; } //TODO ilerde kullanılabilir.
         public Enums.OrderCartStatusTypes Status { get; set; } //TODO enum kullanılmalı ACTIVE, ABANDON, EXPIRED, COMPLETED, PAYMENT_FAILED

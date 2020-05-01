@@ -8,12 +8,14 @@ namespace SorubankCMS.Data.Entity
 {
     public class Bundle : BaseEntity
     {
-        public virtual ICollection<BundleQuestionCard> BundleQuestionCards { get; set; }
-        public virtual ICollection<BundleExamCard> BundleExamCards { get; set; }
-        public virtual ICollection<BundleTopicCard> BundleTopicCards { get; set; }
         
+        public virtual ICollection<ProductBundle> BundleProducts { get; set; }
         [Required]
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public double Price { get; set; }
+        [Required]
+        public string Name { get; set; }
+        public  string Description { get; set; }
+        public string ImageUrl { get; set; }
+        public virtual ICollection<OrderCartItem> OrderCartItems { get; set; }
     }
 }

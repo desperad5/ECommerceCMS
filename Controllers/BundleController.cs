@@ -23,50 +23,7 @@ namespace SorubankCMS.Controllers
             _bundleService = bundleService;
         }
 
-        [HttpPost("[action]")]
-        public IActionResult CreateOrEditBundle([FromBody] BundleModel bundleModel)
-        {
-            var result = _bundleService.CreateOrEditBundle(bundleModel);
-            return GetActionResult(result);
-        }
-        [HttpPost("[action]")]
-        public IActionResult FetchAllBundles()
-        {
-            var tenantId = GetTenantIdFromContext();
-            var result = _bundleService.FetchAllBundlesByTenantId(tenantId);
-            return GetActionResultForList(result);
-        }
-        [HttpPost("[action]")]
-        public IActionResult FetchAllBundlesByTenantId([FromBody]int tenantId)
-        {
-            var result = _bundleService.FetchAllBundlesByTenantId(tenantId);
-            return GetActionResultForList(result);
-        }
-
-        [HttpPost("[action]")]
-        public IActionResult DeleteBundleById([FromBody] int id)
-        {
-            var result = _bundleService.DeleteBundleById(id);
-            return GetActionResult(result);
-        }
-
-        private IActionResult GetActionResult(ServiceResult<BundleModel> result)
-        {
-            if (result.resultType == ServiceResultType.Success)
-            {
-                return Ok(result.data);
-            }
-            return BadRequest(result.message);
-        }
-
-        private IActionResult GetActionResultForList(ServiceResult<List<BundleModel>> result)
-        {
-            if (result.resultType == ServiceResultType.Success)
-            {
-                return Ok(result.data);
-            }
-            return BadRequest(result.message);
-        }
+        
 
         private int GetTenantIdFromContext()
         {

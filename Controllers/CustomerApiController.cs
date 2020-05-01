@@ -4,7 +4,6 @@ using SorubankCMS.Models.Api;
 using System.Threading.Tasks;
 using System.Linq;
 using System.IdentityModel.Tokens.Jwt;
-using SorubankCMS.Data.Entity.Customer;
 using System.Security.Claims;
 using System;
 using Microsoft.IdentityModel.Tokens;
@@ -12,6 +11,7 @@ using System.Text;
 using SorubankCMS.Helpers;
 using SorubankCMS.Service.Abstract;
 using SorubankCMS.Services;
+using SorubankCMS.Data.Entity;
 
 namespace SorubankCMS.Controllers
 {
@@ -35,7 +35,7 @@ namespace SorubankCMS.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(new JsonResult(ModelState.Values.First().Errors));
 
-            var alreadySavedData = _db.SorubankUsers.Where(Uid => Uid.SocialAuthId == userdata.UserId).FirstOrDefault();
+            var alreadySavedData = _db.Customers.Where(Uid => Uid.SocialAuthId == userdata.UserId).FirstOrDefault();
             JwtSecurityToken token;
             if (alreadySavedData != null)
             {
@@ -53,7 +53,7 @@ namespace SorubankCMS.Controllers
                 });
             }
 
-            var user = new SorubankUser
+            var user = new Customer
             {
                 SocialAuthId = userdata.UserId,
                 FirstName = userdata.FirstName,
@@ -82,7 +82,7 @@ namespace SorubankCMS.Controllers
 
         }
 
-        private static JwtSecurityToken CreateJwt(SorubankUser user)
+        private static JwtSecurityToken CreateJwt(Customer user)
         {
 
             var claims = new[]{
@@ -109,7 +109,7 @@ namespace SorubankCMS.Controllers
 
         public ActionResult LoginWithEmail([FromBody] Models.LoginViewModel userdata)
         {
-            var user = _db.SorubankUsers.Where(u => u.EmailAddress == userdata.EmailAddress && u.IsDeleted == false).FirstOrDefault();
+            var user = _db.Customers.Where(u => u.EmailAddress == userdata.EmailAddress && u.IsDeleted == false).FirstOrDefault();
 
             if (user == null)
                 return BadRequest("User not found!");
@@ -152,7 +152,7 @@ namespace SorubankCMS.Controllers
         public ActionResult SaveUser([FromBody]RegistrationRequestModel model)
         {
 
-            var user = _db.SorubankUsers.Where(u => u.EmailAddress == model.Email).FirstOrDefault();
+            var user = _db.Customers.Where(u => u.EmailAddress == model.Email).FirstOrDefault();
             if (user != null)
                 return BadRequest(model.Email + "'e ait kullanıcı mevcut. Lütfen şifremi unuttum alanına gidiniz.");
 
@@ -164,7 +164,7 @@ namespace SorubankCMS.Controllers
                 {
                     string salt = HashCalculator.GenerateSalt();
                     string hashedPassword = HashCalculator.HashPasswordWithSalt(model.Password, salt);
-                    var newUser = new SorubankUser()
+                    var newUser = new Customer()
                     {
                         Password = hashedPassword,
                         PasswordSalt = salt,
@@ -173,7 +173,7 @@ namespace SorubankCMS.Controllers
                         LastName = model.LastName
 
                     };
-                    _db.SorubankUsers.Add(newUser);
+                    _db.Customers.Add(newUser);
 
                     lead.HasRegistered = true;
                     _db.Leads.Update(lead);

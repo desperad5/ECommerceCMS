@@ -1,0 +1,9 @@
+2020-04-29 18:23:06,687 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:44434
+ 2020-04-29 18:23:06,996 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-04-29 18:23:07,424 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-04-29 18:23:07,549 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: D:\GitRepos\SoruBankCMS
+ 2020-04-29 18:33:12,703 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:6926
+ 2020-04-29 18:33:12,772 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-04-29 18:33:12,776 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-04-29 18:33:12,777 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: D:\GitRepos\SoruBankCMS
+ 

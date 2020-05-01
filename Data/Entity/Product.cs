@@ -8,9 +8,7 @@ namespace SorubankCMS.Data.Entity
 {
     public class Product : BaseEntity
     {
-        [Required]
-        public int EntityTypeId { get; set; }
-        
+
         [Required]
         public double TenantPrice { get; set; }
 
@@ -19,22 +17,29 @@ namespace SorubankCMS.Data.Entity
 
         [Required]
         public string Name { get; set; }
-       
-        public string Description { get; set; }
 
+        public string Description { get; set; }
+        [Required]
+        public int CategoryId { get; set; }
+        public ProductCategory ProductCategory { get; set; }
         [Required]
         public int TenantId { get; set; }
         public virtual Tenant Tenant { get; set; }
-
         [Required]
-        public string FileUrl { get; set; }
+        public string BaseImageUrl { get; set; }
+        public string InventoryCode { get; set; }
+        public int? InventoryCount { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
+        public bool isVitrin { get; set; }
+        public int? BrandId { get; set; }
+        public Brand Brand{get;set;}
+        
 
         public virtual ICollection<OrderCartItem> OrderCartItems { get; set; }
         public virtual ICollection<ProductComment> ProductComments { get; set; }
-        public virtual ExamCard ExamCard { get; set; }
-        public virtual QuestionCard QuestionCard { get; set; }
-        public virtual TopicCard TopicCard { get; set; }
-        public virtual Bundle Bundle { get; set; }
+        public virtual ICollection<ProductRating> ProductRatings { get; set; }
+        public virtual ICollection<ProductBundle> ProductBundles { get; set; }
+        public double Rating { get; set; }
       
         public virtual ICollection<ProductTag> ProductTags { get; set; }
     }

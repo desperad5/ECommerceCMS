@@ -188,7 +188,7 @@ namespace SorubankCMS.Service
 
         private OrderCart GetOrderCart(int userId)
         {
-            OrderCart orderCart = _orderCartRepository.FindBy(o => o.UserId == userId && o.Status == Enums.OrderCartStatusTypes.ACTIVE).FirstOrDefault();
+            OrderCart orderCart = _orderCartRepository.FindBy(o => o.CustomerId == userId && o.Status == Enums.OrderCartStatusTypes.ACTIVE).FirstOrDefault();
             if(orderCart == null)
             {
                 return orderCart;
@@ -219,7 +219,7 @@ namespace SorubankCMS.Service
         {
             OrderCart orderCart = new OrderCart()
             {
-                UserId = userId,
+                CustomerId = userId,
                 Status = Enums.OrderCartStatusTypes.ACTIVE,
                 IsActive = true,
                 IsDeleted = false

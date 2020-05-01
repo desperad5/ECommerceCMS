@@ -70,8 +70,8 @@ namespace SorubankCMS
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidateLifetime=true,
-                    ValidIssuer = "Antasya",
-                    ValidAudience = "Antasya",
+                    ValidIssuer = "ECommerceTeam",
+                    ValidAudience = "ECommerceTeam",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"))
                 };
             });
@@ -85,33 +85,20 @@ namespace SorubankCMS
 
             services.AddScoped<ITenantRepository, TenantRepository>();
             services.AddScoped<ITenantService, TenantService>();
-            services.AddScoped<ITopicRepository, TopicRepository>();
-            services.AddScoped<ITopicService, TopicService>();
-            services.AddScoped<ILessonRepository, LessonRepository>();
-
-            services.AddScoped<ILessonRepository, LessonRepository>();
-            services.AddScoped<ILessonService, LessonService>();
-
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICardService, CardService>();
-            services.AddScoped<IQuestionCardRepository, QuestionCardRepository>();
-            services.AddScoped<IExamCardRepository, ExamCardRepository>();
-            services.AddScoped<ITopicCardRepository, TopicCardRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IOrderCartItemRepository, OrderCartItemRepository>();
             services.AddScoped<IOrderCartRepository, OrderCartRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
-            services.AddScoped<ISorubankUserRepository, SorubankUserRepository>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IOrderCartService, OrderCartService>();
             services.AddScoped<IOrderCartItemService, OrderCartItemService>();
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<IBundleRepository, BundleRepository>();
             services.AddScoped<IBundleService, BundleService>();
-            services.AddScoped<IBundleExamCardRepository, BundleExamCardRepository>();
-            services.AddScoped<IBundleQuestionCardRepository, BundleQuestionCardRepository>();
-            services.AddScoped<IBundleTopicCardRepository, BundleTopicCardRepository>();
+            
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerService, CustomerService>();

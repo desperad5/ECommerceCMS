@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SorubankCMS.Data.Entity
 {
-    public class BundleExamCard:BaseEntity
+    public class ProductBundle : BaseEntity
     {
         [Required]
-        public int BundleId { get; set; }
-        public virtual Bundle Bundle { get; set; }
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }
         [Required]
-        public int ExamCardId { get; set; }
-        public virtual ExamCard ExamCard { get; set; }
+        public int BundleId { get; set; }
+        public virtual Bundle Bundle{get;set;}
     }
 }

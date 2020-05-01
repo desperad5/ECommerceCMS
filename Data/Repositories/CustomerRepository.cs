@@ -1,10 +1,13 @@
 ﻿using SorubankCMS.Data.Abstract;
 using SorubankCMS.Data.Entity;
-using SorubankCMS.Data.Entity.Customer;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SorubankCMS.Data.Repositories
 {
-    public class CustomerRepository : EntityBaseRepository<SorubankUser>, ICustomerRepository
+    public class CustomerRepository : EntityBaseRepository<Customer>, ICustomerRepository
     {
         private ApplicationDbContext _context;
 
@@ -15,4 +18,5 @@ namespace SorubankCMS.Data.Repositories
         }
 
     }
+
 }

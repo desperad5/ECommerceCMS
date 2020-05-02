@@ -107,7 +107,8 @@ namespace SorubankCMS
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IProductCommentRepository, ProductCommentRepository>();
 
-
+            services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IBrandService, BrandService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)

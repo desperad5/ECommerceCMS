@@ -32,6 +32,8 @@ namespace ECommerceCMS.Utils
             CreateMap<OrderCartItem, OrderCartItemResponseModel>();
             CreateMap<OrderCartResponseModel, OrderCart>();
             CreateMap<OrderCartItemResponseModel, OrderCartItem>();
+            CreateMap<Brand, BrandViewModel>();
+            CreateMap<BrandViewModel, Brand>();
         }
     }
 }

@@ -18,5 +18,8 @@ namespace ECommerceCMS.Data.Abstract
 
     }
 
+    public interface IBrandRepository : IEntityBaseRepository<Brand>
+    {
 
+    }
 }

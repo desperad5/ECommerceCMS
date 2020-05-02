@@ -48,7 +48,7 @@ import {
 	SubheaderService,
 	TenantService,
 	LessonService,
-	TopicService
+	TopicService,
 } from './core/_base/layout';
 // Auth
 import { AuthModule } from './views/pages/auth/auth.module';
@@ -69,6 +69,7 @@ import { CommonModule } from '@angular/common';
 import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 import { customersReducer, CustomerEffects } from './core/e-commerce';
 import { MatSelectSearchModule } from './common-components/mat-select/mat-select-search.module';
+import { BrandService } from './core/_base/layout/services/brand.service';
 //import { AuthInterceptor } from './auth.interceptor';
 
 // tslint:disable-next-line:class-name
@@ -141,6 +142,7 @@ export function hljsLanguages(): HighlightLanguage[] {
 		TenantService,
 		LessonService,
 		TopicService,
+		BrandService,
 		DataTableService,
 		SplashScreenService,
 		{

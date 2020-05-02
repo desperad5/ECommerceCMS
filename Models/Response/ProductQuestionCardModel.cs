@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace SorubankCMS.Models.Response
+namespace ECommerceCMS.Models.Response
 {
     public class ProductQuestionCardModel : ProductTopicLessonBaseModel
     {

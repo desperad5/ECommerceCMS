@@ -22,7 +22,8 @@ export const locale = {
 			EXAM_CARD: "Exam Card",
 			TOPIC_CARD: "Topic Card",
 			CREATE_USER: "User Management",
-			BUNDLE: "Bundle Management"
+			BUNDLE: "Bundle Management",
+			PRODUCTCATEGORY:"Category Management"
 		},
 		AUTH: {
 			GENERAL: {
@@ -146,6 +147,37 @@ export const locale = {
 			ACTIVE_COLUMN: "Active",
 			ACTIONS_COLUMN: "Actions"
 
+		},
+		PRODUCTCATEGORY: {
+			NEW_PRODUCTCATEGORY: "New Product Category",
+			PRODUCTCATEGORY_LIST: "Product Category List",
+			SAVE_MESSAGE: "New Product Category is Saved",
+			EDIT_MESSAGE: "Product Category is Updated",
+			DELETE_MESSAGE: "Product Category is Deleted",
+			DELETE: "Delete",
+			EDIT: "Edit",
+			EDIT_PRODUCTCATEGORY: "Edit Product Category",
+			CREATE_NEW_PRODUCTCATEGORY: "Create New Product Category",
+			PRODUCTCATEGORY_NAME_IS_REQUIRED: "Product Category Name is Required",
+			LISTING_IS_REQUIRED: "Listing is Required.",
+			ENTER_PRODUCTCATEGORY_NAME: "Please Enter Product Category Name",
+		
+			SELECT_PARENT_CATEGORY: "Select Parent Category",
+			SELECT_LISTING: "Select Listing",
+			CANCEL: "Cancel",
+			SAVE: "Save",
+			TABLE: {
+				ID: "ID",
+				NAME: "Product Category Name",
+				LISTING_NAME: "Listing Name",
+				PARENT_CATEGORY_NAME: "Parent Topic Name",
+				ACTIONS: "Actions"
+			},
+			DELETE_DIALOG: {
+				INFO_MESSAGE: 'Delete Product Category',
+				CONFIRM_MESSAGE: 'Product Category will be deleted. Are you sure?',
+				WAITING_MESSAGE: 'Deleting...'
+			},
 		},
 		TOPIC: {
 			NEW_TOPIC: "New Topic",

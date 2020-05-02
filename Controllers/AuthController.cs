@@ -1,10 +1,10 @@
-﻿using SorubankCMS.Data;
+﻿using ECommerceCMS.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
-using SorubankCMS.Models;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
+using ECommerceCMS.Models;
+using ECommerceCMS.Data.Entity;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -12,7 +12,7 @@ using System.Security.Claims;
 using System;
 using AutoMapper;
 
-namespace SorubankCMS.Controllers
+namespace ECommerceCMS.Controllers
 {
 
     [Route("api/[controller]")]

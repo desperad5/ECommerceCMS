@@ -1,9 +1,9 @@
-﻿using SorubankCMS.Data.Abstract;
-using SorubankCMS.Data.Entity;
+﻿using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SorubankCMS.Data.Repositories
+namespace ECommerceCMS.Data.Repositories
 {
     public class TenantRepository : EntityBaseRepository<Tenant>, ITenantRepository
     {

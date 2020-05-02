@@ -1,0 +1,77 @@
+<kt-portlet>
+	<kt-portlet-header [class]="'kt-portlet__head--lg'">
+		<ng-container ktPortletTitle>
+			<h3 class="kt-portlet__head-title">
+				<span translate="PRODUCTCATEGORY.PRODUCTCATEGORY_LIST">{{this.translate.instant('PRODUCTCATEGORY.PRODUCTCATEGORY_LIST')}}</span>
+			</h3>
+		</ng-container>
+		<ng-container ktPortletTools>
+			<button mat-raised-button matTooltip="{{this.translate.instant('PRODUCTCATEGORY.CREATE_NEW_PRODUCTCATEGORY')}}"
+				(click)="openCreateEditDialog(true,null)" color="primary" type="button">
+				<span translate="PRODUCTCATEGORY.NEW_PRODUCTCATEGORY">{{this.translate.instant('PRODUCTCATEGORY.NEW_PRODUCTCATEGORY')}}</span>
+			</button>
+		</ng-container>
+	</kt-portlet-header>
+
+	<kt-portlet-body>
+
+		<mat-form-field appearance="fill">
+			<mat-label>{{this.translate.instant('MENU.FILTER')}}</mat-label>
+			<input matInput (keyup)="applyFilter($event)"
+				   placeholder="{{this.translate.instant('MENU.SEARCHONTABLE')}}">
+			<mat-icon matSuffix></mat-icon>
+			<!-- <mat-hint>Hint</mat-hint> -->
+		</mat-form-field>
+
+		<div class="mat-table__wrapper">
+			<mat-table class="lmat-elevation-z8" [dataSource]="ProductCategoryList" matSort #sort1="matSort"
+					   matSortActive="id" matSortDirection="asc" matSortDisableClear>
+				<ng-container matColumnDef="categoryName">
+					<mat-header-cell *matHeaderCellDef mat-sort-header>
+						{{this.translate.instant('PRODUCTCATEGORY.TABLE.NAME')}}
+					</mat-header-cell>
+					<mat-cell *matCellDef="let category">{{category.categoryName}}</mat-cell>
+				</ng-container>
+				<ng-container matColumnDef="listingName">
+				<mat-header-cell *matHeaderCellDef mat-sort-header>
+					{{this.translate.instant('PRODUCTCATEGORY.TABLE.LISTING_NAME')}}
+				</mat-header-cell>
+				<mat-cell *matCellDef="let category">{{category.listingName}}</mat-cell>
+			</ng-container>
+
+			<ng-container matColumnDef="parentCategoryName">
+				<mat-header-cell *matHeaderCellDef mat-sort-header>
+					{{this.translate.instant('PRODUCTCATEGORY.TABLE.PARENT_CATEGORY_NAME')}}</mat-header-cell>
+				<mat-cell *matCellDef="let category">{{category.parentCategoryName}}</mat-cell>
+			</ng-container>
+			<ng-container matColumnDef="actions">
+				<mat-header-cell *matHeaderCellDef>{{this.translate.instant('PRODUCTCATEGORY.TABLE.ACTIONS')}}
+				</mat-header-cell>
+				<mat-cell *matCellDef="let category">
+					<button mat-icon-button [matMenuTriggerFor]="menu"
+						matTooltip="{{this.translate.instant('MOREACTIONS')}}">
+						<mat-icon>more_vert</mat-icon>
+					</button>
+					<mat-menu #menu="matMenu">
+						<button mat-menu-item (click)="deleteProductCategory(category.id)">
+							<mat-icon>delete</mat-icon>
+							<span>{{this.translate.instant('PRODUCTCATEGORY.DELETE')}}</span>
+						</button>
+						<button mat-menu-item (click)="openCreateEditDialog(false,category)">
+							<mat-icon>edit</mat-icon>
+							<span>{{this.translate.instant('PRODUCTCATEGORY.EDIT')}}</span>
+						</button>
+					</mat-menu>
+				</mat-cell>
+			</ng-container>
+				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+				<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+			</mat-table>
+			<!-- <div class="mat-table__message" *ngIf="topicList.isPreloadTextViewed$ | async">Yükleniyor....</div> -->
+		</div>
+		<div class="mat-table__bottom">
+			<!-- <mat-spinner [diameter]="20" *ngIf="topicList.loading$ | async"></mat-spinner> -->
+			<mat-paginator [pageSize]="10" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+		</div>
+	</kt-portlet-body>
+</kt-portlet>

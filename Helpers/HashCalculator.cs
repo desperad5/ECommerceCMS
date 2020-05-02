@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace SorubankCMS.Helpers
+namespace ECommerceCMS.Helpers
 {
     public static class HashCalculator
     {

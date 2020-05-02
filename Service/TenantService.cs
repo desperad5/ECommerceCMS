@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
 using log4net;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models;
-using SorubankCMS.Service.Abstract;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
+using ECommerceCMS.Service.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SorubankCMS.Services
+namespace ECommerceCMS.Services
 {
     public class TenantService : ITenantService
     {

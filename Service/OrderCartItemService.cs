@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using log4net;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
+using SorubankCMS;
 
-namespace SorubankCMS.Service
+namespace ECommerceCMS.Service
 {
     public class OrderCartItemService : IOrderCartItemService
     {

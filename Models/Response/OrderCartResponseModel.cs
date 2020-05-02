@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using SorubankCMS.Helpers;
+using ECommerceCMS.Helpers;
 
-namespace SorubankCMS.Models.Response
+namespace ECommerceCMS.Models.Response
 {
     public class OrderCartResponseModel
     {

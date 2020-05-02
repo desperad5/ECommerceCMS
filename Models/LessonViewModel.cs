@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Data.Entity;
 
-namespace SorubankCMS.Models
+namespace ECommerceCMS.Models
 {
     public class LessonViewModel
     {

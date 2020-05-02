@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace SorubankCMS.Data.Abstract
+namespace ECommerceCMS.Data.Abstract
 {
     public interface IEntityBaseRepository<T> where T : class, new()
     {

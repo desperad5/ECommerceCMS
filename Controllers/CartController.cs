@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models;
-using SorubankCMS.Models.Response;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
+using ECommerceCMS.Models.Response;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
 
-namespace SorubankCMS.Controllers
+namespace ECommerceCMS.Controllers
 {
     [Route("api/[controller]")]
     [EnableCors("EnableCors")]

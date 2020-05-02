@@ -24,6 +24,10 @@ const routes: Routes = [
 				loadChildren: () => import('../app/views/pages/bundle/bundle.module').then(m => m.BundleModule),
 			},
 			{
+				path: 'productcategory',
+				loadChildren: () => import('../app/views/pages/productcategory/productcategory.module').then(m => m.ProductCategoryModule),
+			},
+			{
 				path: 'user-registration',
 				loadChildren: () => import('../app/views/pages/user-registration/user-registration.module').then(m => m.UserRegistrationModule),
 			},

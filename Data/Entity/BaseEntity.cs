@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace  SorubankCMS.Data.Entity
+namespace  ECommerceCMS.Data.Entity
 {
     public class BaseEntity
     {

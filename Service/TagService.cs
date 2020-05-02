@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Service.Abstract;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Service.Abstract;
 
-namespace SorubankCMS.Service
+namespace ECommerceCMS.Service
 {
     public class TagService : ITagService
     {

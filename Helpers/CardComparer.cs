@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Models;
+using ECommerceCMS.Models;
 
-namespace SorubankCMS.Helpers
+namespace ECommerceCMS.Helpers
 {
     public class CardComparer : IEqualityComparer<BaseCardModel>
     {

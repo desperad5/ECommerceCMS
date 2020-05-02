@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using log4net;
 
-namespace SorubankCMS
+namespace ECommerceCMS
 {
     public static class Logger
     {

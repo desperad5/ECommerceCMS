@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using SorubankCMS.Models.Response;
+using ECommerceCMS.Models.Response;
 
-namespace SorubankCMS.Models
+namespace ECommerceCMS.Models
 {
     public class ProductTenantModel : ProductBaseModel
     {

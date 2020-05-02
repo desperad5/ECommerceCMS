@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using SorubankCMS.Services;
+using ECommerceCMS.Services;
+using SorubankCMS;
 
-namespace SorubankCMS.Extensions
+namespace ECommerceCMS.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {

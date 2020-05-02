@@ -1,8 +1,8 @@
-﻿using SorubankCMS.Data.Entity;
+﻿using ECommerceCMS.Data.Entity;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SorubankCMS.Data.Entity
+namespace ECommerceCMS.Data.Entity
 {
 
     public class CMSUser : BaseEntity

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models;
-using SorubankCMS.Models.Response;
-using SorubankCMS.Services;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
+using ECommerceCMS.Models.Response;
+using ECommerceCMS.Services;
 
-namespace SorubankCMS.Service.Abstract
+namespace ECommerceCMS.Service.Abstract
 {
     public interface IOrderCartService
     {

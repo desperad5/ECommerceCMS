@@ -22,7 +22,8 @@ export const locale = {
 			EXAM_CARD: "Sınav Kartı",
 			TOPIC_CARD: "Konu Kartı",
 			CREATE_USER: "Kullanıcı Yönetimi",
-			BUNDLE: "Paket Yönetimi"
+			BUNDLE: "Paket Yönetimi",
+			PRODUCTCATEGORY: "Kategori Yönetimi"
 		},
 		AUTH: {
 			GENERAL: {
@@ -145,6 +146,37 @@ export const locale = {
 			TOPICS_COLUMN: "Konular",
 			ACTIVE_COLUMN: "Statü",
 			ACTIONS_COLUMN: "İşlemler"
+		},
+		PRODUCTCATEGORY: {
+			NEW_PRODUCTCATEGORY: "Yeni Ürün Kategorisi",
+			PRODUCTCATEGORY_LIST: "Ürün Kategori Listesi",
+			SAVE_MESSAGE: "Yeni Ürün Kategorisi Kaydedildi",
+			EDIT_MESSAGE: "Ürün Kategorisi Güncellendi",
+			DELETE_MESSAGE: "Ürün Kategorisi Silindi",
+			DELETE: "Sil",
+			EDIT: "Düzenle",
+			EDIT_PRODUCTCATEGORY: "Ürün Kategorisi Düzenle",
+			CREATE_NEW_PRODUCTCATEGORY: "Yeni Ürün Kategorisi Oluştur",
+			PRODUCTCATEGORY_NAME_IS_REQUIRED: "Kategori Adı Zorunludur.",
+			LISTING_IS_REQUIRED: "Liste seçmek Zorunludur.",
+			ENTER_PRODUCTCATEGORY_NAME: "Lütfen Kategori Adını Giriniz",
+
+			SELECT_PARENT_CATEGORY: "Üst Kategoriyi Seçin",
+			SELECT_LISTING: "Liste Seçiniz",
+			CANCEL: "İptal",
+			SAVE: "Kaydet",
+			TABLE: {
+				ID: "ID",
+				NAME: "Kategori Adı",
+				LISTING_NAME: "Liste Adı",
+				PARENT_CATEGORY_NAME: "Üst Kategori Adı",
+				ACTIONS: "İşlemler"
+			},
+			DELETE_DIALOG: {
+				INFO_MESSAGE: 'Ürün Kategorisi Silme',
+				CONFIRM_MESSAGE: 'Ürün Kategorisi silinecek. Onaylıyor musunuz?',
+				WAITING_MESSAGE: 'Siliniyor...'
+			},
 		},
 		TOPIC: {
 			NEW_TOPIC: "Yeni Konu",

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models;
-using SorubankCMS.Services;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
+using ECommerceCMS.Services;
 
-namespace SorubankCMS.Service.Abstract
+namespace ECommerceCMS.Service.Abstract
 {
     public interface IProductService
     {

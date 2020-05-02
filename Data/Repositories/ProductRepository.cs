@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Helpers;
-using SorubankCMS.Models;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Helpers;
+using ECommerceCMS.Models;
 
-namespace SorubankCMS.Data.Repositories
+namespace ECommerceCMS.Data.Repositories
 {
     public class ProductRepository : EntityBaseRepository<Product>, IProductRepository
     {

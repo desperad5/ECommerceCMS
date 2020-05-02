@@ -1,4 +1,4 @@
-using SorubankCMS.Data;
+using ECommerceCMS.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,16 +10,16 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Text;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Data.Repositories;
-using SorubankCMS.Services;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Data.Repositories;
+using ECommerceCMS.Services;
+using ECommerceCMS.Data.Entity;
 using AutoMapper;
-using SorubankCMS.Service;
+using ECommerceCMS.Service;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
-using SorubankCMS.Extensions;
+using ECommerceCMS.Extensions;
 
 namespace SorubankCMS
 {
@@ -98,7 +98,10 @@ namespace SorubankCMS
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<IBundleRepository, BundleRepository>();
             services.AddScoped<IBundleService, BundleService>();
-            
+            services.AddScoped<IListingService, ListingService>();
+            services.AddScoped<IProductCategoryService, ProductCategoryService>();
+            services.AddScoped<IListingRepository, ListingRepository>();
+            services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerService, CustomerService>();

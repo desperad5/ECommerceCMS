@@ -44,7 +44,9 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\auth.interceptor.ts" />
+    <None Remove="ClientApp\src\app\core\_base\layout\services\productcategory.service.ts" />
     <None Remove="ClientApp\src\app\core\_base\layout\services\topic.service.ts" />
+    <None Remove="ClientApp\src\app\views\pages\productcategory\productcategory.module.ts" />
     <None Remove="ClientApp\src\app\views\pages\topic\topic.module.ts" />
   </ItemGroup>
 
@@ -54,7 +56,9 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\auth.interceptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\_base\layout\services\productcategory.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\core\_base\layout\services\topic.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\pages\productcategory\productcategory.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\topic\topic.module.ts" />
   </ItemGroup>
 

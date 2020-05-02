@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SorubankCMS.Models.Api
+namespace ECommerceCMS.Models.Api
 {
     public class RegistrationRequestModel
     {

@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Data.Entity;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace SorubankCMS.Models.ElasticSearch
+namespace ECommerceCMS.Models.ElasticSearch
 {
     public class ProductELModel
     {

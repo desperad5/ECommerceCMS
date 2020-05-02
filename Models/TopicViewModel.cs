@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Data.Entity;
 
-namespace SorubankCMS.Models
+namespace ECommerceCMS.Models
 {
     public class TopicViewModel
     {

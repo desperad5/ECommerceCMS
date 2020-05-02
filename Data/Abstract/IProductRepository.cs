@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
 
-namespace SorubankCMS.Data.Abstract
+namespace ECommerceCMS.Data.Abstract
 {
     public interface IProductRepository : IEntityBaseRepository<Product>
     {

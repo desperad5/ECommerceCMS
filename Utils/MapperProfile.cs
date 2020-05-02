@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models;
-using SorubankCMS.Models.Response;
-using SorubankCMS.Models.ElasticSearch;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
+using ECommerceCMS.Models.Response;
+using ECommerceCMS.Models.ElasticSearch;
 
-namespace SorubankCMS.Utils
+namespace ECommerceCMS.Utils
 {
     public class MapperProfile : Profile
     {
@@ -13,6 +13,10 @@ namespace SorubankCMS.Utils
 
             CreateMap<Tenant, TenantViewModel>();
             CreateMap<TenantViewModel, Tenant>();
+            CreateMap<ProductCategory, ProductCategoryViewModel>();
+            CreateMap<ProductCategoryViewModel, ProductCategory>();
+            CreateMap<Listing, ListingViewModel>();
+            CreateMap<ListingViewModel, Listing>();
             CreateMap<CMSUser, UserViewModel>();
             CreateMap<UserViewModel, CMSUser>();
             CreateMap<BundleModel, Bundle>();

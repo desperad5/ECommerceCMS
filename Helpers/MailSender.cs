@@ -6,7 +6,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
-namespace  SorubankCMS.Helpers
+namespace  ECommerceCMS.Helpers
 {
     public static class MailSender
     {

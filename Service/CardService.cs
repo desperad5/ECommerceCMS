@@ -1,20 +1,20 @@
 ﻿using AutoMapper;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Helpers;
-using SorubankCMS.Models;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Helpers;
+using ECommerceCMS.Models;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Nest;
-using SorubankCMS.Models.ElasticSearch;
-using SorubankCMS.Data.Repositories;
+using ECommerceCMS.Models.ElasticSearch;
+using ECommerceCMS.Data.Repositories;
 using System.Collections;
 using log4net;
 
-namespace SorubankCMS.Service
+namespace ECommerceCMS.Service
 {
     public class CardService : ICardService
     {

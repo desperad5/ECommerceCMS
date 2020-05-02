@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace  SorubankCMS.Models
+namespace  ECommerceCMS.Models
 {
     /// <summary>
     /// Normally, I would create a ViewModel folder but since this is a small project, I'll just leave it in the model folder.

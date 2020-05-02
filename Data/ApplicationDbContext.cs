@@ -1,9 +1,9 @@
-﻿using  SorubankCMS.Data.Entity;
+﻿using  ECommerceCMS.Data.Entity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace  SorubankCMS.Data
+namespace  ECommerceCMS.Data
 {
 
     public class ApplicationDbContext : IdentityDbContext<IdentityUser>

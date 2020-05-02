@@ -1,7 +1,7 @@
-﻿using SorubankCMS.Data.Entity;
+﻿using ECommerceCMS.Data.Entity;
 using System.Collections.Generic;
 
-namespace SorubankCMS.Data.Abstract
+namespace ECommerceCMS.Data.Abstract
 {
     public interface ITenantRepository : IEntityBaseRepository<Tenant>
     {

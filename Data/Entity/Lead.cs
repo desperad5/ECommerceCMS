@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SorubankCMS.Data.Entity
+namespace ECommerceCMS.Data.Entity
 {
     public class Lead : BaseEntity
     {

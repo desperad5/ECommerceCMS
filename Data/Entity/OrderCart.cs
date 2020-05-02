@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Helpers;
+using ECommerceCMS.Helpers;
 
-namespace SorubankCMS.Data.Entity
+namespace ECommerceCMS.Data.Entity
 {
     public class OrderCart : BaseEntity
     {

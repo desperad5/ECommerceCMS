@@ -2,17 +2,17 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using SorubankCMS.Models;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
+using ECommerceCMS.Models;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Nest;
-using SorubankCMS.Models.ElasticSearch;
+using ECommerceCMS.Models.ElasticSearch;
 
-namespace SorubankCMS.Controllers
+namespace ECommerceCMS.Controllers
 {
     /*
         [EnableCors("EnableCors")]

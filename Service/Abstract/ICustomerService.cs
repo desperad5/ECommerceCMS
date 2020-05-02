@@ -1,8 +1,8 @@
-﻿using SorubankCMS.Models;
-using SorubankCMS.Services;
+﻿using ECommerceCMS.Models;
+using ECommerceCMS.Services;
 using System.Collections.Generic;
 
-namespace SorubankCMS.Service.Abstract
+namespace ECommerceCMS.Service.Abstract
 {
     public interface ICustomerService
     {

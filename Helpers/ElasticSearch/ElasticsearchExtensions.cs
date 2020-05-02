@@ -2,8 +2,8 @@ using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nest;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Models.ElasticSearch;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models.ElasticSearch;
 
 public static class ElasticsearchExtensions
 {

@@ -22,7 +22,7 @@ export class InterceptService implements HttpInterceptor {
 		
 		const authToken = localStorage.getItem("authToken");
 		if (authToken) {
-			debugger;
+			
 			const cloned = request.clone({
 				headers: request.headers.set("Authorization",
 					"Bearer " + authToken)
@@ -37,7 +37,7 @@ export class InterceptService implements HttpInterceptor {
 					if (event instanceof HttpResponse) {
 						
 						if (event.status === 401) {
-							debugger;
+							
 							localStorage.removeItem('authToken');
 							localStorage.removeItem('email');
 							localStorage.removeItem('isAdmin');
@@ -49,7 +49,7 @@ export class InterceptService implements HttpInterceptor {
 					}
 				},
 				error => {
-					debugger;
+					
 					if (error.status === 401) {
 						localStorage.removeItem('authToken');
 						localStorage.removeItem('email');

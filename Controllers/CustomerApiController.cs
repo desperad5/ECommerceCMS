@@ -1,6 +1,6 @@
-﻿using SorubankCMS.Data;
+﻿using ECommerceCMS.Data;
 using Microsoft.AspNetCore.Mvc;
-using SorubankCMS.Models.Api;
+using ECommerceCMS.Models.Api;
 using System.Threading.Tasks;
 using System.Linq;
 using System.IdentityModel.Tokens.Jwt;
@@ -8,12 +8,12 @@ using System.Security.Claims;
 using System;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using SorubankCMS.Helpers;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Helpers;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
+using ECommerceCMS.Data.Entity;
 
-namespace SorubankCMS.Controllers
+namespace ECommerceCMS.Controllers
 {
 
     [Route("api/[controller]")]
@@ -246,7 +246,7 @@ namespace SorubankCMS.Controllers
 
         [HttpPost("[action]")]
 
-        public ActionResult ChangePasswordWithCode([FromBody]SorubankCMS.Models.LoginViewModel model)
+        public ActionResult ChangePasswordWithCode([FromBody]ECommerceCMS.Models.LoginViewModel model)
         {
 
             var result = _customerService.ChangePasswordWithCode(model);
@@ -260,7 +260,7 @@ namespace SorubankCMS.Controllers
 
         [HttpPost("[action]")]
 
-        public ActionResult ChangePassword([FromBody]SorubankCMS.Models.LoginViewModel model)
+        public ActionResult ChangePassword([FromBody]ECommerceCMS.Models.LoginViewModel model)
         {
             var result = _customerService.ChangePassword(model);
 

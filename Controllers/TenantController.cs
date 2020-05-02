@@ -1,14 +1,14 @@
-﻿using SorubankCMS.Data;
+﻿using ECommerceCMS.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
-using SorubankCMS.Models;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
+using ECommerceCMS.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 using System;
 
-namespace SorubankCMS.Controllers
+namespace ECommerceCMS.Controllers
 {
 
     [Route("api/[controller]")]

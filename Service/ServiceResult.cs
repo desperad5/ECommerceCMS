@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SorubankCMS.Services
+namespace ECommerceCMS.Services
 {
     public class ServiceResult<T>
     {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace SorubankCMS.Models
+namespace ECommerceCMS.Models
 {
     public class TenantViewModel
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Entity;
+using ECommerceCMS.Data.Entity;
 
-namespace SorubankCMS.Data.Abstract
+namespace ECommerceCMS.Data.Abstract
 {
     public interface ITagRepository : IEntityBaseRepository<Tag>
     {

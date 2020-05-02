@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Helpers;
+using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Helpers;
 
-namespace SorubankCMS.Data.Abstract
+namespace ECommerceCMS.Data.Abstract
 {
     public interface IOrderCartRepository : IEntityBaseRepository<OrderCart>
     {

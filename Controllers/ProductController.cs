@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using log4net;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using SorubankCMS.Models;
-using SorubankCMS.Service.Abstract;
-using SorubankCMS.Services;
+using ECommerceCMS.Models;
+using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
 
-namespace SorubankCMS.Controllers
+namespace ECommerceCMS.Controllers
 {
     [Route("api/[controller]")]
     [EnableCors("EnableCors")]

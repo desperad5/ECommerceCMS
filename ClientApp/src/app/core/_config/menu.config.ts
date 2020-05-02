@@ -25,6 +25,14 @@ export class MenuConfig {
 					page: '/user-registration',
 					translate: 'MENU.CREATE_USER',
 					admin: true
+				},
+				{
+					title: 'Product Category',
+					root: true,
+					alignment: 'left',
+					page: '/productcategory',
+					translate: 'MENU.PRODUCTCATEGORY',
+					admin: true
 				}
 				
 				
@@ -65,6 +73,15 @@ export class MenuConfig {
 					icon: 'flaticon-user-settings',
 					page: '/user-registration',
 					translate: 'MENU.CREATE_USER',
+					admin: true
+				},
+				{
+					title: 'Product Category',
+					root: true,
+					alignment: 'left',
+					icon: 'flaticon-user-settings',
+					page: '/productcategory',
+					translate: 'MENU.PRODUCTCATEGORY',
 					admin: true
 				}
 				//{

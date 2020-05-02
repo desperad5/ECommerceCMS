@@ -43,16 +43,25 @@
 				</div>
 
 			</div>
-			<!--<div class="kt-separator kt-separator--dashed"></div>
+			<div class="kt-separator kt-separator--dashed"></div>
 			<div class="form-group kt-form__group row">
 				<div class="col-lg-4 kt-margin-bottom-20-mobile">
 					<mat-form-field class="mat-form-field-fluid">
-						<input type="text" matInput placeholder="{{this.translate.instant('PRODUCTCATEGORY.ENTER_CLASS_LEVEL')}}" formControlName="classLevel" />
-						<mat-error>{{this.translate.instant('PRODUCTCATEGORY.CLASS_LEVEL_REQUIRED')}}</mat-error>
-						<mat-hint align="start">{{this.translate.instant('PRODUCTCATEGORY.ENTER_CLASS_LEVEL')}}</mat-hint>
+						<mat-select placeholder="{{this.translate.instant('EXAMCARD.ENTER_TENANT')}}" formControlName="tenantId">
+							<mat-option *ngFor="let tenant of tenants" [value]="tenant.id">
+								{{ tenant.name }}
+							</mat-option>
+						</mat-select>
+						<mat-error>
+							{{this.translate.instant("EXAMCARD.ENTER_TENANT")}}
+							<strong>{{this.translate.instant("REQUIRED")}}</strong>
+						</mat-error>
+						<!-- <mat-hint align="start">please enter
+			<strong>first name</strong>
+		</mat-hint> -->
 					</mat-form-field>
 				</div>
-			</div>-->
+			</div>
 			<div class="kt-separator kt-separator--dashed"></div>
 		</div>
 		<div class="kt-portlet__foot kt-portlet__no-border kt-portlet__foot--fit">

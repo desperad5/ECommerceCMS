@@ -28,9 +28,9 @@ export class ListingEditDialogComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-		 
-		if (this.data.listingCategoryModel) {
-			this.listing = this.data.listingCategoryModel;
+		debugger;
+		if (this.data.listingModel) {
+			this.listing = this.data.listingModel;
 		}
 		this.createForm();
 	}
@@ -75,7 +75,7 @@ export class ListingEditDialogComponent implements OnInit {
 			return;
 		} else {
 			debugger;
-			this.listingForm.value.listingId = Number(this.listingForm.value.listingId);
+			this.listingForm.value.id = Number(this.listingForm.value.id);
 			console.log(this.listingForm.value);
 			this.listingService.createOrEdit(this.listingForm.value).subscribe(
 				data => { console.log('success', data); this.dialogRef.close({ listing: data, isEdit: false }); },

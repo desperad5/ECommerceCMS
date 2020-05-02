@@ -16,6 +16,10 @@ namespace ECommerceCMS.Models
         public string ListingName { get; set; }
         [JsonProperty("listingId")]
         public int ListingId { get; set; }
+        [JsonProperty("tenantId")]
+        public int TenantId { get; set; }
+        [JsonProperty("tenantName")]
+        public string TenantName { get; set; }
         [JsonProperty("parentCategoryName")]
         public string ParentCategoryName { get; set; }
         [JsonProperty("parentCategoryId")]

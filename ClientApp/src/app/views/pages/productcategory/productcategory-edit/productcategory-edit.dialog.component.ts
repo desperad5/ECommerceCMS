@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { TranslateService } from '@ngx-translate/core';
 import { ProductCategoryService } from '../../../../core/_base/layout/services/productcategory.service';
+import { TenantService } from '../../../../core/_base/layout';
 
 @Component({
 	selector: 'kt-productcategory-edit.dialog',
@@ -11,11 +12,11 @@ import { ProductCategoryService } from '../../../../core/_base/layout/services/p
 })
 export class ProductCategoryEditDialogComponent implements OnInit {
 
-	productCategory = { id: 0, categoryName: '',listingId:0, parentCategoryId: 0 };
+	productCategory = { id: 0, categoryName: '', listingId: 0, parentCategoryId: 0, tenantId: 0 };
 	listings;
 	productCategories;
 	listingCategories;
-
+	tenants;
 	categoryForm: FormGroup;
 	hasFormErrors = false;
 	viewLoading = false;
@@ -25,13 +26,14 @@ export class ProductCategoryEditDialogComponent implements OnInit {
 		@Inject(MAT_DIALOG_DATA) public data: any,
 		private fb: FormBuilder,
 		private productCategoryService: ProductCategoryService,
-		public translate: TranslateService
+		public translate: TranslateService,
+		private tenantService: TenantService	
 	) { }
 
 	ngOnInit() {
-		 
-		if (this.data.productCategoryModel) {
-			this.productCategory = this.data.productCategoryModel;
+		debugger;
+		if (this.data.ProductCategoryModel) {
+			this.productCategory = this.data.ProductCategoryModel;
 		}
 		this.productCategoryService.fetchAllListings().subscribe((data: any) => {
 			this.listings = data;
@@ -41,14 +43,21 @@ export class ProductCategoryEditDialogComponent implements OnInit {
 			this.calculateCategoryForListing();
 		});
 		this.createForm();
+		this.getAllResources();
 	}
 
 	createForm() {
 		this.categoryForm = this.fb.group({
 			id: [this.productCategory.id],
 			categoryName: [this.productCategory.categoryName, Validators.required],
-			listingId: [this.productCategory.listingId, Validators.compose([Validators.required,Validators.min(1)])],
+			listingId: [this.productCategory.listingId, Validators.compose([Validators.required, Validators.min(1)])],
+			tenantId: [this.productCategory.tenantId, Validators.compose([Validators.required, Validators.min(1)])],
 			parentCategoryId:[this.productCategory.parentCategoryId]
+		});
+	}
+	getAllResources() {
+		this.tenantService.fetchAllTenants().subscribe((data: any) => {
+			this.tenants = data;
 		});
 	}
 
@@ -98,6 +107,7 @@ export class ProductCategoryEditDialogComponent implements OnInit {
 			debugger;
 			this.categoryForm.value.listingId = Number(this.categoryForm.value.listingId);
 			this.categoryForm.value.parentCategoryId = Number(this.categoryForm.value.parentCategoryId);
+			this.categoryForm.value.tenantId = Number(this.categoryForm.value.tenantId);
 			console.log(this.categoryForm.value);
 			this.productCategoryService.createOrEditProductCategory(this.categoryForm.value).subscribe(
 				data => { console.log('success', data); this.dialogRef.close({ category: data, isEdit: false }); },

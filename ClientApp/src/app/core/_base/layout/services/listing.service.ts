@@ -18,7 +18,7 @@ export class ListingService {
     }
 
     fetchAllListings() {
-		return this.http.post("/api/ProductCategory/FetchAllListings", {}, { headers: this.headers }).pipe(
+		return this.http.post("/api/ProductCategory/FetchAllActiveListings", {}, { headers: this.headers }).pipe(
 			catchError(this.handleError)
 		);
     };

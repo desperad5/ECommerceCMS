@@ -37,12 +37,18 @@
 					{{this.translate.instant('PRODUCTCATEGORY.TABLE.LISTING_NAME')}}
 				</mat-header-cell>
 				<mat-cell *matCellDef="let category">{{category.listingName}}</mat-cell>
-			</ng-container>
+				</ng-container>
 
 			<ng-container matColumnDef="parentCategoryName">
 				<mat-header-cell *matHeaderCellDef mat-sort-header>
 					{{this.translate.instant('PRODUCTCATEGORY.TABLE.PARENT_CATEGORY_NAME')}}</mat-header-cell>
 				<mat-cell *matCellDef="let category">{{category.parentCategoryName}}</mat-cell>
+			</ng-container>
+			<ng-container matColumnDef="tenant">
+				<mat-header-cell *matHeaderCellDef mat-sort-header>
+					{{this.translate.instant('EXAMCARD.TENANT')}}
+				</mat-header-cell>
+				<mat-cell *matCellDef="let category">{{category.tenantName}}</mat-cell>
 			</ng-container>
 			<ng-container matColumnDef="actions">
 				<mat-header-cell *matHeaderCellDef>{{this.translate.instant('PRODUCTCATEGORY.TABLE.ACTIONS')}}

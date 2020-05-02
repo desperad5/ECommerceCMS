@@ -37,7 +37,7 @@ namespace ECommerceCMS.Controllers
         }
 
         [HttpPost("[action]")]
-        public ActionResult DeleteTopicById([FromBody] int id)
+        public ActionResult DeleteProductCategoryById([FromBody] int id)
         {
             var result = productCategoryService.DeleteProductCategoryById(id);
             if (result.resultType == Services.ServiceResultType.Success)

@@ -13,7 +13,8 @@ namespace ECommerceCMS.Models
 
         [JsonProperty("name")]
         public string Name { get; set; }
-
+        [JsonProperty("description")]
+        public string Description { get; set; }
 
         [JsonProperty("createdDate")]
         public DateTime CreatedDate { get; set; }

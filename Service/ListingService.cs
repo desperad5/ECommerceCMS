@@ -37,6 +37,7 @@ namespace ECommerceCMS.Service.Abstract
                     Id = i.Id,
                     IsActive = i.IsActive,
                     Name = i.Name,
+                    Description=i.Description,
                     ProductCategories = i.ProductCategories.Select(k => new ProductCategoryViewModel() { Id = k.Id, CategoryName = k.CategoryName })
                 }).ToList();
                 result.resultType = ServiceResultType.Success;

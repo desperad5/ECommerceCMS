@@ -22,8 +22,8 @@ export class ListingComponent implements OnInit, OnDestroy {
 	ListingList = new MatTableDataSource(this.initialData);
 
 	displayedColumns = [
-		'listingName',
-		'listingDescription',
+		'name',
+		'description',
 		'actions'
 	];
 
@@ -71,18 +71,19 @@ export class ListingComponent implements OnInit, OnDestroy {
 		});
 	}
 
-	openCreateEditDialog(isAdd: Boolean, ProductCategory: any) {
-		 
-		let ProductCategoryModel;
+	openCreateEditDialog(isAdd: Boolean, listing: any) {
+		debugger;
+		let listingModel;
 		if (!isAdd) {
-			ProductCategoryModel = ProductCategory;
+			listingModel = listing;
 		}
 		let saveMessageTranslateParam = 'LISTING.';
 		saveMessageTranslateParam += !isAdd ? 'EDIT_MESSAGE' : 'SAVE_MESSAGE';
 		const _saveMessage = this.translate.instant(saveMessageTranslateParam);
 		const _messageType = !isAdd ? MessageType.Update : MessageType.Create;
-		const dialogRef = this.dialog.open(ListingEditDialogComponent, { data: { ProductCategoryModel } })
+		const dialogRef = this.dialog.open(ListingEditDialogComponent, { data: { listingModel } })
 		dialogRef.afterClosed().subscribe(res => {
+			debugger;
 			if (!res) {
 				return;
 			}
@@ -91,7 +92,7 @@ export class ListingComponent implements OnInit, OnDestroy {
 			let data = this.ListingList.data;
 
 			if (isAdd) {
-				data.push(res.Listing);
+				data.push(res.listing);
 				this.ListingList.data = data;
 			} else {
 				this.ListingList.data = data.map(a => {
@@ -108,7 +109,8 @@ export class ListingComponent implements OnInit, OnDestroy {
 		this.subscriptions.forEach(el => el.unsubscribe());
 	}
 
-	deleteProductCategory(id) {
+	deleteListing(id) {
+		debugger;
 		const dialogRef = this.layoutUtilsService.deleteElement(this.translate.instant('LISTING.DELETE_DIALOG.INFO_MESSAGE'),
 			this.translate.instant('LISTING.DELETE_DIALOG.CONFIRM_MESSAGE'), this.translate.instant('LISTING.DELETE_DIALOG.WAITING_MESSAGE'));
 		dialogRef.afterClosed().subscribe(res => {
@@ -126,7 +128,7 @@ export class ListingComponent implements OnInit, OnDestroy {
 				},
 				error => console.log("oops", error)
 			);
-			this.layoutUtilsService.showActionNotification(this.translate.instant('TOPIC.DELETE_MESSAGE'), MessageType.Delete);
+			this.layoutUtilsService.showActionNotification(this.translate.instant('LISTING.DELETE_MESSAGE'), MessageType.Delete);
 		});
 	}
 

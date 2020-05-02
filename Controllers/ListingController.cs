@@ -4,12 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using ECommerceCMS.Models;
 using ECommerceCMS.Service.Abstract;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ECommerceCMS.Controllers
 {
+    [Route("api/[controller]")]
+    [EnableCors("EnableCors")]
+    [Authorize]
     public class ListingController : Controller
     {
         IListingService listingService;

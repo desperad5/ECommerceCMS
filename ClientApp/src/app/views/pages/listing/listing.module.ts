@@ -13,8 +13,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductCategoryComponent } from './productcategory.component';
-import { ProductCategoryEditDialogComponent } from './productcategory-edit/productcategory-edit.dialog.component';
+import { ListingComponent } from './listing.component';
+import { ListingEditDialogComponent } from './listing-edit/listing-edit.dialog.component';
 
 @NgModule({
 	imports: [
@@ -48,16 +48,16 @@ import { ProductCategoryEditDialogComponent } from './productcategory-edit/produ
 		RouterModule.forChild([
 			{
 				path: '',
-				component: ProductCategoryComponent
+				component: ListingComponent
 			},
 		]),
 	],
-	entryComponents: [ProductCategoryEditDialogComponent],
+	entryComponents: [ListingEditDialogComponent],
 	providers: [],
 	declarations: [
-		ProductCategoryComponent,
-		ProductCategoryEditDialogComponent
+		ListingComponent,
+		ListingEditDialogComponent
 	]
 })
-export class ProductCategoryModule {
+export class ListingModule {
 }

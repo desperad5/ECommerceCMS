@@ -71,7 +71,8 @@ namespace ECommerceCMS.Service
                 Id = model.Id,
                 Listing = listing,
                 ParentCategory = parentCategory,
-                CategoryName = model.CategoryName
+                CategoryName = model.CategoryName,
+                TenantId=model.TenantId
             };
             _productCategoryRepository.Update(category);
             _productCategoryRepository.Commit();
@@ -83,9 +84,11 @@ namespace ECommerceCMS.Service
             var category = new ProductCategory
             {
                 ListingId = listing.Id,
-                ParentCategoryId = parentCategory.Id,
-                CategoryName = model.CategoryName
+                CategoryName = model.CategoryName,
+                TenantId=model.TenantId
             };
+            if (parentCategory != null)
+                category.ParentCategoryId = parentCategory.Id;
             category = _productCategoryRepository.AddWithCommit(category);
             return _mapper.Map<ProductCategoryViewModel>(category);
         }
@@ -122,14 +125,16 @@ namespace ECommerceCMS.Service
             ServiceResult<List<ProductCategoryViewModel>> result = new ServiceResult<List<ProductCategoryViewModel>>();
             try
             {
-                var productCategories = _productCategoryRepository.AllIncluding(x => x.Listing,x=>x.ParentCategory).Where(x => !x.IsDeleted).ToList();
+                var productCategories = _productCategoryRepository.AllIncluding(x => x.Listing,x=>x.ParentCategory,x=>x.Tenant).Where(x => !x.IsDeleted).ToList();
                 result.data = productCategories.Select(i=>new ProductCategoryViewModel()
                 { CategoryName=i.CategoryName,
                   Id=i.Id,
                   ListingId=i.Listing!=null?i.Listing.Id:0,
                   ParentCategoryId=i.ParentCategory!=null?i.ParentCategory.Id  :0,
                   ParentCategoryName=i.ParentCategory!=null?i.ParentCategory.CategoryName:string.Empty,
-                  ListingName=i.Listing!=null?i.Listing.Name:string.Empty
+                  ListingName=i.Listing!=null?i.Listing.Name:string.Empty,
+                  TenantId=i.Tenant!=null?i.Tenant.Id:0,
+                  TenantName=i.Tenant!=null?i.Tenant.Name:string.Empty
                 }).ToList();
                 result.resultType = ServiceResultType.Success;
             }

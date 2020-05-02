@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using ECommerceCMS.Services;
-using SorubankCMS;
+using ECommerceCMS;
 
 namespace ECommerceCMS.Extensions
 {

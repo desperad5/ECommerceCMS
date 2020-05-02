@@ -8,7 +8,7 @@ using ECommerceCMS.Data.Abstract;
 using ECommerceCMS.Data.Entity;
 using ECommerceCMS.Service.Abstract;
 using ECommerceCMS.Services;
-using SorubankCMS;
+using ECommerceCMS;
 
 namespace ECommerceCMS.Service
 {

@@ -76,7 +76,9 @@ namespace ECommerceCMS.Service
             };
             _productCategoryRepository.Update(category);
             _productCategoryRepository.Commit();
-            return _mapper.Map<ProductCategoryViewModel>(category);
+            var categoryModel=_mapper.Map<ProductCategoryViewModel>(category);
+            categoryModel.ParentCategoryName = parentCategory.CategoryName;
+            return categoryModel;
         }
 
         private ProductCategoryViewModel AddProductCategory(ProductCategoryViewModel model, Listing listing, ProductCategory parentCategory)
@@ -90,7 +92,9 @@ namespace ECommerceCMS.Service
             if (parentCategory != null)
                 category.ParentCategoryId = parentCategory.Id;
             category = _productCategoryRepository.AddWithCommit(category);
-            return _mapper.Map<ProductCategoryViewModel>(category);
+            var categoryReturnModel = _mapper.Map<ProductCategoryViewModel>(category);
+            categoryReturnModel.ParentCategoryName = parentCategory.CategoryName;
+            return categoryReturnModel;
         }
 
         public Services.ServiceResult<ProductCategoryViewModel> DeleteProductCategoryById(int id)

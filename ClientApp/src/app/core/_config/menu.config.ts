@@ -3,51 +3,51 @@ export class MenuConfig {
 		header: {
 			self: {},
 			items: [
-				{
-					title: 'Dashboards',
-					root: true,
-					alignment: 'left',
-					page: '/dashboard',
-					translate: 'MENU.DASHBOARD',
-				},
-				{
-					title: 'Tenant',
-					root: true,
-					alignment: 'left',
-					page: '/tenant',
-					translate: 'MENU.TENANT',
-					admin:true
-				},
-				{
-					title: 'Create User',
-					root: true,
-					alignment: 'left',
-					page: '/user-registration',
-					translate: 'MENU.CREATE_USER',
-					admin: true
-				},
-				{
-					title: 'Listings',
-					root: true,
-					alignment: 'left',
-					page: '/listing',
-					translate: 'MENU.LISTINGS'
-				},
-				{
-					title: 'Product Category',
-					root: true,
-					alignment: 'left',
-					page: '/productcategory',
-					translate: 'MENU.PRODUCTCATEGORY',
-					admin: true
-				},
-				{
-					title: 'Brands',
-					root: true,
-					alignment: 'left',
-					page: '/brand',
-					translate: 'MENU.BRANDS'
-				}
+				//{
+				//	title: 'Dashboards',
+				//	root: true,
+				//	alignment: 'left',
+				//	page: '/dashboard',
+				//	translate: 'MENU.DASHBOARD',
+				//},
+				//{
+				//	title: 'Tenant',
+				//	root: true,
+				//	alignment: 'left',
+				//	page: '/tenant',
+				//	translate: 'MENU.TENANT',
+				//	admin:true
+				//},
+				//{
+				//	title: 'Create User',
+				//	root: true,
+				//	alignment: 'left',
+				//	page: '/user-registration',
+				//	translate: 'MENU.CREATE_USER',
+				//	admin: true
+				//},
+				//{
+				//	title: 'Listings',
+				//	root: true,
+				//	alignment: 'left',
+				//	page: '/listing',
+				//	translate: 'MENU.LISTINGS'
+				//},
+				//{
+				//	title: 'Product Category',
+				//	root: true,
+				//	alignment: 'left',
+				//	page: '/productcategory',
+				//	translate: 'MENU.PRODUCTCATEGORY',
+				//	admin: true
+				//},
+				//{
+				//	title: 'Brands',
+				//	root: true,
+				//	alignment: 'left',
+				//	page: '/brand',
+				//	translate: 'MENU.BRANDS'
+				//}
 				
 				
 				//{

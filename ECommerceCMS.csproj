@@ -15,7 +15,6 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="EntityFramework" Version="6.3.0" />
-    <PackageReference Include="EPPlus" Version="5.1.1" />
     <PackageReference Include="LinqKit" Version="1.1.17" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
@@ -46,6 +45,7 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\auth.interceptor.ts" />
     <None Remove="ClientApp\src\app\core\_base\layout\services\brand.service.ts" />
+    <None Remove="ClientApp\src\app\core\_base\layout\services\listing.service.ts" />
     <None Remove="ClientApp\src\app\core\_base\layout\services\productcategory.service.ts" />
     <None Remove="ClientApp\src\app\core\_base\layout\services\topic.service.ts" />
     <None Remove="ClientApp\src\app\models\brand-model.ts" />
@@ -53,6 +53,7 @@
     <None Remove="ClientApp\src\app\views\pages\brand\brand-edit\brand-edit.dialog.component.ts" />
     <None Remove="ClientApp\src\app\views\pages\brand\brand.component.ts" />
     <None Remove="ClientApp\src\app\views\pages\brand\brand.module.ts" />
+    <None Remove="ClientApp\src\app\views\pages\listing\listing.module.ts" />
     <None Remove="ClientApp\src\app\views\pages\productcategory\productcategory.module.ts" />
     <None Remove="ClientApp\src\app\views\pages\topic\topic.module.ts" />
   </ItemGroup>
@@ -63,6 +64,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\auth.interceptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\core\_base\layout\services\listing.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\core\_base\layout\services\productcategory.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\core\_base\layout\services\brand.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\core\_base\layout\services\topic.service.ts" />
@@ -71,6 +73,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\brand\brand-edit\brand-edit.dialog.component.html" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\brand\brand.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\brand\brand.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\pages\listing\listing.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\productcategory\productcategory.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\topic\topic.module.ts" />
   </ItemGroup>

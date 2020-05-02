@@ -24,7 +24,8 @@ export const locale = {
 			CREATE_USER: "User Management",
 			BUNDLE: "Bundle Management",
 			BRANDS: "Brands",
-			PRODUCTCATEGORY:"Category Management"
+			PRODUCTCATEGORY: "Category Management",
+			LISTINGS: "Listing Management"
 		},
 		AUTH: {
 			GENERAL: {
@@ -148,6 +149,35 @@ export const locale = {
 			ACTIVE_COLUMN: "Active",
 			ACTIONS_COLUMN: "Actions"
 
+		},
+		LISTING: {
+			NEW_LISTING: "New Listing",
+			LISTING_LIST: "Listing List",
+			SAVE_MESSAGE: "List was saved.",
+			EDIT_MESSAGE: "List was updated",
+			DELETE_MESSAGE: "List was deleted",
+			DELETE: "Delete",
+			EDIT: "Edit",
+			EDIT_LISTING: "Edit Listing",
+			CREATE_NEW_LISTING: "Create New Listing",
+			LISTING_NAME_IS_REQUIRED: "Name is required.",
+			ENTER_LISTING_NAME: "Please Enter Listing Name",
+
+			ENTER_LISTING_DESCRIPTION: "Please Enter Description",
+			SELECT_LISTING: "Select a Listing",
+			CANCEL: "Cancel",
+			SAVE: "Save",
+			TABLE: {
+				ID: "ID",
+				NAME: "Name",
+				DESCRIPTION: "Description",
+				ACTIONS: "Actions"
+			},
+			DELETE_DIALOG: {
+				INFO_MESSAGE: 'Delete Listing',
+				CONFIRM_MESSAGE: 'List will be deleted. Do you approve?',
+				WAITING_MESSAGE: 'Deleting...'
+			},
 		},
 		PRODUCTCATEGORY: {
 			NEW_PRODUCTCATEGORY: "New Product Category",

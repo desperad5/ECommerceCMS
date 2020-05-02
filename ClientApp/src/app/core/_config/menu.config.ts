@@ -27,6 +27,13 @@ export class MenuConfig {
 					admin: true
 				},
 				{
+					title: 'Listings',
+					root: true,
+					alignment: 'left',
+					page: '/listing',
+					translate: 'MENU.LISTINGS'
+				},
+				{
 					title: 'Product Category',
 					root: true,
 					alignment: 'left',
@@ -83,12 +90,12 @@ export class MenuConfig {
 					admin: true
 				},
 				{
-					title: 'Brands',
+					title: 'Listings',
 					root: true,
 					alignment: 'left',
 					icon: 'flaticon-price-tag',
-					page: '/brand',
-					translate: 'MENU.BRANDS'
+					page: '/listing',
+					translate: 'MENU.LISTINGS'
 				},
 				{
 					title: 'Product Category',
@@ -98,7 +105,16 @@ export class MenuConfig {
 					page: '/productcategory',
 					translate: 'MENU.PRODUCTCATEGORY',
 					admin: true
+				},
+				{
+					title: 'Brands',
+					root: true,
+					alignment: 'left',
+					icon: 'flaticon-price-tag',
+					page: '/brand',
+					translate: 'MENU.BRANDS'
 				}
+				
 				//{
 				//	title: 'Question Card',
 				//	root: true,

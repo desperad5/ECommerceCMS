@@ -24,7 +24,8 @@ export const locale = {
 			CREATE_USER: "Kullanıcı Yönetimi",
 			BRANDS: "Markalar",
 			BUNDLE: "Paket Yönetimi",
-			PRODUCTCATEGORY: "Kategori Yönetimi"
+			PRODUCTCATEGORY: "Kategori Yönetimi",
+			LISTINGS:"Liste Yönetimi"
 		},
 		AUTH: {
 			GENERAL: {
@@ -147,6 +148,35 @@ export const locale = {
 			TOPICS_COLUMN: "Konular",
 			ACTIVE_COLUMN: "Statü",
 			ACTIONS_COLUMN: "İşlemler"
+		},
+		LISTING: {
+			NEW_LISTING: "Yeni Liste",
+			LISTING_LIST: "Liste Listesi",
+			SAVE_MESSAGE: "Yeni Liste Kaydedildi",
+			EDIT_MESSAGE: "Liste Güncellendi",
+			DELETE_MESSAGE: "Liste Silindi",
+			DELETE: "Sil",
+			EDIT: "Düzenle",
+			EDIT_LISTING: "Liste Düzenle",
+			CREATE_NEW_LISTING: "Yeni Liste Oluştur",
+			LISTING_NAME_IS_REQUIRED: "Liste Adı Zorunludur.",
+			ENTER_LISTING_NAME: "Lütfen Liste Adını Giriniz",
+			
+			ENTER_LISTING_DESCRIPTION: "Lütfen Liste Açıklaması Giriniz",
+			SELECT_LISTING: "Liste Seçiniz",
+			CANCEL: "İptal",
+			SAVE: "Kaydet",
+			TABLE: {
+				ID: "ID",
+				NAME: "Adı",
+				DESCRIPTION: "Açıklama",
+				ACTIONS: "İşlemler"
+			},
+			DELETE_DIALOG: {
+				INFO_MESSAGE: 'Liste Silme',
+				CONFIRM_MESSAGE: 'Liste silinecek. Onaylıyor musunuz?',
+				WAITING_MESSAGE: 'Siliniyor...'
+			},
 		},
 		PRODUCTCATEGORY: {
 			NEW_PRODUCTCATEGORY: "Yeni Ürün Kategorisi",

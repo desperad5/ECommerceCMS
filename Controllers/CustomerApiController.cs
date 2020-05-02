@@ -225,7 +225,7 @@ namespace ECommerceCMS.Controllers
             }
             var url = "http://localhost:4200/auth/sign-up" + "?code=" + lead.Code + "&" + "email=" + lead.Email;
             var content = "<html><body>Üyeliğinizi tamamlamak için <a href='" + url + "'>linke</a> tıklayınız. </body></html>";
-            MailSender.SendMail(lead.Email, "Sorubank Üyelik Aktivasyonu", content);
+            MailSender.SendMail(lead.Email, "ETicaret Paketi Üyelik Aktivasyonu", content);
             return Ok("Mailiniz tarafımıza yönlendirildi.");
         }
 

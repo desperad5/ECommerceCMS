@@ -216,7 +216,7 @@ namespace ECommerceCMS.Services
                 var url = "localhost:5486/auth/change-password?" + "code=" + user.ForgotPasswordToken + "&" + "email=" + email;
                 var content = "<html><body>Üyeliğinizi tamamlamak için <a href='" + url + "'>linke</a> tıklayınız." + url + "</body></html>";
 
-                MailSender.SendMail(email, "SorubankCMS Şifremi Unuttum", content);
+                MailSender.SendMail(email, "ETicaret Paketi CMS Şifremi Unuttum", content);
 
                 result.resultType = ServiceResultType.Success;
                 _userRepository.Commit();

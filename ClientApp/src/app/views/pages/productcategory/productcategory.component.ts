@@ -91,12 +91,12 @@ export class ProductCategoryComponent implements OnInit, OnDestroy {
 			let data = this.ProductCategoryList.data;
 
 			if (isAdd) {
-				data.push(res.ProductCategory);
+				data.push(res.category);
 				this.ProductCategoryList.data = data;
 			} else {
 				this.ProductCategoryList.data = data.map(a => {
-					if (a["id"] == res.ProductCategory.id)
-						return res.ProductCategory;
+					if (a["id"] == res.category.id)
+						return res.category;
 					return a;
 				});
 			}

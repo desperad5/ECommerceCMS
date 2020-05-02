@@ -7,6 +7,8 @@ import { LayoutUtilsService, MessageType } from '../../../core/_base/crud';
 import { BrandService } from '../../../core/_base/layout/services/brand.service';
 import { BrandModel } from '../../../models/brand-model';
 import { BrandEditDialogComponent } from './brand-edit/brand-edit.dialog.component';
+import { map } from 'rxjs/operators';
+import { downloadFile, saveAs  } from 'file-saver';
 
 @Component({
 	selector: 'brandpage',
@@ -136,4 +138,13 @@ export class BrandPageComponent implements OnInit {
 		result = result.concat(this.StringsOrEmpty(data.id));
 		return (result.trim() as any).toLocaleLowerCase(this.locale);
 	}
+
+	public downloadExcel() {
+		this.brandService.downloadExcel().subscribe(
+			(blob) => {
+				saveAs(blob, 'Markalar.xlsx');
+		},
+			(error) => { });
+	}
+
 }

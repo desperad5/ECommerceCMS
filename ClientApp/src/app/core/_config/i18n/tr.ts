@@ -22,7 +22,7 @@ export const locale = {
 			EXAM_CARD: "Sınav Kartı",
 			TOPIC_CARD: "Konu Kartı",
 			CREATE_USER: "Kullanıcı Yönetimi",
-			BRANDS: "Markalar"
+			BRANDS: "Markalar",
 			BUNDLE: "Paket Yönetimi",
 			PRODUCTCATEGORY: "Kategori Yönetimi"
 		},

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
+using ECommerceCMS.Data.Abstract;
+using ECommerceCMS.Data.Entity;
 using ECommerceCMS.Models;
 using ECommerceCMS.Service.Abstract;
+using ECommerceCMS.Services;
 using log4net;
-using SorubankCMS;
-using SorubankCMS.Data.Abstract;
-using SorubankCMS.Data.Entity;
-using SorubankCMS.Services;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

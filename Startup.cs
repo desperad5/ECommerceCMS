@@ -21,7 +21,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
 using ECommerceCMS.Extensions;
 
-namespace SorubankCMS
+namespace ECommerceCMS
 {
     public class Startup
     {

@@ -23,7 +23,7 @@ export const locale = {
 			TOPIC_CARD: "Topic Card",
 			CREATE_USER: "User Management",
 			BUNDLE: "Bundle Management",
-			BRANDS: "Brands,
+			BRANDS: "Brands",
 			PRODUCTCATEGORY:"Category Management"
 		},
 		AUTH: {

@@ -52,7 +52,6 @@
     <None Remove="ClientApp\src\app\views\pages\brand\brand-edit\brand-edit.dialog.component.ts" />
     <None Remove="ClientApp\src\app\views\pages\brand\brand.component.ts" />
     <None Remove="ClientApp\src\app\views\pages\brand\brand.module.ts" />
-    <None Remove="ClientApp\src\app\views\pages\listing\productcategory.module.ts" />
     <None Remove="ClientApp\src\app\views\pages\productcategory\productcategory.module.ts" />
     <None Remove="ClientApp\src\app\views\pages\topic\topic.module.ts" />
   </ItemGroup>
@@ -71,7 +70,6 @@
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\brand\brand-edit\brand-edit.dialog.component.html" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\brand\brand.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\brand\brand.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\views\pages\listing\productcategory.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\productcategory\productcategory.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\views\pages\topic\topic.module.ts" />
   </ItemGroup>

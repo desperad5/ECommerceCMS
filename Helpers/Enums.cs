@@ -35,6 +35,15 @@ namespace ECommerceCMS.Helpers
             MAÖL = 7,
             AÖİHL = 8
         }
+        public enum ProductSpecValueTypes
+        {
+            number=0,
+            text=1,
+            Decimal=2,
+            SelectList=3,
+            Datetime=4
+
+        }
         
 
 

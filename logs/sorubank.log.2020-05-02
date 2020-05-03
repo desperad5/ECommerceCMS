@@ -1,0 +1,548 @@
+2020-05-02 15:25:20,591 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:1912
+ 2020-05-02 15:25:20,610 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 15:25:20,610 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 15:25:20,611 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 15:26:45,290 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+
+
+ 2020-05-02 15:28:34,056 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/views/pages/productcategory/productcategory.module.ts
+Module not found: Error: Can't resolve './productcategory-edit/prooductcategory-edit.dialog.component' in 'C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\views\pages\productcategory'
+
+ 2020-05-02 15:28:36,488 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+    
+
+ 2020-05-02 15:29:15,043 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/views/pages/productcategory/productcategory.module.ts
+Module not found: Error: Can't resolve './productcategory-edit/prooductcategory-edit.dialog.component' in 'C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\views\pages\productcategory'
+
+ 2020-05-02 15:29:22,900 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+    
+
+ 2020-05-02 15:30:47,659 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/views/pages/productcategory/productcategory.module.ts
+Module not found: Error: Can't resolve './productcategory-edit/prooductcategory-edit.dialog.component' in 'C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\views\pages\productcategory'
+
+ 2020-05-02 15:30:52,992 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+    
+
+ 2020-05-02 15:32:49,941 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/views/pages/productcategory/productcategory.module.ts
+Module not found: Error: Can't resolve './productcategory-edit/prooductcategory-edit.dialog.component' in 'C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\views\pages\productcategory'
+ERROR in src/app/core/_config/menu.config.ts(33,6): error TS1005: ',' expected.
+
+
+ 2020-05-02 15:32:57,241 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+    
+
+ 2020-05-02 15:34:11,673 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/views/pages/productcategory/productcategory.module.ts
+Module not found: Error: Can't resolve './productcategory-edit/prooductcategory-edit.dialog.component' in 'C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\views\pages\productcategory'
+ERROR in src/app/core/_config/menu.config.ts(33,6): error TS1005: ',' expected.
+
+
+ 2020-05-02 15:34:26,488 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/views/pages/productcategory/productcategory.module.ts
+Module not found: Error: Can't resolve './productcategory-edit/prooductcategory-edit.dialog.component' in 'C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\views\pages\productcategory'
+
+ 2020-05-02 15:34:26,609 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+    
+
+ 2020-05-02 15:34:31,776 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/prooductcategory-edit.dialog.component'.
+    
+
+ 2020-05-02 15:37:19,838 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:8224
+ 2020-05-02 15:37:20,018 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 15:37:20,151 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 15:37:20,172 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 15:39:47,300 ERROR ECommerceCMS.Service.ProductCategoryService.? Line: ? - MESSAGE: Error@FetchAllActiveProductCategories: 
+ AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[ECommerceCMS.Data.Entity.ProductCategory, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[ECommerceCMS.Models.ProductCategoryViewModel, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductCategory -> ProductCategoryViewModel
+ECommerceCMS.Data.Entity.ProductCategory -> ECommerceCMS.Models.ProductCategoryViewModel
+   at lambda_method(Closure , ProductCategory , ProductCategoryViewModel , ResolutionContext )
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at ECommerceCMS.Service.ProductCategoryService.FetchAllActiveProductCategories() in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductCategoryService.cs:line 126
+2020-05-02 15:39:50,055 ERROR ECommerceCMS.Service.ProductCategoryService.? Line: ? - MESSAGE: Error@FetchAllActiveProductCategories: 
+ AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[ECommerceCMS.Data.Entity.ProductCategory, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[ECommerceCMS.Models.ProductCategoryViewModel, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductCategory -> ProductCategoryViewModel
+ECommerceCMS.Data.Entity.ProductCategory -> ECommerceCMS.Models.ProductCategoryViewModel
+   at lambda_method(Closure , ProductCategory , ProductCategoryViewModel , ResolutionContext )
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at ECommerceCMS.Service.ProductCategoryService.FetchAllActiveProductCategories() in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductCategoryService.cs:line 126
+2020-05-02 15:46:08,737 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:1162
+ 2020-05-02 15:46:08,864 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 15:46:08,951 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 15:46:08,975 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 15:52:07,406 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:14280
+ 2020-05-02 15:52:07,424 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 15:52:07,424 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 15:52:07,424 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 16:06:03,798 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:38286
+ 2020-05-02 16:06:03,953 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 16:06:04,048 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 16:06:04,063 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 16:57:50,457 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/productcategory/productcategory.component.ts(140,51): error TS2339: Property 'listingName' does not exist on type 'ProductCategoryDataModel'.
+    src/app/views/pages/productcategory/productcategory.component.ts(141,51): error TS2339: Property 'parentCategoryName' does not exist on type 'ProductCategoryDataModel'.
+    src/app/views/pages/productcategory/productcategory.component.ts(142,51): error TS2339: Property 'isActive' does not exist on type 'ProductCategoryDataModel'.
+    src/app/views/pages/productcategory/productcategory.component.ts(143,51): error TS2339: Property 'createdDate' does not exist on type 'ProductCategoryDataModel'.
+    src/app/views/pages/productcategory/productcategory.component.ts(144,51): error TS2339: Property 'id' does not exist on type 'ProductCategoryDataModel'.
+    
+
+ 2020-05-02 17:04:33,225 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/views/pages/productcategory/productcategory.component.ts(25,3): error TS1005: ',' expected.
+
+
+ 2020-05-02 17:14:13,807 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:24987
+ 2020-05-02 17:14:13,939 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 17:14:14,015 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 17:14:14,063 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 17:19:14,779 ERROR ECommerceCMS.Service.Abstract.ListingService.? Line: ? - MESSAGE: Error@FetchAllListings: 
+ AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[ECommerceCMS.Data.Entity.Listing, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[ECommerceCMS.Models.ListingViewModel, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Listing -> ListingViewModel
+ECommerceCMS.Data.Entity.Listing -> ECommerceCMS.Models.ListingViewModel
+   at lambda_method(Closure , Listing , ListingViewModel , ResolutionContext )
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at ECommerceCMS.Service.Abstract.ListingService.FetchAllListings() in C:\Users\Emir\Desktop\ECommerceCMS\Service\ListingService.cs:line 34
+2020-05-02 17:20:01,656 ERROR ECommerceCMS.Service.Abstract.ListingService.? Line: ? - MESSAGE: Error@FetchAllListings: 
+ AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[ECommerceCMS.Data.Entity.Listing, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[ECommerceCMS.Models.ListingViewModel, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Listing -> ListingViewModel
+ECommerceCMS.Data.Entity.Listing -> ECommerceCMS.Models.ListingViewModel
+   at lambda_method(Closure , Listing , ListingViewModel , ResolutionContext )
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at ECommerceCMS.Service.Abstract.ListingService.FetchAllListings() in C:\Users\Emir\Desktop\ECommerceCMS\Service\ListingService.cs:line 34
+2020-05-02 17:23:02,993 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:37096
+ 2020-05-02 17:23:03,125 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 17:23:03,144 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 17:23:03,161 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 17:25:53,074 ERROR ECommerceCMS.Service.Abstract.ListingService.? Line: ? - MESSAGE: Error@FetchAllListings: 
+ AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[ECommerceCMS.Data.Entity.Listing, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[ECommerceCMS.Models.ListingViewModel, ECommerceCMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Listing -> ListingViewModel
+ECommerceCMS.Data.Entity.Listing -> ECommerceCMS.Models.ListingViewModel
+
+Type Map configuration:
+Listing -> ListingViewModel
+ECommerceCMS.Data.Entity.Listing -> ECommerceCMS.Models.ListingViewModel
+
+Destination Member:
+ProductCategories
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductCategory -> TopicViewModel
+ECommerceCMS.Data.Entity.ProductCategory -> ECommerceCMS.Models.TopicViewModel
+   at lambda_method(Closure , ProductCategory , TopicViewModel , ResolutionContext )
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at ECommerceCMS.Service.Abstract.ListingService.FetchAllListings() in C:\Users\Emir\Desktop\ECommerceCMS\Service\ListingService.cs:line 34
+2020-05-02 17:32:37,486 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:18255
+ 2020-05-02 17:32:37,641 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 17:32:37,673 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 17:32:37,721 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 18:01:27,532 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:25426
+ 2020-05-02 18:01:27,584 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 18:01:27,608 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 18:01:27,616 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 18:02:29,750 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/core/_config/i18n/en.ts(26,20): error TS1002: Unterminated string literal.
+src/app/core/_config/i18n/en.ts(27,4): error TS1005: ',' expected.
+src/app/core/_config/i18n/tr.ts(26,4): error TS1005: ',' expected.
+
+
+ 2020-05-02 18:06:30,700 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:23029
+ 2020-05-02 18:06:30,851 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 18:06:30,974 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 18:06:31,296 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 18:07:27,161 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/core/_config/i18n/en.ts(26,20): error TS1002: Unterminated string literal.
+src/app/core/_config/i18n/en.ts(27,4): error TS1005: ',' expected.
+src/app/core/_config/i18n/tr.ts(26,4): error TS1005: ',' expected.
+
+
+ 2020-05-02 18:13:34,351 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:20621
+ 2020-05-02 18:13:34,402 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 18:13:34,425 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 18:13:34,441 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 18:14:16,830 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/core/_config/i18n/en.ts(26,20): error TS1002: Unterminated string literal.
+src/app/core/_config/i18n/en.ts(27,4): error TS1005: ',' expected.
+src/app/core/_config/i18n/tr.ts(26,4): error TS1005: ',' expected.
+
+
+ 2020-05-02 18:17:14,990 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/core/_config/i18n/en.ts(26,20): error TS1002: Unterminated string literal.
+src/app/core/_config/i18n/en.ts(27,4): error TS1005: ',' expected.
+src/app/core/_config/i18n/tr.ts(26,4): error TS1005: ',' expected.
+
+
+ 2020-05-02 18:17:45,412 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/core/_config/i18n/tr.ts(26,4): error TS1005: ',' expected.
+
+
+ 2020-05-02 18:55:15,391 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:8096
+ 2020-05-02 18:55:15,487 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 18:55:15,517 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 18:55:15,534 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 20:34:34,339 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:38604
+ 2020-05-02 20:34:34,460 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 20:34:34,558 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 20:34:34,675 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 20:36:26,304 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in src/app/views/pages/listing/listing.module.ts(16,42): error TS2307: Cannot find module './productcategory.component'.
+src/app/views/pages/listing/listing.module.ts(17,52): error TS2307: Cannot find module './productcategory-edit/productcategory-edit.dialog.component'.
+
+
+ 2020-05-02 20:49:06,400 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:37290
+ 2020-05-02 20:49:06,637 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 20:49:06,722 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 20:49:06,752 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 20:55:00,889 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:16576
+ 2020-05-02 20:55:00,971 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 20:55:00,995 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 20:55:01,057 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 21:06:50,278 ERROR Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.? Line: ? - MESSAGE: An unhandled exception has occurred while executing the request.
+ System.AggregateException: One or more errors occurred. (The remote party closed the WebSocket connection without completing the close handshake.)
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-05-02 21:06:50,296 WARN Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.? Line: ? - MESSAGE: The response has already started, the error handler will not be executed.
+ 2020-05-02 21:06:50,318 ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.? Line: ? - MESSAGE: An unhandled exception has occurred while executing the request.
+ System.AggregateException: One or more errors occurred. (The remote party closed the WebSocket connection without completing the close handshake.)
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-02 21:06:50,328 WARN Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.? Line: ? - MESSAGE: The response has already started, the error page middleware will not be executed.
+ 2020-05-02 21:06:50,362 ERROR Microsoft.AspNetCore.Server.Kestrel.? Line: ? - MESSAGE: Connection id "0HLVEO7NP6BRR", Request id "0HLVEO7NP6BRR:00000004": An unhandled exception was thrown by the application.
+ System.AggregateException: One or more errors occurred. (The remote party closed the WebSocket connection without completing the close handshake.)
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-05-02 21:12:14,044 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:37911
+ 2020-05-02 21:12:14,126 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 21:12:14,206 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 21:12:14,242 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 21:21:32,778 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:6831
+ 2020-05-02 21:21:32,924 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 21:21:32,953 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 21:21:33,003 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 21:29:00,643 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE:     ERROR in src/app/views/pages/listing/listing.component.ts(84,76): error TS2304: Cannot find name 'ProductCategoryModel'.
+    
+
+ 2020-05-02 21:35:02,618 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (163ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ProductCategory] ([CategoryName], [CreatedDate], [ImageUrl], [IsActive], [IsDeleted], [ListingId], [ParentCategoryId], [TenantId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [ProductCategory]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+ 2020-05-02 21:35:02,887 ERROR Microsoft.EntityFrameworkCore.Update.? Line: ? - MESSAGE: An exception occurred in the database while saving changes for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ProductCategory_Tenants_TenantId". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:729b8580-d691-4a22-80df-b5aafde11ec3
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ProductCategory_Tenants_TenantId". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:729b8580-d691-4a22-80df-b5aafde11ec3
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2020-05-02 21:35:03,156 ERROR ECommerceCMS.Service.ProductCategoryService.? Line: ? - MESSAGE: Error@CreateOrEdit: 
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ProductCategory_Tenants_TenantId". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:729b8580-d691-4a22-80df-b5aafde11ec3
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ECommerceCMS.Data.Repositories.EntityBaseRepository`1.AddWithCommit(T entity) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\EntityBaseRepository.cs:line 85
+   at ECommerceCMS.Service.ProductCategoryService.AddProductCategory(ProductCategoryViewModel model, Listing listing, ProductCategory parentCategory) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductCategoryService.cs:line 89
+   at ECommerceCMS.Service.ProductCategoryService.CreateOrEdit(ProductCategoryViewModel model) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductCategoryService.cs:line 56
+2020-05-02 21:36:32,740 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ProductCategory] ([CategoryName], [CreatedDate], [ImageUrl], [IsActive], [IsDeleted], [ListingId], [ParentCategoryId], [TenantId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [ProductCategory]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+ 2020-05-02 21:36:32,770 ERROR Microsoft.EntityFrameworkCore.Update.? Line: ? - MESSAGE: An exception occurred in the database while saving changes for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ProductCategory_Tenants_TenantId". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:729b8580-d691-4a22-80df-b5aafde11ec3
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ProductCategory_Tenants_TenantId". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:729b8580-d691-4a22-80df-b5aafde11ec3
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2020-05-02 21:36:32,863 ERROR ECommerceCMS.Service.ProductCategoryService.? Line: ? - MESSAGE: Error@CreateOrEdit: 
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ProductCategory_Tenants_TenantId". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:729b8580-d691-4a22-80df-b5aafde11ec3
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ECommerceCMS.Data.Repositories.EntityBaseRepository`1.AddWithCommit(T entity) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\EntityBaseRepository.cs:line 85
+   at ECommerceCMS.Service.ProductCategoryService.AddProductCategory(ProductCategoryViewModel model, Listing listing, ProductCategory parentCategory) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductCategoryService.cs:line 89
+   at ECommerceCMS.Service.ProductCategoryService.CreateOrEdit(ProductCategoryViewModel model) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductCategoryService.cs:line 56
+2020-05-02 21:52:41,036 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:40125
+ 2020-05-02 21:52:41,065 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 21:52:41,073 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 21:52:41,082 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 22:03:15,681 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:17777
+ 2020-05-02 22:03:15,699 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 22:03:15,699 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 22:03:15,699 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 22:08:48,570 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:27930
+ 2020-05-02 22:08:48,809 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 22:08:48,893 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 22:08:48,996 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 22:32:08,611 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:9350
+ 2020-05-02 22:32:08,643 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 22:32:08,649 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 22:32:08,659 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 22:56:07,583 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:22329
+ 2020-05-02 22:56:07,617 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 22:56:07,641 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 22:56:07,751 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-02 23:10:50,076 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:29995
+ 2020-05-02 23:10:50,283 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-02 23:10:50,416 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-02 23:10:50,443 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 

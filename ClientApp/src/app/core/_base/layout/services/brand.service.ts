@@ -22,4 +22,8 @@ export class BrandService {
 		return this.http.post("/api/Brand/DeleteTopicById", id, { headers: this.headers });
 	};
 
+	downloadExcel() {
+		return this.http.post<Blob>("/api/Excel/DownloadExcel", {}, { headers: this.headers, responseType: 'blob' as 'json' });
+	}
+
 }

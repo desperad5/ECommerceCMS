@@ -23,7 +23,7 @@ namespace  ECommerceCMS.Data
         public DbSet<ProductBundle> ProductBundles { get; set; }
         public DbSet<ProductComment> ProductComments { get; set; }
         public DbSet<ProductRating> ProductRatings { get; set; }
-        public DbSet<Listing> Listings { get; set; }
+        public DbSet<Menu> Menus { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<OrderCartItem> OrderCartItems { get; set; }
         public DbSet<OrderCart> OrderCarts { get; set; }
@@ -56,8 +56,12 @@ namespace  ECommerceCMS.Data
                .HasOne(b => b.ParentCategory)
                .WithMany(a => a.ChildCategories)
                .OnDelete(DeleteBehavior.NoAction);
-
+            modelBuilder.Entity<Product>()
+              .HasOne(b => b.Tenant)
+              .WithMany(a => a.Products)
+              .OnDelete(DeleteBehavior.NoAction);
         }
+
     }
 
 }

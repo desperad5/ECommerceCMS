@@ -29,7 +29,7 @@ namespace ECommerceCMS.Service.Abstract
             ServiceResult<List<ListingViewModel>> result = new ServiceResult<List<ListingViewModel>>();
             try
             {
-                var listings = _listingRepository.AllIncluding(a => a.ProductCategories).Where(a => a.IsDeleted == false).ToList();
+                var listings = _listingRepository.FindBy(a => a.IsDeleted == false).ToList();
 
                 result.data = listings.Select(i => new ListingViewModel()
                 {
@@ -37,8 +37,6 @@ namespace ECommerceCMS.Service.Abstract
                     Id = i.Id,
                     IsActive = i.IsActive,
                     Name = i.Name,
-                    Description=i.Description,
-                    ProductCategories = i.ProductCategories.Select(k => new ProductCategoryViewModel() { Id = k.Id, CategoryName = k.CategoryName })
                 }).ToList();
                 result.resultType = ServiceResultType.Success;
             }
@@ -90,8 +88,7 @@ namespace ECommerceCMS.Service.Abstract
                 var listing = _listingRepository.FindBy(a => a.Id == id).FirstOrDefault();
                 listing.IsDeleted = true;
                 _listingRepository.Update(listing);
-                _productCategoryRepository.FindBy(t => t.ListingId == id).ToList().ForEach(i => { i.IsDeleted = true; });
-                result.data = _mapper.Map<ListingViewModel>(listing);
+                 result.data = _mapper.Map<ListingViewModel>(listing);
                 result.resultType = ServiceResultType.Success;
                 _listingRepository.Commit();
                 _productCategoryRepository.Commit();

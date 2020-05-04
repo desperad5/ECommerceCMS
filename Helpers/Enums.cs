@@ -37,12 +37,20 @@ namespace ECommerceCMS.Helpers
         }
         public enum ProductSpecValueTypes
         {
-            number=0,
-            text=1,
+            Number=0,
+            Text=1,
             Decimal=2,
             SelectList=3,
-            Datetime=4
+            Datetime=4,
+            Multiselect=5,
+            Boolean=6
 
+        }
+        public enum MenuLocations
+        {
+            Header=0,
+            LeftAside=1,
+            RightAside=2
         }
         
 

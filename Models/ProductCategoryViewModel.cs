@@ -12,10 +12,10 @@ namespace ECommerceCMS.Models
         public int Id { get; set; }
         [JsonProperty("categoryName")]
         public string CategoryName { get; set; }
-        [JsonProperty("listingName")]
-        public string ListingName { get; set; }
-        [JsonProperty("listingId")]
-        public int ListingId { get; set; }
+        [JsonProperty("menuName")]
+        public string MenuName { get; set; }
+        [JsonProperty("menuId")]
+        public int MenuId { get; set; }
         [JsonProperty("tenantId")]
         public int TenantId { get; set; }
         [JsonProperty("tenantName")]

@@ -20,6 +20,7 @@ namespace ECommerceCMS.Data.Entity
         public string TaxAdministration { get; set; }
         public string TaxNumber { get; set; }
         public ICollection<CMSUser> Users { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
     }
 }

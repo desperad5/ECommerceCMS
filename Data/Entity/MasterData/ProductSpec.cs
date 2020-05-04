@@ -15,6 +15,7 @@ namespace ECommerceCMS.Data.Entity.MasterData
         public ProductSpecValueTypes ProductSpecValueType { get; set; }
         public int? TranslationId { get; set; }
         public virtual Translation Translation { get; set; }
+        public Boolean isViewSpec { get; set; }
 
     }
 }

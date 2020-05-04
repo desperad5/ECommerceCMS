@@ -15,14 +15,14 @@ namespace ECommerceCMS.Service
     public class ProductCategoryService : IProductCategoryService
     {
         private readonly IProductCategoryRepository _productCategoryRepository;
-        private readonly IListingService _listingService;
+        private readonly IMenuService _menuService;
         private readonly IMapper _mapper;
         private static readonly ILog logger = Logger.GetLogger(typeof(ProductCategoryService));
-        public ProductCategoryService(IProductCategoryRepository productCategoryRepository, IMapper mapper, IListingService listingService)
+        public ProductCategoryService(IProductCategoryRepository productCategoryRepository, IMapper mapper, IMenuService menuService)
         {
             _productCategoryRepository = productCategoryRepository;
             _mapper = mapper;
-            _listingService = listingService;
+            _menuService = menuService;
         }
         public Services.ServiceResult<ProductCategoryViewModel> CreateOrEdit(ProductCategoryViewModel model)
         {
@@ -41,7 +41,7 @@ namespace ECommerceCMS.Service
                     }
                 }
                 result.resultType = ServiceResultType.Success;
-                Listing listing = _listingService.GetListingById(model.ListingId);
+                Menu listing = _menuService.GetMenuById(model.MenuId);
                 if (listing == null)
                 {
                     result.message = "NO_LISTING_FOUND";
@@ -64,12 +64,12 @@ namespace ECommerceCMS.Service
 
             return result;
         }
-        private ProductCategoryViewModel EditProductCategory(ProductCategoryViewModel model, Listing listing, ProductCategory parentCategory)
+        private ProductCategoryViewModel EditProductCategory(ProductCategoryViewModel model, Menu menu, ProductCategory parentCategory)
         {
             var category = new ProductCategory
             {
                 Id = model.Id,
-                Listing = listing,
+                Menu = menu,
                 ParentCategory = parentCategory,
                 CategoryName = model.CategoryName,
                 TenantId=model.TenantId
@@ -81,11 +81,11 @@ namespace ECommerceCMS.Service
             return categoryModel;
         }
 
-        private ProductCategoryViewModel AddProductCategory(ProductCategoryViewModel model, Listing listing, ProductCategory parentCategory)
+        private ProductCategoryViewModel AddProductCategory(ProductCategoryViewModel model, Menu menu, ProductCategory parentCategory)
         {
             var category = new ProductCategory
             {
-                ListingId = listing.Id,
+                MenuId = menu.Id,
                 CategoryName = model.CategoryName,
                 TenantId=model.TenantId
             };
@@ -129,14 +129,14 @@ namespace ECommerceCMS.Service
             ServiceResult<List<ProductCategoryViewModel>> result = new ServiceResult<List<ProductCategoryViewModel>>();
             try
             {
-                var productCategories = _productCategoryRepository.AllIncluding(x => x.Listing,x=>x.ParentCategory,x=>x.Tenant).Where(x => !x.IsDeleted).ToList();
+                var productCategories = _productCategoryRepository.AllIncluding(x => x.Menu,x=>x.ParentCategory,x=>x.Tenant).Where(x => !x.IsDeleted).ToList();
                 result.data = productCategories.Select(i=>new ProductCategoryViewModel()
                 { CategoryName=i.CategoryName,
                   Id=i.Id,
-                  ListingId=i.Listing!=null?i.Listing.Id:0,
+                  MenuId=i.Menu!=null?i.Menu.Id:0,
                   ParentCategoryId=i.ParentCategory!=null?i.ParentCategory.Id  :0,
                   ParentCategoryName=i.ParentCategory!=null?i.ParentCategory.CategoryName:string.Empty,
-                  ListingName=i.Listing!=null?i.Listing.Name:string.Empty,
+                  MenuName=i.Menu!=null?i.Menu.Name:string.Empty,
                   TenantId=i.Tenant!=null?i.Tenant.Id:0,
                   TenantName=i.Tenant!=null?i.Tenant.Name:string.Empty
                 }).ToList();

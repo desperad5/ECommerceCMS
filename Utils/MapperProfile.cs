@@ -15,8 +15,8 @@ namespace ECommerceCMS.Utils
             CreateMap<TenantViewModel, Tenant>();
             CreateMap<ProductCategory, ProductCategoryViewModel>();
             CreateMap<ProductCategoryViewModel, ProductCategory>();
-            CreateMap<Listing, ListingViewModel>();
-            CreateMap<ListingViewModel, Listing>();
+            CreateMap<Menu, ListingViewModel>();
+            CreateMap<ListingViewModel, Menu>();
             CreateMap<CMSUser, UserViewModel>();
             CreateMap<UserViewModel, CMSUser>();
             CreateMap<BundleModel, Bundle>();

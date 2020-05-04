@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using static ECommerceCMS.Helpers.Enums;
 
 namespace ECommerceCMS.Data.Entity.MasterData
 {
-    public class ProductSpec:BaseEntity
+    public class ProductSpecOption:BaseEntity
     {
         [Required]
-        public string Name { get; set; }
-        [Required]
-        public ProductSpecValueTypes ProductSpecValueType { get; set; }
+        public int ProductSpecId { get; set; }
         public int? TranslationId { get; set; }
         public virtual Translation Translation { get; set; }
-
+        public string Option { get; set; }
+        public virtual ProductSpec ProductSpec { get; set; }
     }
 }

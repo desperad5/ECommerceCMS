@@ -1,4 +1,5 @@
 ﻿using  ECommerceCMS.Data.Entity;
+using ECommerceCMS.Data.Entity.MasterData;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,15 @@ namespace  ECommerceCMS.Data
         public DbSet<OrderCart> OrderCarts { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<ProductSpec> ProductSpecs { get; set; }
+        public DbSet<ProductSpecOption> ProductSpecOptions { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<ProductTypeSpec> ProductTypeSpecs { get; set; }
+        public DbSet<Sector> Sectors { get; set; }
+        public DbSet<Translation> Translations { get; set; }
+        public DbSet<ProductSpecValue> ProductSpecValues { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

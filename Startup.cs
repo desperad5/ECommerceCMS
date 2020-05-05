@@ -20,6 +20,7 @@ using ECommerceCMS.Service;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
 using ECommerceCMS.Extensions;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace ECommerceCMS
 {
@@ -35,7 +36,10 @@ namespace ECommerceCMS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(Startup));
-            services.AddMvc();
+            services.AddMvc(opts =>
+            {
+                opts.Filters.Add(new AllowAnonymousFilter());
+            });
 
             services.AddControllersWithViews().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSpaStaticFiles(configuration =>

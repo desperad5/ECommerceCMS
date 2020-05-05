@@ -1,7 +1,9 @@
 ﻿using ECommerceCMS.Data.Abstract;
 using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,6 +17,7 @@ namespace ECommerceCMS.Data.Repositories
         {
             _context = context;
         }
+        
 
     }
 }

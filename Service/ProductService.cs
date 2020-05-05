@@ -32,6 +32,23 @@ namespace ECommerceCMS.Service
             _productCommentRepository = productCommentRepository;
             _mapper = mapper;
         }
+        public ServiceResult<List<ProductViewModel>> GetProductsByListingId(int listingId)
+        {
+            ServiceResult<List<ProductViewModel>> result = new ServiceResult<List<ProductViewModel>>();
+            try
+            {
+                var returnModel=_productRepository.GetProductsByListingId(listingId);
+                result.resultType = ServiceResultType.Success;
+                result.data = returnModel;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error@GetProductDetail: ", ex);
+                result.resultType = ServiceResultType.Fail;
+                result.message = ex.ToString();
+            }
+            return result;
+        }
         //public ServiceResult<ProductResponseModel> GetProductDetail(int productId)
         //{
         //    ServiceResult<ProductResponseModel> result = new ServiceResult<ProductResponseModel>();
@@ -86,7 +103,7 @@ namespace ECommerceCMS.Service
         //            TopicName = product.QuestionCard.Topic.Name,
         //            TopicClassLevel = product.QuestionCard.Topic.ClassLevel,
         //            QuestionCount = product.QuestionCard.QuestionCount
-                    
+
         //        } : null,
         //        TopicCard = product.TopicCard != null ? new ProductTopicCardModel()
         //        {
@@ -96,14 +113,14 @@ namespace ECommerceCMS.Service
         //            TopicName = product.TopicCard.Topic.Name,
         //            TopicClassLevel = product.TopicCard.Topic.ClassLevel,
         //            InstructorName = product.TopicCard.InstructorName,
-                    
+
         //        } : null,
         //        ExamCard = product.ExamCard != null ? new ProductExamCardModel()
         //        {
         //            Id = product.ExamCard.Id,
         //            ExamTypeId = product.ExamCard.ExamTypeId,
         //            QuestionCount = product.ExamCard.QuestionCount,
-                    
+
         //        } : null,
         //        Bundle = product.Bundle != null ? new ProductBundleModel()
         //        {

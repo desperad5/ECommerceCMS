@@ -22,7 +22,7 @@ namespace ECommerceCMS.Models
         [JsonProperty("isActive")]
         public bool IsActive { get; set; }
 
-        [JsonProperty("productCategories")]
-        public IEnumerable<ProductCategoryViewModel> ProductCategories { get; set; }
+        [JsonProperty("products")]
+        public IEnumerable<ProductViewModel> Products { get; set; }
     }
 }

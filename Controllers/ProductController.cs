@@ -72,6 +72,16 @@ namespace ECommerceCMS.Controllers
             }
             return BadRequest(result.message);
         }
+        [HttpPost("[action]")]
+        public IActionResult GetProductsByListingId([FromBody] ProductCommentModel productcommentModel)
+        {
+            var result = _productService.GetProductsByListingId(productcommentModel.Id);
+            if (result.resultType == ServiceResultType.Success)
+            {
+                return Ok(result.data);
+            }
+            return BadRequest(result.message);
+        }
         private int GetUserIdFromContext()
         {
             var user = HttpContext.User;

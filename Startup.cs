@@ -70,7 +70,7 @@ namespace ECommerceCMS
                 {
                    ValidateAudience=true,
                    ValidateIssuer=true,
-                    ValidateLifetime = true,
+                   ValidateLifetime = true,
                    ValidIssuer="Antasya",
                    ValidAudience="Antasya",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"))

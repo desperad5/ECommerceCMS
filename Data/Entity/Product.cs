@@ -31,7 +31,7 @@ namespace ECommerceCMS.Data.Entity
         public int? InventoryCount { get; set; }
         public List<ProductImage> ProductImages { get; set; }
         public int? BrandId { get; set; }
-        [Required]
+
         public int? ProductTypeId { get; set; }
         public Brand Brand { get; set; }
         public ProductType ProductType { get; set; }

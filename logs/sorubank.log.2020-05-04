@@ -1,0 +1,69 @@
+2020-05-04 00:41:22,657 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:35587
+ 2020-05-04 00:41:22,739 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-04 00:41:22,752 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-04 00:41:22,762 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-04 00:43:48,935 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/common-components/mat-select/mat-select-search.component.scss
+Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+undefined
+^
+      Expected selector.
+   Γò╖
+23 Γöé /deep/ .mat-select-search-panel{
+   Γöé ^
+   Γò╡
+  stdin 23:1  root stylesheet
+      in C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\common-components\mat-select\mat-select-search.component.scss (line 23, column 1)
+
+ 2020-05-04 00:48:47,562 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/common-components/mat-select/mat-select-search.component.scss
+Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+undefined
+^
+      Expected selector.
+   Γò╖
+23 Γöé /deep/ .mat-select-search-panel{
+   Γöé ^
+   Γò╡
+  stdin 23:1  root stylesheet
+      in C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\common-components\mat-select\mat-select-search.component.scss (line 23, column 1)
+
+ 2020-05-04 00:49:02,289 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/common-components/mat-select/mat-select-search.component.scss
+Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+undefined
+^
+      Expected selector.
+   Γò╖
+23 Γöé /deep/ .mat-select-search-panel{
+   Γöé ^
+   Γò╡
+  stdin 23:1  root stylesheet
+      in C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\common-components\mat-select\mat-select-search.component.scss (line 23, column 1)
+
+ 2020-05-04 00:51:30,223 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:46897
+ 2020-05-04 00:51:30,307 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-04 00:51:30,322 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-04 00:51:30,333 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-04 00:53:16,017 ERROR Microsoft.AspNetCore.SpaServices.? Line: ? - MESSAGE: ERROR in ./src/app/common-components/mat-select/mat-select-search.component.scss
+Module build failed (from ./node_modules/sass-loader/lib/loader.js):
+
+undefined
+^
+      Expected selector.
+   Γò╖
+23 Γöé /deep/ .mat-select-search-panel{
+   Γöé ^
+   Γò╡
+  stdin 23:1  root stylesheet
+      in C:\Users\Emir\Desktop\ECommerceCMS\ClientApp\src\app\common-components\mat-select\mat-select-search.component.scss (line 23, column 1)
+
+ 2020-05-04 01:04:12,043 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:37969
+ 2020-05-04 01:04:12,095 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-04 01:04:12,110 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-04 01:04:12,123 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-04 19:18:53,548 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:3670
+ 2020-05-04 19:18:53,583 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-04 19:18:53,589 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-04 19:18:53,595 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 

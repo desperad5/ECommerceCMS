@@ -24,6 +24,23 @@ namespace ECommerceCMS.Service
             _mapper = mapper;
             _menuService = menuService;
         }
+        public ServiceResult<List<ProductCategoryTreeModel>> GetProductCategoryTree()
+        {
+            ServiceResult<List<ProductCategoryTreeModel>> result = new ServiceResult<List<ProductCategoryTreeModel>>();
+            try
+            {
+                result.resultType = ServiceResultType.Success;
+                result.data = _productCategoryRepository.GetProductCategoryTree();
+            }
+            catch (Exception ex)
+            {
+                result.resultType = ServiceResultType.Fail;
+                result.message = ex.Message;
+                
+            }
+            return result;
+        }
+    
         public Services.ServiceResult<ProductCategoryViewModel> CreateOrEdit(ProductCategoryViewModel model)
         {
             ServiceResult<ProductCategoryViewModel> result = new ServiceResult<ProductCategoryViewModel>();

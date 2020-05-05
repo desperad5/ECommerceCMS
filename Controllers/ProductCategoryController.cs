@@ -19,10 +19,21 @@ namespace ECommerceCMS.Controllers
     {
         private readonly IProductCategoryService productCategoryService;
         private readonly IListingService listingService;
+
         public ProductCategoryController(IProductCategoryService _productCategoryService,IListingService _listingService)
         {
             productCategoryService = _productCategoryService;
             listingService = _listingService;
+        }
+        [HttpPost("[action]")]
+        public IActionResult GetProductCategoryTree()
+        {
+            var result =productCategoryService.GetProductCategoryTree();
+            if (result.resultType == Services.ServiceResultType.Success)
+            {
+                return Ok(result.data);
+            }
+            return BadRequest(result.message);
         }
         // GET: /<controller>/
         [HttpPost("[action]")]

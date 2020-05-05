@@ -54,7 +54,8 @@ namespace ECommerceCMS
                 });
 
             });
-            
+
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -67,16 +68,16 @@ namespace ECommerceCMS
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                 {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime=true,
-                    ValidIssuer = "ECommerceTeam",
-                    ValidAudience = "ECommerceTeam",
+                   ValidateAudience=true,
+                   ValidateIssuer=true,
+                    ValidateLifetime = true,
+                   ValidIssuer="Antasya",
+                   ValidAudience="Antasya",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"))
                 };
             });
 
-             services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CMS Api", Version = "v1" });
             });

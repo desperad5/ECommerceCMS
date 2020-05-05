@@ -11,6 +11,7 @@ namespace  ECommerceCMS.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
+            
         }
 
         public DbSet<CMSUser> CMSUsers { get; set; }

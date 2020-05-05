@@ -32,9 +32,9 @@ namespace ECommerceCMS.Service
             _productCommentRepository = productCommentRepository;
             _mapper = mapper;
         }
-        public ServiceResult<List<ProductViewModel>> GetProductsByListingId(int listingId)
+        public ServiceResult<ProductsByListingModel> GetProductsByListingId(int listingId)
         {
-            ServiceResult<List<ProductViewModel>> result = new ServiceResult<List<ProductViewModel>>();
+            ServiceResult<ProductsByListingModel> result = new ServiceResult<ProductsByListingModel>();
             try
             {
                 var returnModel=_productRepository.GetProductsByListingId(listingId);

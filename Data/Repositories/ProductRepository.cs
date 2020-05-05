@@ -18,25 +18,30 @@ namespace ECommerceCMS.Data.Repositories
         {
             _context = context;
         }
-        public List<ProductViewModel> GetProductsByListingId(int listingId)
+        public ProductsByListingModel GetProductsByListingId(int listingId)
         {
-            var returnModel = new List<ProductViewModel>();
-            var queryable = _context.Set<ProductListing>().Include(c => c.Product);
+            var returnModel = new ProductsByListingModel();
+            var queryable = _context.Set<ProductListing>().Include(c => c.Product).Include(c=>c.Listing);
             queryable.Load();
-            var productlistings = queryable.Where(t => t.ListingId == listingId).Select(c=>c.Product).ToList();
+            var productlistings = queryable.Where(t => t.ListingId == listingId).Select(c=>new { Product = c.Product,Listing=c.Listing }).ToList();
             int index = 0;
+            if(productlistings!=null && productlistings.Count > 0)
+            {
+                returnModel.Listing = new ListingViewModel() { Name = productlistings[0].Listing.Name, Description = productlistings[0].Listing.Description };
+                returnModel.Products = new List<ProductViewModel>();
+            }
             foreach (var product in productlistings)
             {
                
 
-                returnModel.Add(new ProductViewModel()
+                returnModel.Products.Add(new ProductViewModel()
                 {
-                    BaseImageUrl = product.BaseImageUrl,
-                    Id = product.Id,
+                    BaseImageUrl = product.Product.BaseImageUrl,
+                    Id = product.Product.Id,
                     isSale = index % 2 == 0,
-                    Name = product.Name,
-                    Price = product.Price,
-                    SalePrice = index % 2 == 0 ? product.Price * 0.85 : product.Price,
+                    Name = product.Product.Name,
+                    Price = product.Product.Price,
+                    SalePrice = index % 2 == 0 ? product.Product.Price * 0.85 : product.Product.Price,
                     isNew = index % 3 == 0
                 }
                 );

@@ -15,7 +15,7 @@ namespace ECommerceCMS.Service.Abstract
         ServiceResult<Product> GetActiveProductById(int id);
         ServiceResult<List<ProductCommentModel>> GetProductComments(int productId);
         ServiceResult<ProductCommentModel> InsertProductComments(int productId, string Comment, int userId);
-        ServiceResult<List<ProductViewModel>> GetProductsByListingId(int listingId);
+        ServiceResult<ProductsByListingModel> GetProductsByListingId(int listingId);
 
     }
 }

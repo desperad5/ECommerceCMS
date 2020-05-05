@@ -10,7 +10,7 @@ namespace ECommerceCMS.Data.Abstract
     public interface IProductRepository : IEntityBaseRepository<Product>
     {
         IQueryable<Product> GetProductsQueryable();
-        List<ProductViewModel> GetProductsByListingId(int listingId);
+        ProductsByListingModel GetProductsByListingId(int listingId);
     }
 
 }

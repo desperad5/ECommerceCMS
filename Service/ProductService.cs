@@ -22,14 +22,16 @@ namespace ECommerceCMS.Service
         private readonly IProductRepository _productRepository;
         private readonly ICustomerRepository _userRepository;
         private readonly IProductCommentRepository _productCommentRepository;
+        private readonly IBrandRepository _brandRepository;
         private readonly IMapper _mapper;
         private static readonly ILog logger = Logger.GetLogger(typeof(ProductService));
 
-        public ProductService(IProductRepository productRepository, ICustomerRepository userRepository,IProductCommentRepository productCommentRepository,IMapper mapper)
+        public ProductService(IProductRepository productRepository, ICustomerRepository userRepository,IProductCommentRepository productCommentRepository,IBrandRepository brandRepository,IMapper mapper)
         {
             _productRepository = productRepository;
             _userRepository = userRepository;
             _productCommentRepository = productCommentRepository;
+            _brandRepository = brandRepository;
             _mapper = mapper;
         }
         public ServiceResult<ProductsByListingModel> GetProductsByListingId(int listingId)
@@ -54,7 +56,28 @@ namespace ECommerceCMS.Service
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try
             {
-                var returnModel = _productRepository.GetProductsByCategoryId(categoryId,itemCount,pageNumber);
+                var returnModel = new ProductsByCategoryModel();
+                returnModel.Products= _productRepository.GetNewProductsByCategoryId(categoryId, itemCount, pageNumber);
+                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products); 
+                result.resultType = ServiceResultType.Success;
+                result.data = returnModel;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error@GetProductDetail: ", ex);
+                result.resultType = ServiceResultType.Fail;
+                result.message = ex.ToString();
+            }
+            return result;
+        }
+        public ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
+        {
+            ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
+            try
+            {
+                var returnModel = new ProductsByCategoryModel();
+                returnModel.Products = _productRepository.GetNewProductsByCategoryId(categoryId, itemCount, pageNumber);
+                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }

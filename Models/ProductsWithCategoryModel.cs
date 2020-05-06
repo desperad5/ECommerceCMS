@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ECommerceCMS.Models
 {
-    public class ProductsByCategoryModel
+    public class ProductsWithCategoryModel
     {
         [JsonProperty("products")]
-        public ProductsWithCategoryModel Products { get; set; }
-        
-        [JsonProperty("brands")]
-        public List<BrandViewModel> Brands { get; set; }
+        public List<ProductViewModel> Products { get; set; }
+        [JsonProperty("listing")]
+        public ProductCategoryViewModel Category { get; set; }
     }
 }

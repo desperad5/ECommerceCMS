@@ -1,0 +1,217 @@
+2020-05-06 00:21:25,119 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:30731
+ 2020-05-06 00:21:25,199 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 00:21:25,256 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 00:21:25,322 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 00:31:34,217 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:35431
+ 2020-05-06 00:31:34,268 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 00:31:34,278 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 00:31:34,292 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 01:08:51,918 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:34275
+ 2020-05-06 01:08:51,951 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 01:08:51,962 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 01:08:51,994 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 15:44:08,678 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:9737
+ 2020-05-06 15:44:09,378 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 15:44:09,890 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 15:44:10,604 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 16:03:03,163 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:3548
+ 2020-05-06 16:03:03,227 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 16:03:03,248 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 16:03:03,291 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 16:41:07,050 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:14161
+ 2020-05-06 16:41:07,098 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 16:41:07,099 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 16:41:07,099 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 16:42:51,418 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:41166
+ 2020-05-06 16:42:51,468 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 16:42:51,514 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 16:42:51,555 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 16:59:49,040 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:38501
+ 2020-05-06 16:59:49,076 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 16:59:49,077 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 16:59:49,077 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 17:02:30,512 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:45873
+ 2020-05-06 17:02:30,680 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 17:02:30,869 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 17:02:31,045 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 17:09:12,855 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:10613
+ 2020-05-06 17:09:12,918 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 17:09:12,919 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 17:09:12,919 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 17:10:41,652 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:44891
+ 2020-05-06 17:10:41,876 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 17:10:41,945 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 17:10:42,424 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 17:27:12,786 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:43860
+ 2020-05-06 17:27:15,283 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 17:27:16,068 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 17:27:18,032 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 17:51:13,132 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:26828
+ 2020-05-06 17:51:13,763 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 17:51:14,214 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 17:51:14,395 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 18:16:06,894 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:46832
+ 2020-05-06 18:16:06,943 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 18:16:06,950 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 18:16:06,968 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 18:54:05,981 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:20820
+ 2020-05-06 18:54:06,440 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 18:54:06,838 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 18:54:07,490 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 19:42:12,347 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:47878
+ 2020-05-06 19:42:12,373 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 19:42:12,373 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 19:42:12,373 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 19:43:31,323 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:36071
+ 2020-05-06 19:43:31,364 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 19:43:31,376 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 19:43:31,416 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 19:45:50,541 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:35974
+ 2020-05-06 19:45:50,570 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 19:45:50,571 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 19:45:50,571 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 22:22:17,959 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:24709
+ 2020-05-06 22:22:17,977 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 22:22:17,978 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 22:22:17,978 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 22:23:21,469 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (26ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedDate], [EmailAddress], [FirstName], [ForgotPasswordToken], [IsActive], [IsDeleted], [LastName], [Password], [PasswordSalt], [PictureUrl], [Provider], [SocialAuthId], [TenantId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [Id]
+FROM [Customers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+ 2020-05-06 22:23:21,538 ERROR Microsoft.EntityFrameworkCore.Update.? Line: ? - MESSAGE: An exception occurred in the database while saving changes for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Customers_Tenants". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:a445dc9b-2b8b-45fc-9f4f-61fcd1b3ae77
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Customers_Tenants". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:a445dc9b-2b8b-45fc-9f4f-61fcd1b3ae77
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2020-05-06 22:25:48,935 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (8ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedDate], [EmailAddress], [FirstName], [ForgotPasswordToken], [IsActive], [IsDeleted], [LastName], [Password], [PasswordSalt], [PictureUrl], [Provider], [SocialAuthId], [TenantId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [Id]
+FROM [Customers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+ 2020-05-06 22:25:48,951 ERROR Microsoft.EntityFrameworkCore.Update.? Line: ? - MESSAGE: An exception occurred in the database while saving changes for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Customers_Tenants". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:a445dc9b-2b8b-45fc-9f4f-61fcd1b3ae77
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Customers_Tenants". The conflict occurred in database "ECommerceCMS", table "dbo.Tenants", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:a445dc9b-2b8b-45fc-9f4f-61fcd1b3ae77
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2020-05-06 22:27:56,900 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:18298
+ 2020-05-06 22:27:57,010 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 22:27:57,058 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 22:27:57,103 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-06 23:20:38,050 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:9911
+ 2020-05-06 23:20:38,145 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-06 23:20:38,185 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-06 23:20:38,209 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 

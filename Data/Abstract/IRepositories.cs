@@ -1,4 +1,5 @@
 ﻿using ECommerceCMS.Data.Entity;
+using ECommerceCMS.Models;
 using System.Collections.Generic;
 
 namespace ECommerceCMS.Data.Abstract
@@ -20,6 +21,6 @@ namespace ECommerceCMS.Data.Abstract
 
     public interface IBrandRepository : IEntityBaseRepository<Brand>
     {
-
+        List<BrandViewModel> GetBrandsOfProducts(ProductsWithCategoryModel products);
     }
 }

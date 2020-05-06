@@ -13,8 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ECommerceCMS.Controllers
 {
     [Route("api/[controller]")]
-    [EnableCors("EnableCors")]
-    [Authorize]
+    [EnableCors("MyPolicy")]
     public class ProductCategoryController : Controller
     {
         private readonly IProductCategoryService productCategoryService;

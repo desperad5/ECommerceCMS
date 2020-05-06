@@ -12,7 +12,7 @@ using ECommerceCMS.Services;
 namespace ECommerceCMS.Controllers
 {
     [Route("api/[controller]")]
-    [EnableCors("EnableCors")]
+    [EnableCors("MyPolicy")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
@@ -73,7 +73,7 @@ namespace ECommerceCMS.Controllers
             return BadRequest(result.message);
         }
         [HttpPost("[action]")]
-        public IActionResult GetProductsByListingId([FromBody] ProductCommentModel productcommentModel)
+        public IActionResult GetProductsByListingId([FromBody] ProductsByListingRequestModel productcommentModel)
         {
             var result = _productService.GetProductsByListingId(productcommentModel.Id);
             if (result.resultType == ServiceResultType.Success)

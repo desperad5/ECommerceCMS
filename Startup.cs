@@ -50,14 +50,13 @@ namespace ECommerceCMS
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("SocialAuth")));
 
-            services.AddCors(option =>
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                option.AddPolicy("EnableCors", builder =>
-                {
-                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().Build();
-                });
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
 
-            });
 
 
             services.AddAuthentication(options =>
@@ -120,6 +119,7 @@ namespace ECommerceCMS
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -148,7 +148,7 @@ namespace ECommerceCMS
             }
             app.UseRouting();
 
-            app.UseCors("EnableCors");
+            app.UseCors("MyPolicy");
 
             app.UseAuthorization();
 

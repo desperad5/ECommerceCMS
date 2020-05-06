@@ -151,15 +151,11 @@ namespace ECommerceCMS.Controllers
 
         public ActionResult SaveUser([FromBody]RegistrationRequestModel model)
         {
+            
 
             var user = _db.Customers.Where(u => u.EmailAddress == model.Email).FirstOrDefault();
             if (user != null)
                 return BadRequest(model.Email + "'e ait kullanıcı mevcut. Lütfen şifremi unuttum alanına gidiniz.");
-
-            var lead = _db.Leads.Where(l => l.Email == model.Email && l.Code == model.Code && l.HasRegistered == false).FirstOrDefault();
-
-            if (lead != null)
-            {
                 try
                 {
                     string salt = HashCalculator.GenerateSalt();
@@ -170,13 +166,10 @@ namespace ECommerceCMS.Controllers
                         PasswordSalt = salt,
                         EmailAddress = model.Email,
                         FirstName = model.FirstName,
-                        LastName = model.LastName
-
+                        LastName = model.LastName,
+                        TenantId=1
                     };
                     _db.Customers.Add(newUser);
-
-                    lead.HasRegistered = true;
-                    _db.Leads.Update(lead);
                     _db.SaveChanges();
                     return Ok(model);
 
@@ -187,12 +180,7 @@ namespace ECommerceCMS.Controllers
 
                     throw;
                 }
-
-            }
-            return BadRequest("Geçersiz mail ve kod.");
-
-
-        }
+         }
 
 
         [HttpPost("[action]")]

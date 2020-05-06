@@ -16,6 +16,8 @@ namespace ECommerceCMS.Data.Entity
         public virtual ICollection<ProductCategory> ProductCategories { get; set; }
         [Required]
         public string Name { get; set; }
+        public int TenantId { get; set; }
+        public virtual Tenant Tenant { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public MenuLocations Location { get; set; }

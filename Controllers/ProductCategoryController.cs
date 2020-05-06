@@ -28,7 +28,7 @@ namespace ECommerceCMS.Controllers
         [HttpPost("[action]")]
         public IActionResult GetProductCategoryTree()
         {
-            var result =productCategoryService.GetProductCategoryTree();
+            var result =productCategoryService.GetProductCategoryTree(1);
             if (result.resultType == Services.ServiceResultType.Success)
             {
                 return Ok(result.data);

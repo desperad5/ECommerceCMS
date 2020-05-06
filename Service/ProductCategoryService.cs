@@ -24,13 +24,13 @@ namespace ECommerceCMS.Service
             _mapper = mapper;
             _menuService = menuService;
         }
-        public ServiceResult<List<ProductCategoryTreeModel>> GetProductCategoryTree()
+        public ServiceResult<List<ProductCategoryTreeModel>> GetProductCategoryTree(int tenantId)
         {
             ServiceResult<List<ProductCategoryTreeModel>> result = new ServiceResult<List<ProductCategoryTreeModel>>();
             try
             {
                 result.resultType = ServiceResultType.Success;
-                result.data = _productCategoryRepository.GetProductCategoryTree();
+                result.data = _productCategoryRepository.GetProductCategoryTree(tenantId);
             }
             catch (Exception ex)
             {

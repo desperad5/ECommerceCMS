@@ -21,6 +21,9 @@ namespace ECommerceCMS.Data.Entity
         public string TaxNumber { get; set; }
         public ICollection<CMSUser> Users { get; set; }
         public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductCategory> ProductCategories{get;set;}
+        public virtual ICollection<Menu> Menus { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
 
     }
 }

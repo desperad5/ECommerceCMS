@@ -30,5 +30,7 @@ namespace ECommerceCMS.Data.Entity
         {
             return FirstName + " " + LastName;
         }
+        public int TenantId { get; set; }
+        public virtual Tenant Tenant { get; set; }
     }
 }

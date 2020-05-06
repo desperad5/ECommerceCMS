@@ -10,7 +10,7 @@ namespace ECommerceCMS.Data.Abstract
 {
     public interface IProductCategoryRepository: IEntityBaseRepository<ProductCategory>
     {
-        List<ProductCategoryTreeModel> GetProductCategoryTree();
+        List<ProductCategoryTreeModel> GetProductCategoryTree(int tenantId);
 
 
     }

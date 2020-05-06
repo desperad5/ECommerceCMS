@@ -17,12 +17,12 @@ namespace ECommerceCMS.Data.Repositories
         {
             _context = context;
         }
-        public List<ProductCategoryTreeModel> GetProductCategoryTree()
+        public List<ProductCategoryTreeModel> GetProductCategoryTree(int tenantId)
         {
             var model = new List<ProductCategoryTreeModel>();
             //path: '/home/left-sidebar/collection/all', title: 'makeup', type: 'link'
             AsQueryable().Include(c => c.ChildCategories).Load();
-            var categories = FindBy(t => !t.IsDeleted && t.IsActive);
+            var categories = FindBy(t => t.TenantId==tenantId &&!t.IsDeleted && t.IsActive);
 
             if (categories != null && categories.Count() > 0)
             {

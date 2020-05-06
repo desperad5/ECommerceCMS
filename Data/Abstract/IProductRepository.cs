@@ -11,6 +11,7 @@ namespace ECommerceCMS.Data.Abstract
     {
         IQueryable<Product> GetProductsQueryable();
         ProductsByListingModel GetProductsByListingId(int listingId);
+        ProductsByCategoryModel GetProductsByCategoryId(int categoryId, int itemCount, int pageNumber);
     }
 
 }

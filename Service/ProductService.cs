@@ -49,6 +49,23 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
+        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId,int itemCount,int pageNumber)
+        {
+            ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
+            try
+            {
+                var returnModel = _productRepository.GetProductsByCategoryId(categoryId,itemCount,pageNumber);
+                result.resultType = ServiceResultType.Success;
+                result.data = returnModel;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error@GetProductDetail: ", ex);
+                result.resultType = ServiceResultType.Fail;
+                result.message = ex.ToString();
+            }
+            return result;
+        }
         //public ServiceResult<ProductResponseModel> GetProductDetail(int productId)
         //{
         //    ServiceResult<ProductResponseModel> result = new ServiceResult<ProductResponseModel>();

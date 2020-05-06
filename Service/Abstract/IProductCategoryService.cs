@@ -13,6 +13,6 @@ namespace ECommerceCMS.Service.Abstract
 
         ServiceResult<ProductCategoryViewModel> DeleteProductCategoryById(int id);
         ServiceResult<ProductCategoryViewModel> CreateOrEdit(ProductCategoryViewModel model);
-        ServiceResult<List<ProductCategoryTreeModel>> GetProductCategoryTree();
+        ServiceResult<List<ProductCategoryTreeModel>> GetProductCategoryTree(int tenantId);
     }
 }

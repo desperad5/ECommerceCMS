@@ -123,6 +123,61 @@ namespace ECommerceCMS.Data.Repositories
 
 
         }
+        
+        public ProductViewModel GetProductsWithImages(int productId)
+        {
+            var returnModel = new ProductViewModel();
+            var queryable = _context.Set<Product>().Include(x => x.ProductImages).Where(x => x.Id == productId).Select(x => x);
+            queryable.Load();
+            var product = queryable.ToList().FirstOrDefault();
+            if (product != null)
+            {
+                returnModel = new ProductViewModel()
+                {
+                    BaseImageUrl = product.BaseImageUrl,
+                    Id = product.Id,
+                    isSale = true,
+                    Name = product.Name,
+                    Price = product.Price,
+                    SalePrice = product.Price * 0.85,
+                    isNew = true,
+                    Pictures = new List<string>() { product.BaseImageUrl, "https://statics.boyner.com.tr/mnresize/325/451/productimages/5002540892_424_01.jpg", "https://statics.boyner.com.tr/mnresize/325/451/productimages/5002540859_250_01.jpg" },
+                    Discount= 15,
+                    Description=product.Description
+                };
+            }
+
+            return returnModel;
+        }
+
+        public List<ProductViewModel> GetNewProduct(int itemCount)
+        {
+            var returnModel = new List<ProductViewModel>();
+            var queryable = _context.Set<Product>().Where(x => !x.IsDeleted && x.IsActive).OrderByDescending(x => x.CreatedDate).Take(itemCount);
+            queryable.Load();
+            var topProducts = queryable.ToList();
+            if (topProducts != null)
+            {
+                topProducts.ForEach(product =>
+                {
+                    returnModel.Add(new ProductViewModel()
+                    {
+                        BaseImageUrl = product.BaseImageUrl,
+                        Id = product.Id,
+                        isSale = true,
+                        Name = product.Name,
+                        Price = product.Price,
+                        SalePrice = product.Price * 0.85,
+                        isNew = true,
+                        Pictures = new List<string>() { product.BaseImageUrl, "https://statics.boyner.com.tr/mnresize/325/451/productimages/5002540892_424_01.jpg", "https://statics.boyner.com.tr/mnresize/325/451/productimages/5002540859_250_01.jpg" },
+                        Discount = 15,
+                        Description = product.Description
+                    });
+                });
+            }
+
+            return returnModel;
+        }
         public IQueryable<Product> GetProductsQueryable()
         {
             IQueryable<Product> query = _context.Set<Product>().AsQueryable();

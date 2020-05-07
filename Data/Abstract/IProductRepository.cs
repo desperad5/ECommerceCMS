@@ -13,6 +13,9 @@ namespace ECommerceCMS.Data.Abstract
         ProductsByListingModel GetProductsByListingId(int listingId);
         ProductsWithCategoryModel GetProductsByCategoryId(int categoryId, int itemCount, int pageNumber);
         ProductsWithCategoryModel GetNewProductsByCategoryId(int categoryId, int itemCount, int pageNumber);
+        ProductViewModel GetProductsWithImages(int productId);
+        List<ProductViewModel> GetNewProduct(int itemCount);
+
     }
 
 }

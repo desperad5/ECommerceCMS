@@ -102,6 +102,26 @@ namespace ECommerceCMS.Controllers
             }
             return BadRequest(result.message);
         }
+        [HttpPost("[action]")]
+        public IActionResult GetProductsWithImages([FromBody] ProductDetailModel productDetailModel)
+        {
+            var result = _productService.GetProductsWithImages(productDetailModel.ProductId);
+            if(result.resultType==ServiceResultType.Success)
+            {
+                return Ok(result.data);
+            }
+            return BadRequest(result.message);
+        }
+        [HttpPost("[action]")]
+        public IActionResult GetNewProduct([FromBody] ProductsByCategoryRetrieveModel productsByCategoryRetrieveModel)
+        {
+            var result = _productService.GetNewProduct(productsByCategoryRetrieveModel.ItemCount);
+            if (result.resultType == ServiceResultType.Success)
+            {
+                return Ok(result.data);
+            }
+            return BadRequest(result.message);
+        }
         private int GetUserIdFromContext()
         {
             var user = HttpContext.User;

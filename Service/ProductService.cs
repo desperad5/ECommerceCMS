@@ -26,7 +26,7 @@ namespace ECommerceCMS.Service
         private readonly IMapper _mapper;
         private static readonly ILog logger = Logger.GetLogger(typeof(ProductService));
 
-        public ProductService(IProductRepository productRepository, ICustomerRepository userRepository,IProductCommentRepository productCommentRepository,IBrandRepository brandRepository,IMapper mapper)
+        public ProductService(IProductRepository productRepository, ICustomerRepository userRepository, IProductCommentRepository productCommentRepository, IBrandRepository brandRepository, IMapper mapper)
         {
             _productRepository = productRepository;
             _userRepository = userRepository;
@@ -39,7 +39,7 @@ namespace ECommerceCMS.Service
             ServiceResult<ProductsByListingModel> result = new ServiceResult<ProductsByListingModel>();
             try
             {
-                var returnModel=_productRepository.GetProductsByListingId(listingId);
+                var returnModel = _productRepository.GetProductsByListingId(listingId);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }
@@ -51,14 +51,14 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
-        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId,int itemCount,int pageNumber)
+        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try
             {
                 var returnModel = new ProductsByCategoryModel();
                 var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber);
-                returnModel.Products= productsWithCategory.Products;
+                returnModel.Products = productsWithCategory.Products;
                 if (returnModel.Products == null)
                 {
                     result.resultType = ServiceResultType.Fail;
@@ -66,8 +66,8 @@ namespace ECommerceCMS.Service
                     return result;
                 }
                 returnModel.CategoryName = productsWithCategory.Category.CategoryName;
-               
-                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products); 
+
+                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }
@@ -94,7 +94,7 @@ namespace ECommerceCMS.Service
                     return result;
                 }
                 returnModel.CategoryName = productsWithCategory.Category.CategoryName;
-                
+
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
@@ -107,6 +107,44 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
+
+        public ServiceResult<ProductViewModel> GetProductsWithImages(int productId)
+        {
+            ServiceResult<ProductViewModel> result = new ServiceResult<ProductViewModel>();
+            try
+            {
+                var returnModel = _productRepository.GetProductsWithImages(productId);
+                result.resultType = ServiceResultType.Success;
+                result.data = returnModel;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error@GetProductDetail: ", ex);
+                result.resultType = ServiceResultType.Fail;
+                result.message = ex.ToString();
+            }
+            return result;
+        }
+
+        public ServiceResult<List<ProductViewModel>> GetNewProduct(int itemCount)
+        {
+            ServiceResult<List<ProductViewModel>> result = new ServiceResult<List<ProductViewModel>>();
+            try
+            {
+                var returnModel = _productRepository.GetNewProduct(itemCount);
+
+                result.resultType = ServiceResultType.Success;
+                result.data = returnModel;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error@GetProductDetail: ", ex);
+                result.resultType = ServiceResultType.Fail;
+                result.message = ex.ToString();
+            }
+            return result;
+        }
+
         //public ServiceResult<ProductResponseModel> GetProductDetail(int productId)
         //{
         //    ServiceResult<ProductResponseModel> result = new ServiceResult<ProductResponseModel>();
@@ -372,7 +410,8 @@ namespace ECommerceCMS.Service
                     result.message = "NO_ACTIVE_PRODUCT_FOUND";
                     return result;
                 }
-                result.data = product.ProductComments.OrderByDescending(t=>t.CreatedDate).Select(i => {
+                result.data = product.ProductComments.OrderByDescending(t => t.CreatedDate).Select(i =>
+                {
                     var user = _userRepository.GetSingle(t => t.Id == i.CustomerId);
                     return new ProductCommentModel()
                     {
@@ -380,7 +419,7 @@ namespace ECommerceCMS.Service
                         ProductId = i.ProductId,
                         CreatedDate = i.CreatedDate,
                         Id = i.Id,
-                        User = new UserViewModel() { Id = i.CustomerId, UserName=user.UserName, Name=user.FirstName, Surname=user.LastName }
+                        User = new UserViewModel() { Id = i.CustomerId, UserName = user.UserName, Name = user.FirstName, Surname = user.LastName }
                     };
                 }).ToList();
                 result.resultType = ServiceResultType.Success;
@@ -397,7 +436,7 @@ namespace ECommerceCMS.Service
 
 
         }
-        public ServiceResult<ProductCommentModel> InsertProductComments(int productId,string Comment,int userId)
+        public ServiceResult<ProductCommentModel> InsertProductComments(int productId, string Comment, int userId)
         {
             ServiceResult<ProductCommentModel> result = new ServiceResult<ProductCommentModel>();
             try
@@ -412,18 +451,18 @@ namespace ECommerceCMS.Service
                 _productCommentRepository.AddWithCommit(new ProductComment()
                 {
                     Comment = Comment,
-                    ProductId=productId,
+                    ProductId = productId,
                     CustomerId = userId
                 });
-                
-                
+
+
                 result.resultType = ServiceResultType.Success;
-                result.data= new ProductCommentModel()
+                result.data = new ProductCommentModel()
                 {
                     Comment = Comment,
                     ProductId = productId,
-                    User = new UserViewModel { Id=userId}
-                } ;
+                    User = new UserViewModel { Id = userId }
+                };
             }
             catch (Exception e)
             {

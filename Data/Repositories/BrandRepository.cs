@@ -20,9 +20,9 @@ namespace ECommerceCMS.Data.Repositories
             _context = context;
         }
 
-        public List<BrandViewModel> GetBrandsOfProducts(ProductsWithCategoryModel products)
+        public List<BrandViewModel> GetBrandsOfProducts(List<ProductViewModel> products)
         {
-            var productIds=products.Products.Select(i => i.Id);
+            var productIds=products.Select(i => i.Id);
             return this.AllIncluding(t => t.Products).Where(t => t.Products.Any(i => productIds.Contains(i.Id))).Select(i=>
             new BrandViewModel() { Id = i.Id, Name = i.Name }).ToList();
         }

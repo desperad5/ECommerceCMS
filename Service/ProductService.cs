@@ -57,13 +57,16 @@ namespace ECommerceCMS.Service
             try
             {
                 var returnModel = new ProductsByCategoryModel();
-                returnModel.Products= _productRepository.GetNewProductsByCategoryId(categoryId, itemCount, pageNumber);
-                if(returnModel.Products.Products==null)
+                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber);
+                returnModel.Products= productsWithCategory.Products;
+                if (returnModel.Products == null)
                 {
                     result.resultType = ServiceResultType.Fail;
                     result.message = "No Product in the Category";
                     return result;
                 }
+                returnModel.CategoryName = productsWithCategory.Category.CategoryName;
+               
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products); 
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
@@ -82,13 +85,16 @@ namespace ECommerceCMS.Service
             try
             {
                 var returnModel = new ProductsByCategoryModel();
-                returnModel.Products = _productRepository.GetNewProductsByCategoryId(categoryId, itemCount, pageNumber);
-                if (returnModel.Products.Products == null)
+                var productsWithCategory = _productRepository.GetNewProductsByCategoryId(categoryId, itemCount, pageNumber);
+                returnModel.Products = productsWithCategory.Products;
+                if (returnModel.Products == null)
                 {
                     result.resultType = ServiceResultType.Fail;
                     result.message = "No Product in the Category";
                     return result;
                 }
+                returnModel.CategoryName = productsWithCategory.Category.CategoryName;
+                
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;

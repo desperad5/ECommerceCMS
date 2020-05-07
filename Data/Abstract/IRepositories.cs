@@ -21,6 +21,6 @@ namespace ECommerceCMS.Data.Abstract
 
     public interface IBrandRepository : IEntityBaseRepository<Brand>
     {
-        List<BrandViewModel> GetBrandsOfProducts(ProductsWithCategoryModel products);
+        List<BrandViewModel> GetBrandsOfProducts(List<ProductViewModel>  products);
     }
 }

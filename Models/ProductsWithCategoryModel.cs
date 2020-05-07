@@ -10,7 +10,9 @@ namespace ECommerceCMS.Models
     {
         [JsonProperty("products")]
         public List<ProductViewModel> Products { get; set; }
+
         [JsonProperty("listing")]
         public ProductCategoryViewModel Category { get; set; }
     }
+    
 }

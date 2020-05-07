@@ -83,6 +83,12 @@ namespace ECommerceCMS.Service
             {
                 var returnModel = new ProductsByCategoryModel();
                 returnModel.Products = _productRepository.GetNewProductsByCategoryId(categoryId, itemCount, pageNumber);
+                if (returnModel.Products.Products == null)
+                {
+                    result.resultType = ServiceResultType.Fail;
+                    result.message = "No Product in the Category";
+                    return result;
+                }
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;

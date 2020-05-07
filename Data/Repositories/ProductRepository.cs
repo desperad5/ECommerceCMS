@@ -53,51 +53,31 @@ namespace ECommerceCMS.Data.Repositories
 
 
         }
-        public ProductsWithCategoryModel GetNewProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
+        public ProductsWithCategoryModel GetNewProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber)
         {
-            var returnModel = new ProductsWithCategoryModel();
-            var queryable = _context.Set<Product>().Include(c => c.ProductCategory);
-            queryable.Load();
-            var products = queryable.Where(t => t.ProductCategoryId == categoryId).OrderByDescending(t=>t.CreatedDate).Skip((pageNumber-1)*itemCount).Take(itemCount).Select(c => new { Product = c, ProductCategory = c.ProductCategory }).ToList();
-            int index = 0;
-            if (products != null && products.Count > 0)
-            {
-                returnModel.Category = new ProductCategoryViewModel() { CategoryName = products[0].ProductCategory.CategoryName};
-                returnModel.Products = new List<ProductViewModel>();
-            }
-            foreach (var product in products)
-            {
-
-
-                returnModel.Products.Add(new ProductViewModel()
-                {
-                    BaseImageUrl = product.Product.BaseImageUrl,
-                    Id = product.Product.Id,
-                    isSale = index % 2 == 0,
-                    Name = product.Product.Name,
-                    Price = product.Product.Price,
-                    SalePrice = index % 2 == 0 ? product.Product.Price * 0.85 : product.Product.Price,
-                    isNew = index % 3 == 0,
-                    Pictures = new List<string>() { product.Product.BaseImageUrl }
-
-                }
-                );
-                index++;
-            }
-            return returnModel;
+            return GetProductsByCategoryId(categoryId, itemCount, pageNumber, true);
 
 
         }
-        public ProductsWithCategoryModel GetProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
+        public ProductsWithCategoryModel GetProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber,bool orderByDate)
         {
             var returnModel = new ProductsWithCategoryModel();
             var queryable = _context.Set<Product>().Include(c => c.ProductCategory);
             queryable.Load();
-            var products = queryable.Where(t => t.ProductCategoryId == categoryId).Skip((pageNumber - 1) * itemCount).Take(itemCount).Select(c => new { Product = c, ProductCategory = c.ProductCategory }).ToList();
-            int index = 0;
-            if (products != null && products.Count > 0)
+            var products = queryable.Where(t => t.ProductCategoryId == categoryId).Select(c => new { Product = c, ProductCategory = c.ProductCategory });
+            if (itemCount.HasValue && pageNumber.HasValue)
             {
-                returnModel.Category = new ProductCategoryViewModel() { CategoryName = products[0].ProductCategory.CategoryName };
+                products=products.Skip((pageNumber.Value - 1) * itemCount.Value).Take(itemCount.Value);
+            }
+            if (orderByDate)
+            {
+                products = products.OrderByDescending(t => t.Product.CreatedDate);
+            }
+             int index = 0;
+            var productList = products.ToList();
+            if (products != null && productList.Count > 0)
+            {
+                returnModel.Category = new ProductCategoryViewModel() { CategoryName = productList[0].ProductCategory.CategoryName };
                 returnModel.Products = new List<ProductViewModel>();
             }
             foreach (var product in products)

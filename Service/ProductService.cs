@@ -51,13 +51,13 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
-        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId,int itemCount,int pageNumber)
+        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId,int? itemCount,int? pageNumber,bool orderByDate)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try
             {
                 var returnModel = new ProductsByCategoryModel();
-                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber);
+                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber,orderByDate);
                 returnModel.Products= productsWithCategory.Products;
                 if (returnModel.Products == null)
                 {
@@ -79,7 +79,7 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
-        public ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
+        public ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try

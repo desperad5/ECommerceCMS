@@ -11,9 +11,9 @@ namespace ECommerceCMS.Models
         [JsonProperty("id")]
         public int Id { get; set; }
         [JsonProperty("itemCount")]
-        public int ItemCount { get; set; }
+        public int? ItemCount { get; set; }
         [JsonProperty("pageNumber")]
-        public int PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
     }
 }

@@ -85,7 +85,7 @@ namespace ECommerceCMS.Controllers
         [HttpPost("[action]")]
         public IActionResult GetProductsByCategoryId([FromBody] ProductsByCategoryRetrieveModel productsByCategoryRetrieveModel)
         {
-            var result = _productService.GetProductsByCategoryId(productsByCategoryRetrieveModel.Id, productsByCategoryRetrieveModel.ItemCount,productsByCategoryRetrieveModel.PageNumber);
+            var result = _productService.GetProductsByCategoryId(productsByCategoryRetrieveModel.Id, productsByCategoryRetrieveModel.ItemCount,productsByCategoryRetrieveModel.PageNumber,false);
             if (result.resultType == ServiceResultType.Success)
             {
                 return Ok(result.data);

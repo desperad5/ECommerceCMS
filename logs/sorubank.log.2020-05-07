@@ -1,0 +1,148 @@
+2020-05-07 00:23:19,405 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:34810
+ 2020-05-07 00:23:19,561 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 00:23:19,995 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 00:23:20,093 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 14:13:19,105 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:41967
+ 2020-05-07 14:13:19,129 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 14:13:19,136 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 14:13:19,141 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 14:24:33,915 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 80
+2020-05-07 14:24:33,915 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 61
+2020-05-07 14:25:37,021 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 61
+2020-05-07 14:25:37,067 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 80
+2020-05-07 14:26:16,277 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 80
+2020-05-07 14:26:26,282 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 61
+2020-05-07 14:30:22,376 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:16751
+ 2020-05-07 14:30:22,397 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 14:30:22,404 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 14:30:22,410 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 14:31:57,457 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 86
+2020-05-07 14:32:18,876 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 61
+2020-05-07 14:32:58,854 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 86
+2020-05-07 14:32:58,855 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 86
+2020-05-07 14:32:58,963 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 61
+2020-05-07 14:32:59,035 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 61
+2020-05-07 14:33:19,138 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 86
+2020-05-07 14:34:41,735 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:13757
+ 2020-05-07 14:34:41,870 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 14:34:41,927 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 14:34:42,019 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 14:36:10,516 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:16804
+ 2020-05-07 14:36:10,543 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 14:36:10,555 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 14:36:10,560 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 14:37:28,032 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 86
+2020-05-07 14:45:27,796 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:35046
+ 2020-05-07 14:45:27,833 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 14:45:27,847 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 14:45:27,854 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 14:46:19,930 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at ECommerceCMS.Data.Repositories.BrandRepository.GetBrandsOfProducts(ProductsWithCategoryModel products) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\BrandRepository.cs:line 25
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 86
+2020-05-07 14:49:00,954 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:47724
+ 2020-05-07 14:49:00,987 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 14:49:00,997 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 14:49:01,009 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 16:02:49,009 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:19493
+ 2020-05-07 16:02:49,054 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 16:02:49,074 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 16:02:49,085 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 16:22:50,852 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 89
+2020-05-07 16:22:50,852 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Int32 itemCount, Int32 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 62
+2020-05-07 16:24:53,396 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:5121
+ 2020-05-07 16:24:53,444 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 16:24:53,452 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 16:24:53,528 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 17:06:26,590 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:27372
+ 2020-05-07 17:06:26,606 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 17:06:26,607 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 17:06:26,607 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 17:18:52,925 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:17312
+ 2020-05-07 17:18:52,987 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 17:18:52,999 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 17:18:53,008 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 17:33:51,204 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:30699
+ 2020-05-07 17:33:51,228 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 17:33:51,237 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 17:33:51,242 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 17:37:15,134 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:2401
+ 2020-05-07 17:37:15,186 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 17:37:15,203 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 17:37:15,220 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 21:02:27,368 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:22519
+ 2020-05-07 21:02:27,394 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 21:02:27,408 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 21:02:27,416 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-07 22:57:53,637 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:8340
+ 2020-05-07 22:57:53,665 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-07 22:57:53,670 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-07 22:57:53,678 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 

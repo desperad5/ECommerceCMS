@@ -13,7 +13,10 @@ namespace ECommerceCMS.Models
         public int Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
-        public TemplateTypes TemplateType { get; set; }
+        
+        
+        [JsonProperty("templateType")]
+        public TemplateTypes? TemplateType { get; set; }
         public int? ItemCount { get; set; }
         [JsonProperty("pageNumber")]
         public int? PageNumber { get; set; }

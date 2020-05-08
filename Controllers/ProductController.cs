@@ -103,9 +103,9 @@ namespace ECommerceCMS.Controllers
             return BadRequest(result.message);
         }
         [HttpPost("[action]")]
-        public IActionResult GetProductsWithImages([FromBody] ProductDetailModel productDetailModel)
+        public IActionResult GetProductsWithImages([FromBody] BaseRequestModel productDetailModel)
         {
-            var result = _productService.GetProductsWithImages(productDetailModel.ProductId);
+            var result = _productService.GetProductsWithImages(productDetailModel.Id);
             if(result.resultType==ServiceResultType.Success)
             {
                 return Ok(result.data);
@@ -113,9 +113,9 @@ namespace ECommerceCMS.Controllers
             return BadRequest(result.message);
         }
         [HttpPost("[action]")]
-        public IActionResult GetNewProduct([FromBody] ProductsByCategoryRetrieveModel productsByCategoryRetrieveModel)
+        public IActionResult GetNewProduct([FromBody] BaseRequestModel newProductRetrieveModel)
         {
-            var result = _productService.GetNewProduct(productsByCategoryRetrieveModel.ItemCount);
+            var result = _productService.GetNewProduct(newProductRetrieveModel.ItemCount.Value);
             if (result.resultType == ServiceResultType.Success)
             {
                 return Ok(result.data);

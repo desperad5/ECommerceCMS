@@ -99,13 +99,13 @@ namespace ECommerceCMS.Service
                 {
                     foreach (var productVariation in product.ProductVariations)
                     {
-                        if (!returnModel.Colors.Any(i => i.Id == (int)productVariation.ColorValue))
+                        if (!returnModel.Colors.Any(i => i.Name == productVariation.ColorValue))
                         {
-                            returnModel.Colors.Add(new BrandViewModel() { Id = (int)productVariation.ColorValue, Name = productVariation.ColorValue.ToString() });
+                            returnModel.Colors.Add(new BrandViewModel() { Id = (int)((Enums.ColorValues)Enum.Parse(typeof(Enums.ColorValues), productVariation.ColorValue)), Name = productVariation.ColorValue.ToString() });
                         }
-                        if (!returnModel.Sizes.Any(i => i.Id == (int)productVariation.SizeValue))
+                        if (!returnModel.Sizes.Any(i => i.Name == productVariation.SizeValue))
                         {
-                            returnModel.Sizes.Add(new BrandViewModel() { Id = (int)productVariation.SizeValue, Name = productVariation.SizeValue.ToString() });
+                            returnModel.Sizes.Add(new BrandViewModel() { Id = (int)((Enums.SizeValues)Enum.Parse(typeof(Enums.SizeValues), productVariation.SizeValue)), Name = productVariation.SizeValue.ToString() });
                         }
                     }
                 }
@@ -128,8 +128,6 @@ namespace ECommerceCMS.Service
                     return result;
                 }
                 returnModel.CategoryName = productsWithCategory.Category.CategoryName;
-
-                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }

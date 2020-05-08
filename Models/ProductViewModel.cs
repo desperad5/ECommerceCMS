@@ -13,9 +13,9 @@ namespace ECommerceCMS.Models
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("price")]
-        public double Price { get; set; }
+        public double? Price { get; set; }
         [JsonProperty("salePrice")]
-        public double SalePrice { get; set; }
+        public double? SalePrice { get; set; }
         [JsonProperty("baseImageUrl")]
         public string BaseImageUrl { get; set; }
         [JsonProperty("sale")]
@@ -29,8 +29,9 @@ namespace ECommerceCMS.Models
         [JsonProperty("variations")]
         public List<ProductVariationModel> ProductVariations { get; set; }
         [JsonProperty("discount")]
-        public int Discount { get; set; }
+        public int? Discount { get; set; }
         [JsonProperty("description")]
         public string Description { get; set; }
+       
     }
 }

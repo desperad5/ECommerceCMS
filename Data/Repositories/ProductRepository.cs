@@ -61,52 +61,69 @@ namespace ECommerceCMS.Data.Repositories
         }
         public ProductsWithCategoryModel GetProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber,bool orderByDate)
         {
-            var returnModel = new ProductsWithCategoryModel();
-            var queryable = _context.Set<Product>().Include(c => c.ProductCategory).Include(c=>c.ProductVariations);
-            queryable.Load();
-            var products = queryable.Where(t => t.ProductCategoryId == categoryId).Select(c => new { Product = c, ProductCategory = c.ProductCategory,ProductVariations=c.ProductVariations });
-            if (itemCount.HasValue && pageNumber.HasValue)
+            try
             {
-                products=products.Skip((pageNumber.Value - 1) * itemCount.Value).Take(itemCount.Value);
-            }
-            if (orderByDate)
-            {
-                products = products.OrderByDescending(t => t.Product.CreatedDate);
-            }
-             int index = 0;
-            var productList = products.ToList();
-            if (products != null && productList.Count > 0)
-            {
-                returnModel.Category = new ProductCategoryViewModel() { CategoryName = productList[0].ProductCategory.CategoryName };
-                returnModel.Products = new List<ProductViewModel>();
-            }
-            foreach (var product in products)
-            {
-
-
-                returnModel.Products.Add(new ProductViewModel()
+                var returnModel = new ProductsWithCategoryModel();
+                var queryable = _context.Set<Product>().Include(c => c.ProductCategory).Include(c => c.ProductVariations);
+                queryable.Load();
+                var rawProducts = queryable.Where(t => t.ProductCategoryId == categoryId);
+                IOrderedQueryable<Product> orderedQueryable;
+                if(orderByDate)
                 {
-                    BaseImageUrl = product.Product.BaseImageUrl,
-                    Id = product.Product.Id,
-                    isSale = index % 2 == 0,
-                    Name = product.Product.Name,
-                    Price = product.Product.Price,
-                    SalePrice = index % 2 == 0 ? product.Product.Price * 0.85 : product.Product.Price,
-                    isNew = index % 3 == 0,
-                    BrandId = product.Product.BrandId,
-                    ProductVariations = product.ProductVariations!=null &&product.ProductVariations.Count>0?
-                    product.ProductVariations.Select(t => new ProductVariationModel()
-                    { ColorValue = (Enums.ColorValues)t.Color,
-                        SizeValue = (Enums.SizeValues)t.Size,
-                        Quantity = t.Quantity
-                    }).ToList():new List<ProductVariationModel>(),
-                    Pictures = new List<string>() { product.Product.BaseImageUrl }
-
+                    orderedQueryable = rawProducts.OrderByDescending(t => t.CreatedDate);
                 }
-                );
-                index++;
+                else
+                {
+                    orderedQueryable = rawProducts.OrderByDescending(t => t.Id);
+                }
+                var products= orderedQueryable.Select(c => new { Product = c, ProductCategory = c.ProductCategory, ProductVariations = c.ProductVariations }).ToList();
+                
+                
+                if (itemCount.HasValue && pageNumber.HasValue)
+                {
+                    products = products.Skip((pageNumber.Value - 1) * itemCount.Value).Take(itemCount.Value).ToList();
+                }
+
+                int index = 0;
+                var productList = products.ToList();
+                if (products != null && productList.Count > 0)
+                {
+                    returnModel.Category = new ProductCategoryViewModel() { CategoryName = productList[0].ProductCategory.CategoryName };
+                    returnModel.Products = new List<ProductViewModel>();
+                }
+                foreach (var product in products)
+                {
+
+
+                    returnModel.Products.Add(new ProductViewModel()
+                    {
+                        BaseImageUrl = product.Product.BaseImageUrl,
+                        Id = product.Product.Id,
+                        isSale = index % 2 == 0,
+                        Name = product.Product.Name,
+                        Price = product.Product.Price,
+                        SalePrice = index % 2 == 0 ? product.Product.Price * 0.85 : product.Product.Price,
+                        isNew = index % 3 == 0,
+                        BrandId = product.Product.BrandId,
+                        ProductVariations = product.ProductVariations != null && product.ProductVariations.Count > 0 ?
+                        product.ProductVariations.Select(t => new ProductVariationModel()
+                        {
+                            ColorValue = ((Enums.ColorValues)t.Color).ToString(),
+                            SizeValue = ((Enums.SizeValues)t.Size).ToString(),
+                            Quantity = t.Quantity
+                        }).ToList() : new List<ProductVariationModel>(),
+                        Pictures = new List<string>() { product.Product.BaseImageUrl }
+
+                    }
+                    );
+                    index++;
+                }
+                return returnModel;
             }
-            return returnModel;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
 
         }

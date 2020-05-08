@@ -8,8 +8,8 @@ namespace ECommerceCMS.Models
 {
     public class ProductVariationModel
     {
-        public ColorValues? ColorValue { get; set; }
-        public SizeValues? SizeValue { get; set; }
+        public string ColorValue { get; set; }
+        public string SizeValue { get; set; }
         public int? Quantity { get; set; }
     }
 }

@@ -63,13 +63,17 @@ namespace ECommerceCMS.Helpers
         }
         public enum ColorValues
         {
-            red=0,
-            green=1,
-            yellow=2,
-            brown=3,
-            black=4,
-            grey=5,
-            blue=6
+            white = 0,
+            black=1,
+            red=2,
+            green=3,
+            purple=4,
+            yellow=5,
+            blue=6,
+            gray=7,
+            orange=8,
+            pink=9
+
 
 
         }

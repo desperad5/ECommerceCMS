@@ -1,0 +1,509 @@
+2020-05-08 22:31:54,243 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:5947
+ 2020-05-08 22:31:54,289 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-08 22:31:54,334 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-08 22:31:54,399 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-08 23:32:21,938 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:31715
+ 2020-05-08 23:32:22,042 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-08 23:32:22,175 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-08 23:32:22,196 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-08 23:36:07,979 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[BaseImageUrl], [p].[BrandId], [p].[CreatedDate], [p].[Description], [p].[Discount], [p].[InventoryCode], [p].[InventoryCount], [p].[IsActive], [p].[IsDeleted], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p].[ProductTypeId], [p].[Rating], [p].[TenantId], [p].[TenantPrice]
+FROM [Products] AS [p]
+ 2020-05-08 23:36:07,979 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[BaseImageUrl], [p].[BrandId], [p].[CreatedDate], [p].[Description], [p].[Discount], [p].[InventoryCode], [p].[InventoryCount], [p].[IsActive], [p].[IsDeleted], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p].[ProductTypeId], [p].[Rating], [p].[TenantId], [p].[TenantPrice]
+FROM [Products] AS [p]
+ 2020-05-08 23:36:08,172 ERROR Microsoft.EntityFrameworkCore.Query.? Line: ? - MESSAGE: An exception occurred while iterating over the results of a query for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:d152aa7a-5679-4d50-97c2-967b6882733d
+Error Number:207,State:1,Class:16
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:d152aa7a-5679-4d50-97c2-967b6882733d
+Error Number:207,State:1,Class:16
+2020-05-08 23:36:08,172 ERROR Microsoft.EntityFrameworkCore.Query.? Line: ? - MESSAGE: An exception occurred while iterating over the results of a query for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:36:08,648 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 66
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 65
+ClientConnectionId:d152aa7a-5679-4d50-97c2-967b6882733d
+Error Number:207,State:1,Class:16
+2020-05-08 23:36:08,648 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 66
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 58
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 122
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:41:26,209 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[BaseImageUrl], [p].[BrandId], [p].[CreatedDate], [p].[Description], [p].[Discount], [p].[InventoryCode], [p].[InventoryCount], [p].[IsActive], [p].[IsDeleted], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p].[ProductTypeId], [p].[Rating], [p].[TenantId], [p].[TenantPrice]
+FROM [Products] AS [p]
+ 2020-05-08 23:41:26,215 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[BaseImageUrl], [p].[BrandId], [p].[CreatedDate], [p].[Description], [p].[Discount], [p].[InventoryCode], [p].[InventoryCount], [p].[IsActive], [p].[IsDeleted], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p].[ProductTypeId], [p].[Rating], [p].[TenantId], [p].[TenantPrice]
+FROM [Products] AS [p]
+ 2020-05-08 23:41:26,285 ERROR Microsoft.EntityFrameworkCore.Query.? Line: ? - MESSAGE: An exception occurred while iterating over the results of a query for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:41:26,327 ERROR Microsoft.EntityFrameworkCore.Query.? Line: ? - MESSAGE: An exception occurred while iterating over the results of a query for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:d152aa7a-5679-4d50-97c2-967b6882733d
+Error Number:207,State:1,Class:16
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:d152aa7a-5679-4d50-97c2-967b6882733d
+Error Number:207,State:1,Class:16
+2020-05-08 23:41:26,542 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 66
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 58
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 122
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:41:27,262 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 66
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 65
+ClientConnectionId:d152aa7a-5679-4d50-97c2-967b6882733d
+Error Number:207,State:1,Class:16
+2020-05-08 23:42:31,613 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (198ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[BaseImageUrl], [p].[BrandId], [p].[CreatedDate], [p].[Description], [p].[Discount], [p].[InventoryCode], [p].[InventoryCount], [p].[IsActive], [p].[IsDeleted], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p].[ProductTypeId], [p].[Rating], [p].[TenantId], [p].[TenantPrice]
+FROM [Products] AS [p]
+ 2020-05-08 23:42:37,114 ERROR Microsoft.EntityFrameworkCore.Query.? Line: ? - MESSAGE: An exception occurred while iterating over the results of a query for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:42:46,675 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 66
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 58
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 122
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:42:46,687 ERROR Microsoft.EntityFrameworkCore.Database.Command.? Line: ? - MESSAGE: Failed executing DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[BaseImageUrl], [p].[BrandId], [p].[CreatedDate], [p].[Description], [p].[Discount], [p].[InventoryCode], [p].[InventoryCount], [p].[IsActive], [p].[IsDeleted], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p].[ProductTypeId], [p].[Rating], [p].[TenantId], [p].[TenantPrice]
+FROM [Products] AS [p]
+ 2020-05-08 23:42:46,705 ERROR Microsoft.EntityFrameworkCore.Query.? Line: ? - MESSAGE: An exception occurred while iterating over the results of a query for context type 'ECommerceCMS.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+ Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Discount'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:68426abe-204b-4b81-b2d5-a94e1629e509
+Error Number:207,State:1,Class:16
+2020-05-08 23:47:09,687 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:11353
+ 2020-05-08 23:47:09,780 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-08 23:47:09,944 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-08 23:47:10,059 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-08 23:51:03,276 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.InvalidOperationException: The LINQ expression 'DbSet<Product>
+    .Where(p => p.ProductCategoryId == __categoryId_0)
+    .Join(
+        outer: DbSet<ProductCategory>, 
+        inner: p => EF.Property<Nullable<int>>(p, "ProductCategoryId"), 
+        outerKeySelector: p0 => EF.Property<Nullable<int>>(p0, "Id"), 
+        innerKeySelector: (o, i) => new TransparentIdentifier<Product, ProductCategory>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(p => new { 
+        Product = p.Outer, 
+        ProductCategory = p.Inner, 
+        ProductVariations = (MaterializeCollectionNavigation(
+            navigation: Navigation: Product.ProductVariations,
+            subquery: DbSet<ProductVariation>
+                .Where(p1 => EF.Property<Nullable<int>>(p.Outer, "Id") != null && EF.Property<Nullable<int>>(p.Outer, "Id") == EF.Property<Nullable<int>>(p1, "ProductId")))
+     })
+    .Skip(__p_1)
+    .Take(__p_2)
+    .OrderByDescending(e0 => e0.Product.CreatedDate)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 77
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 58
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 122
+2020-05-08 23:51:04,008 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentException: Requested value 'white' was not found.
+   at System.Enum.TryParseByName(RuntimeType enumType, String originalValueString, ReadOnlySpan`1 value, Boolean ignoreCase, Boolean throwOnFailure, UInt64& result)
+   at System.Enum.TryParseInt32Enum(RuntimeType enumType, String originalValueString, ReadOnlySpan`1 value, Int32 minInclusive, Int32 maxInclusive, Boolean ignoreCase, Boolean throwOnFailure, TypeCode type, Int32& result)
+   at System.Enum.TryParse(Type enumType, String value, Boolean ignoreCase, Boolean throwOnFailure, Object& result)
+   at System.Enum.Parse(Type enumType, String value)
+   at ECommerceCMS.Service.ProductService.FindDistinctColorSizes(List`1 products) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 108
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 76
+2020-05-08 23:58:50,752 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Now listening on: http://127.0.0.1:33492
+ 2020-05-08 23:58:50,895 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-05-08 23:58:50,932 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Hosting environment: Development
+ 2020-05-08 23:58:51,001 INFO Microsoft.Hosting.Lifetime.? Line: ? - MESSAGE: Content root path: C:\Users\Emir\Desktop\ECommerceCMS
+ 2020-05-08 23:59:35,457 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.InvalidOperationException: The LINQ expression 'DbSet<Product>
+    .Where(p => p.ProductCategoryId == __categoryId_0)
+    .Join(
+        outer: DbSet<ProductCategory>, 
+        inner: p => EF.Property<Nullable<int>>(p, "ProductCategoryId"), 
+        outerKeySelector: p0 => EF.Property<Nullable<int>>(p0, "Id"), 
+        innerKeySelector: (o, i) => new TransparentIdentifier<Product, ProductCategory>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(p => new { 
+        Product = p.Outer, 
+        ProductCategory = p.Inner, 
+        ProductVariations = (MaterializeCollectionNavigation(
+            navigation: Navigation: Product.ProductVariations,
+            subquery: DbSet<ProductVariation>
+                .Where(p1 => EF.Property<Nullable<int>>(p.Outer, "Id") != null && EF.Property<Nullable<int>>(p.Outer, "Id") == EF.Property<Nullable<int>>(p1, "ProductId")))
+     })
+    .Skip(__p_1)
+    .Take(__p_2)
+    .OrderByDescending(e0 => e0.Product.CreatedDate)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 77
+   at ECommerceCMS.Data.Repositories.ProductRepository.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Data\Repositories\ProductRepository.cs:line 58
+   at ECommerceCMS.Service.ProductService.GetNewProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 122
+2020-05-08 23:59:55,300 ERROR ECommerceCMS.Service.ProductService.? Line: ? - MESSAGE: Error@GetProductDetail: 
+ System.ArgumentException: Requested value 'white' was not found.
+   at System.Enum.TryParseByName(RuntimeType enumType, String originalValueString, ReadOnlySpan`1 value, Boolean ignoreCase, Boolean throwOnFailure, UInt64& result)
+   at System.Enum.TryParseInt32Enum(RuntimeType enumType, String originalValueString, ReadOnlySpan`1 value, Int32 minInclusive, Int32 maxInclusive, Boolean ignoreCase, Boolean throwOnFailure, TypeCode type, Int32& result)
+   at System.Enum.TryParse(Type enumType, String value, Boolean ignoreCase, Boolean throwOnFailure, Object& result)
+   at System.Enum.Parse(Type enumType, String value)
+   at ECommerceCMS.Service.ProductService.FindDistinctColorSizes(List`1 products) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 108
+   at ECommerceCMS.Service.ProductService.GetProductsByCategoryId(Int32 categoryId, Nullable`1 itemCount, Nullable`1 pageNumber, Boolean orderByDate) in C:\Users\Emir\Desktop\ECommerceCMS\Service\ProductService.cs:line 76

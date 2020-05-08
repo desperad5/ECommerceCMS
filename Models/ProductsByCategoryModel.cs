@@ -22,5 +22,6 @@ namespace ECommerceCMS.Models
         public string CategoryName { get; set; }
         [JsonProperty("listing")]
         public string Listing { get; set; }
+        
     }
 }

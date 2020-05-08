@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using static ECommerceCMS.Helpers.Enums;
 
 namespace ECommerceCMS.Data.Entity
 {
@@ -14,7 +15,8 @@ namespace ECommerceCMS.Data.Entity
         public string Address { get; set; }
         public string County { get; set; }
         public string Town { get; set; }
-        public int TypeId { get; set; }
+        public int? TypeId { get; set; }
+        public TemplateTypes? TemplateType { get; set; }
         [Required]
         public string PhoneNumber { get; set; }
         public string TaxAdministration { get; set; }

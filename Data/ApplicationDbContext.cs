@@ -38,6 +38,8 @@ namespace  ECommerceCMS.Data
         public DbSet<Sector> Sectors { get; set; }
         public DbSet<Translation> Translations { get; set; }
         public DbSet<ProductSpecValue> ProductSpecValues { get; set; }
+        public DbSet<UserFavorite> UserFavorites { get; set; }
+        public DbSet<ProductVariation> ProductVariations { get; set; }
 
 
 

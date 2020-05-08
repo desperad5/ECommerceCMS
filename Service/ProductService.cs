@@ -17,6 +17,11 @@ using ECommerceCMS.Services;
 
 namespace ECommerceCMS.Service
 {
+    public class DistinctColorsAndSizes
+    {
+        public List<BrandViewModel> Colors { get; set; }
+        public List<BrandViewModel> Sizes { get; set; }
+    }
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
@@ -51,13 +56,13 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
-        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
+        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber, bool orderByDate)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try
             {
                 var returnModel = new ProductsByCategoryModel();
-                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber);
+                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber, orderByDate);
                 returnModel.Products = productsWithCategory.Products;
                 if (returnModel.Products == null)
                 {
@@ -68,6 +73,9 @@ namespace ECommerceCMS.Service
                 returnModel.CategoryName = productsWithCategory.Category.CategoryName;
 
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
+                var distinctColorsSizes = FindDistinctColorSizes(returnModel.Products);
+                returnModel.Colors = distinctColorsSizes.Colors;
+                returnModel.Sizes = distinctColorsSizes.Sizes;
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }
@@ -79,7 +87,33 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
-        public ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int itemCount, int pageNumber)
+
+        private DistinctColorsAndSizes FindDistinctColorSizes(List<ProductViewModel> products)
+        {
+            var returnModel = new DistinctColorsAndSizes();
+            returnModel.Colors = new List<BrandViewModel>();
+            returnModel.Sizes = new List<BrandViewModel>();
+            foreach (var product in products)
+            {
+                if (product.ProductVariations != null && product.ProductVariations.Count > 0)
+                {
+                    foreach (var productVariation in product.ProductVariations)
+                    {
+                        if (!returnModel.Colors.Any(i => i.Id == (int)productVariation.ColorValue))
+                        {
+                            returnModel.Colors.Add(new BrandViewModel() { Id = (int)productVariation.ColorValue, Name = productVariation.ColorValue.ToString() });
+                        }
+                        if (!returnModel.Sizes.Any(i => i.Id == (int)productVariation.SizeValue))
+                        {
+                            returnModel.Sizes.Add(new BrandViewModel() { Id = (int)productVariation.SizeValue, Name = productVariation.SizeValue.ToString() });
+                        }
+                    }
+                }
+            }
+            return returnModel;
+        }
+
+        public ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try

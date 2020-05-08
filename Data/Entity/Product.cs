@@ -35,8 +35,8 @@ namespace ECommerceCMS.Data.Entity
         public int? ProductTypeId { get; set; }
         public Brand Brand { get; set; }
         public ProductType ProductType { get; set; }
-
-
+        
+        public virtual List<ProductVariation> ProductVariations { get; set; }
         public virtual ICollection<OrderCartItem> OrderCartItems { get; set; }
         public virtual ICollection<ProductComment> ProductComments { get; set; }
         public virtual ICollection<ProductRating> ProductRatings { get; set; }

@@ -16,9 +16,10 @@ namespace ECommerceCMS.Service.Abstract
         ServiceResult<List<ProductCommentModel>> GetProductComments(int productId);
         ServiceResult<ProductCommentModel> InsertProductComments(int productId, string Comment, int userId);
         ServiceResult<ProductsByListingModel> GetProductsByListingId(int listingId);
-        ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId, int itemCount, int pageNumber);
-        ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int itemCount, int pageNumber);
+        ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber,bool orderByDate);
+        ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber);
         ServiceResult<ProductViewModel> GetProductsWithImages(int productId);
         ServiceResult<List<ProductViewModel>> GetNewProduct(int itemCount);
+
     }
 }

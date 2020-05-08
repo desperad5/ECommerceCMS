@@ -3,17 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static ECommerceCMS.Helpers.Enums;
 
 namespace ECommerceCMS.Models
 {
-    public class ProductsByCategoryRetrieveModel
+    public class BaseRequestModel
     {
         [JsonProperty("id")]
         public int Id { get; set; }
-        [JsonProperty("itemCount")]
-        public int ItemCount { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        public TemplateTypes TemplateType { get; set; }
+        public int? ItemCount { get; set; }
         [JsonProperty("pageNumber")]
-        public int PageNumber { get; set; }
-
+        public int? PageNumber { get; set; }
     }
+    
 }

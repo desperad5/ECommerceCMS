@@ -93,6 +93,7 @@ namespace ECommerceCMS.Data.Repositories
                     Price = product.Product.Price,
                     SalePrice = index % 2 == 0 ? product.Product.Price * 0.85 : product.Product.Price,
                     isNew = index % 3 == 0,
+                    BrandId=product.Product.BrandId,
                     Pictures = new List<string>() { product.Product.BaseImageUrl }
 
                 }

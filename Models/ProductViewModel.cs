@@ -24,5 +24,7 @@ namespace ECommerceCMS.Models
         public bool isNew { get; set; }
         [JsonProperty("pictures")]
         public List<string> Pictures { get; set; }
+        [JsonProperty("brandId")]
+        public int? BrandId { get; set; }
     }
 }

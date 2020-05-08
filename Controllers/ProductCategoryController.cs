@@ -25,7 +25,7 @@ namespace ECommerceCMS.Controllers
             listingService = _listingService;
         }
         [HttpPost("[action]")]
-        public IActionResult GetProductCategoryTree([FromBody]ProductsByCategoryRetrieveModel model)
+        public IActionResult GetProductCategoryTree([FromBody]BaseRequestModel model)
         {
             var result =productCategoryService.GetProductCategoryTree(model.Id);
             if (result.resultType == Services.ServiceResultType.Success)

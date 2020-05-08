@@ -73,7 +73,7 @@ namespace ECommerceCMS.Controllers
             return BadRequest(result.message);
         }
         [HttpPost("[action]")]
-        public IActionResult GetProductsByListingId([FromBody] ProductsByListingRequestModel productcommentModel)
+        public IActionResult GetProductsByListingId([FromBody] BaseRequestModel productcommentModel)
         {
             var result = _productService.GetProductsByListingId(productcommentModel.Id);
             if (result.resultType == ServiceResultType.Success)
@@ -83,7 +83,7 @@ namespace ECommerceCMS.Controllers
             return BadRequest(result.message);
         }
         [HttpPost("[action]")]
-        public IActionResult GetProductsByCategoryId([FromBody] ProductsByCategoryRetrieveModel productsByCategoryRetrieveModel)
+        public IActionResult GetProductsByCategoryId([FromBody] BaseRequestModel productsByCategoryRetrieveModel)
         {
             var result = _productService.GetProductsByCategoryId(productsByCategoryRetrieveModel.Id, productsByCategoryRetrieveModel.ItemCount,productsByCategoryRetrieveModel.PageNumber,false);
             if (result.resultType == ServiceResultType.Success)
@@ -93,7 +93,7 @@ namespace ECommerceCMS.Controllers
             return BadRequest(result.message);
         }
         [HttpPost("[action]")]
-        public IActionResult GetNewProductsByCategoryId([FromBody] ProductsByCategoryRetrieveModel productsByCategoryRetrieveModel)
+        public IActionResult GetNewProductsByCategoryId([FromBody] BaseRequestModel productsByCategoryRetrieveModel)
         {
             var result = _productService.GetNewProductsByCategoryId(productsByCategoryRetrieveModel.Id, productsByCategoryRetrieveModel.ItemCount, productsByCategoryRetrieveModel.PageNumber);
             if (result.resultType == ServiceResultType.Success)

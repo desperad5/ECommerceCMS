@@ -74,6 +74,8 @@ namespace ECommerceCMS.Service
 
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 var distinctColorsSizes = FindDistinctColorSizes(returnModel.Products);
+                returnModel.Colors = distinctColorsSizes.Colors;
+                returnModel.Sizes = distinctColorsSizes.Sizes;
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }

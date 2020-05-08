@@ -17,6 +17,11 @@ using ECommerceCMS.Services;
 
 namespace ECommerceCMS.Service
 {
+    public class DistinctColorsAndSizes
+    {
+        public List<BrandViewModel> Colors { get; set; }
+        public List<BrandViewModel> Sizes { get; set; }
+    }
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
@@ -26,7 +31,7 @@ namespace ECommerceCMS.Service
         private readonly IMapper _mapper;
         private static readonly ILog logger = Logger.GetLogger(typeof(ProductService));
 
-        public ProductService(IProductRepository productRepository, ICustomerRepository userRepository,IProductCommentRepository productCommentRepository,IBrandRepository brandRepository,IMapper mapper)
+        public ProductService(IProductRepository productRepository, ICustomerRepository userRepository, IProductCommentRepository productCommentRepository, IBrandRepository brandRepository, IMapper mapper)
         {
             _productRepository = productRepository;
             _userRepository = userRepository;
@@ -39,7 +44,7 @@ namespace ECommerceCMS.Service
             ServiceResult<ProductsByListingModel> result = new ServiceResult<ProductsByListingModel>();
             try
             {
-                var returnModel=_productRepository.GetProductsByListingId(listingId);
+                var returnModel = _productRepository.GetProductsByListingId(listingId);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }
@@ -51,14 +56,14 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
-        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId,int? itemCount,int? pageNumber,bool orderByDate)
+        public ServiceResult<ProductsByCategoryModel> GetProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber, bool orderByDate)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
             try
             {
                 var returnModel = new ProductsByCategoryModel();
-                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber,orderByDate);
-                returnModel.Products= productsWithCategory.Products;
+                var productsWithCategory = _productRepository.GetProductsByCategoryId(categoryId, itemCount, pageNumber, orderByDate);
+                returnModel.Products = productsWithCategory.Products;
                 if (returnModel.Products == null)
                 {
                     result.resultType = ServiceResultType.Fail;
@@ -66,8 +71,9 @@ namespace ECommerceCMS.Service
                     return result;
                 }
                 returnModel.CategoryName = productsWithCategory.Category.CategoryName;
-               
-                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products); 
+
+                returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
+                var distinctColorsSizes = FindDistinctColorSizes(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
             }
@@ -79,6 +85,32 @@ namespace ECommerceCMS.Service
             }
             return result;
         }
+
+        private DistinctColorsAndSizes FindDistinctColorSizes(List<ProductViewModel> products)
+        {
+            var returnModel = new DistinctColorsAndSizes();
+            returnModel.Colors = new List<BrandViewModel>();
+            returnModel.Sizes = new List<BrandViewModel>();
+            foreach (var product in products)
+            {
+                if (product.ProductVariations != null && product.ProductVariations.Count > 0)
+                {
+                    foreach (var productVariation in product.ProductVariations)
+                    {
+                        if (!returnModel.Colors.Any(i => i.Id == (int)productVariation.ColorValue))
+                        {
+                            returnModel.Colors.Add(new BrandViewModel() { Id = (int)productVariation.ColorValue, Name = productVariation.ColorValue.ToString() });
+                        }
+                        if (!returnModel.Sizes.Any(i => i.Id == (int)productVariation.SizeValue))
+                        {
+                            returnModel.Sizes.Add(new BrandViewModel() { Id = (int)productVariation.SizeValue, Name = productVariation.SizeValue.ToString() });
+                        }
+                    }
+                }
+            }
+            return returnModel;
+        }
+
         public ServiceResult<ProductsByCategoryModel> GetNewProductsByCategoryId(int categoryId, int? itemCount, int? pageNumber)
         {
             ServiceResult<ProductsByCategoryModel> result = new ServiceResult<ProductsByCategoryModel>();
@@ -94,7 +126,7 @@ namespace ECommerceCMS.Service
                     return result;
                 }
                 returnModel.CategoryName = productsWithCategory.Category.CategoryName;
-                
+
                 returnModel.Brands = _brandRepository.GetBrandsOfProducts(returnModel.Products);
                 result.resultType = ServiceResultType.Success;
                 result.data = returnModel;
@@ -372,7 +404,8 @@ namespace ECommerceCMS.Service
                     result.message = "NO_ACTIVE_PRODUCT_FOUND";
                     return result;
                 }
-                result.data = product.ProductComments.OrderByDescending(t=>t.CreatedDate).Select(i => {
+                result.data = product.ProductComments.OrderByDescending(t => t.CreatedDate).Select(i =>
+                {
                     var user = _userRepository.GetSingle(t => t.Id == i.CustomerId);
                     return new ProductCommentModel()
                     {
@@ -380,7 +413,7 @@ namespace ECommerceCMS.Service
                         ProductId = i.ProductId,
                         CreatedDate = i.CreatedDate,
                         Id = i.Id,
-                        User = new UserViewModel() { Id = i.CustomerId, UserName=user.UserName, Name=user.FirstName, Surname=user.LastName }
+                        User = new UserViewModel() { Id = i.CustomerId, UserName = user.UserName, Name = user.FirstName, Surname = user.LastName }
                     };
                 }).ToList();
                 result.resultType = ServiceResultType.Success;
@@ -397,7 +430,7 @@ namespace ECommerceCMS.Service
 
 
         }
-        public ServiceResult<ProductCommentModel> InsertProductComments(int productId,string Comment,int userId)
+        public ServiceResult<ProductCommentModel> InsertProductComments(int productId, string Comment, int userId)
         {
             ServiceResult<ProductCommentModel> result = new ServiceResult<ProductCommentModel>();
             try
@@ -412,18 +445,18 @@ namespace ECommerceCMS.Service
                 _productCommentRepository.AddWithCommit(new ProductComment()
                 {
                     Comment = Comment,
-                    ProductId=productId,
+                    ProductId = productId,
                     CustomerId = userId
                 });
-                
-                
+
+
                 result.resultType = ServiceResultType.Success;
-                result.data= new ProductCommentModel()
+                result.data = new ProductCommentModel()
                 {
                     Comment = Comment,
                     ProductId = productId,
-                    User = new UserViewModel { Id=userId}
-                } ;
+                    User = new UserViewModel { Id = userId }
+                };
             }
             catch (Exception e)
             {

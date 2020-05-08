@@ -14,6 +14,10 @@ namespace ECommerceCMS.Models
 
         [JsonProperty("brands")]
         public List<BrandViewModel> Brands { get; set; }
+        [JsonProperty("colors")]
+        public List<BrandViewModel> Colors { get; set; }
+        [JsonProperty("sizes")]
+        public List<BrandViewModel> Sizes { get; set; }
         [JsonProperty("categoryName")]
         public string CategoryName { get; set; }
         [JsonProperty("listing")]

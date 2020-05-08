@@ -26,5 +26,7 @@ namespace ECommerceCMS.Models
         public List<string> Pictures { get; set; }
         [JsonProperty("brandId")]
         public int? BrandId { get; set; }
+        [JsonProperty("variations")]
+        public List<ProductVariationModel> ProductVariations { get; set; }
     }
 }
